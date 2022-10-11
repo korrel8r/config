@@ -1,0 +1,5 @@
+# config
+= Configure clusters for signal correlation
+WARNING: work in progress.
+
+This repository will collect configuration scripts and resources to set up an observable cluster. 
