@@ -1,0 +1,27 @@
+---
+apiVersion: "logging.openshift.io/v1"
+kind: "ClusterLogging"
+metadata:
+  name: "instance"
+  namespace: "openshift-logging"
+  annotations:
+    logging.openshift.io/preview-vector-collector: "enabled"
+spec:
+  managementState: "Managed"
+  collection:
+    logs:
+      type: "vector"
+---
+apiVersion: logging.openshift.io/v1
+kind: ClusterLogForwarder
+metadata:
+  name: instance
+  namespace: openshift-logging
+spec:
+  outputs:
+    - name: loki
+      type: loki
+      url: http://loki.openshift-logging.svc.cluster.local:3100
+  pipelines:
+    - inputRefs: [application, audit, infrastructure]
+      outputRefs: [loki]

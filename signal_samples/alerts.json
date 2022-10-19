@@ -1,0 +1,393 @@
+{
+  "labels": {
+    "alertname": "KubeStatefulSetReplicasMismatch",
+    "container": "kube-rbac-proxy-main",
+    "endpoint": "https-main",
+    "job": "kube-state-metrics",
+    "namespace": "openshift-logging",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "kube-state-metrics",
+    "severity": "warning",
+    "statefulset": "logging-lokistack-index-gateway"
+  },
+  "annotations": {
+    "description": "StatefulSet openshift-logging/logging-lokistack-index-gateway has not matched the expected number of replicas for longer than 15 minutes.",
+    "summary": "Deployment has not matched the expected number of replicas."
+  },
+  "startsAt": "2022-09-14T16:30:47.864Z",
+  "endsAt": "2022-09-15T14:25:47.864Z",
+  "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=%28kube_statefulset_status_replicas_ready%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D+%21%3D+kube_statefulset_status_replicas%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D%29+and+%28changes%28kube_statefulset_status_replicas_updated%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D%5B10m%5D%29+%3D%3D+0%29&g0.tab=1",
+  "status": {
+    "state": "active",
+    "silencedBy": null,
+    "inhibitedBy": null
+  },
+  "receivers": [
+    "Default"
+  ],
+  "fingerprint": "0fd5513f5cabc95d"
+}
+{
+  "labels": {
+    "alertname": "KubeDaemonSetRolloutStuck",
+    "container": "kube-rbac-proxy-main",
+    "daemonset": "topolvm-node",
+    "endpoint": "https-main",
+    "job": "kube-state-metrics",
+    "namespace": "openshift-storage",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "kube-state-metrics",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "DaemonSet openshift-storage/topolvm-node has not finished or progressed for at least 30 minutes.",
+    "summary": "DaemonSet rollout is stuck."
+  },
+  "startsAt": "2022-09-14T17:01:47.864Z",
+  "endsAt": "2022-09-15T14:26:47.864Z",
+  "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=%28%28kube_daemonset_status_current_number_scheduled%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D+%21%3D+kube_daemonset_status_desired_number_scheduled%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D%29+or+%28kube_daemonset_status_number_misscheduled%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D+%21%3D+0%29+or+%28kube_daemonset_status_updated_number_scheduled%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D+%21%3D+kube_daemonset_status_desired_number_scheduled%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D%29+or+%28kube_daemonset_status_number_available%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D+%21%3D+kube_daemonset_status_desired_number_scheduled%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D%29%29+and+%28changes%28kube_daemonset_status_updated_number_scheduled%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D%5B5m%5D%29+%3D%3D+0%29&g0.tab=1",
+  "status": {
+    "state": "active",
+    "silencedBy": null,
+    "inhibitedBy": null
+  },
+  "receivers": [
+    "Default"
+  ],
+  "fingerprint": "1725be01d5f0a37a"
+}
+{
+  "labels": {
+    "alertname": "ClusterNotUpgradeable",
+    "condition": "Upgradeable",
+    "endpoint": "metrics",
+    "name": "version",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info"
+  },
+  "annotations": {
+    "description": "In most cases, you will still be able to apply patch releases. Reason IncompatibleOperatorsInstalled. For more information refer to 'oc adm upgrade' or https://console-openshift-console.apps.snoflake.my.test/settings/cluster/.",
+    "summary": "One or more cluster operators have been blocking minor version cluster upgrades for at least an hour."
+  },
+  "startsAt": "2022-09-14T17:18:09.577Z",
+  "endsAt": "2022-09-15T14:26:39.577Z",
+  "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=max+by%28name%2C+condition%2C+endpoint%29+%28cluster_operator_conditions%7Bcondition%3D%22Upgradeable%22%2Cendpoint%3D%22metrics%22%2Cname%3D%22version%22%7D+%3D%3D+0%29&g0.tab=1",
+  "status": {
+    "state": "active",
+    "silencedBy": null,
+    "inhibitedBy": null
+  },
+  "receivers": [
+    "Default"
+  ],
+  "fingerprint": "32d341d80301996a"
+}
+{
+  "labels": {
+    "alertname": "AlertmanagerReceiversNotConfigured",
+    "namespace": "openshift-monitoring",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Alerts are not configured to be sent to a notification system, meaning that you may not be notified in a timely fashion when important failures occur. Check the OpenShift documentation to learn how to configure notifications with Alertmanager.",
+    "summary": "Receivers (notification integrations) are not configured on Alertmanager"
+  },
+  "startsAt": "2022-09-14T16:15:02.179Z",
+  "endsAt": "2022-09-15T14:26:32.179Z",
+  "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=cluster%3Aalertmanager_integrations%3Amax+%3D%3D+0&g0.tab=1",
+  "status": {
+    "state": "active",
+    "silencedBy": null,
+    "inhibitedBy": null
+  },
+  "receivers": [
+    "Default"
+  ],
+  "fingerprint": "36dc4a4e69cb6fd9"
+}
+{
+  "labels": {
+    "alertname": "KubePodNotReady",
+    "namespace": "openshift-logging",
+    "pod": "logging-lokistack-index-gateway-0",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Pod openshift-logging/logging-lokistack-index-gateway-0 has been in a non-ready state for longer than 15 minutes.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/KubePodNotReady.md",
+    "summary": "Pod has been in a non-ready state for more than 15 minutes."
+  },
+  "startsAt": "2022-09-14T16:30:47.864Z",
+  "endsAt": "2022-09-15T14:25:47.864Z",
+  "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=sum+by%28namespace%2C+pod%2C+cluster%29+%28max+by%28namespace%2C+pod%2C+cluster%29+%28kube_pod_status_phase%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%2Cphase%3D~%22Pending%7CUnknown%22%7D%29+%2A+on%28namespace%2C+pod%2C+cluster%29+group_left%28owner_kind%29+topk+by%28namespace%2C+pod%2C+cluster%29+%281%2C+max+by%28namespace%2C+pod%2C+owner_kind%2C+cluster%29+%28kube_pod_owner%7Bowner_kind%21%3D%22Job%22%7D%29%29%29+%3E+0&g0.tab=1",
+  "status": {
+    "state": "active",
+    "silencedBy": null,
+    "inhibitedBy": null
+  },
+  "receivers": [
+    "Default"
+  ],
+  "fingerprint": "38074e059db71c77"
+}
+{
+  "labels": {
+    "alertname": "KubeContainerWaiting",
+    "container": "lvmd",
+    "namespace": "openshift-storage",
+    "pod": "topolvm-node-tmd4n",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "pod/topolvm-node-tmd4n in namespace openshift-storage on container lvmd has been in waiting state for longer than 1 hour.",
+    "summary": "Pod container waiting longer than 1 hour"
+  },
+  "startsAt": "2022-09-14T20:25:47.864Z",
+  "endsAt": "2022-09-15T14:26:47.864Z",
+  "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=sum+by%28namespace%2C+pod%2C+container%2C+cluster%29+%28kube_pod_container_status_waiting_reason%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D%29+%3E+0&g0.tab=1",
+  "status": {
+    "state": "active",
+    "silencedBy": null,
+    "inhibitedBy": null
+  },
+  "receivers": [
+    "Default"
+  ],
+  "fingerprint": "3a590cc35ae60ab6"
+}
+{
+  "labels": {
+    "alertname": "KubeStatefulSetReplicasMismatch",
+    "container": "kube-rbac-proxy-main",
+    "endpoint": "https-main",
+    "job": "kube-state-metrics",
+    "namespace": "openshift-logging",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "kube-state-metrics",
+    "severity": "warning",
+    "statefulset": "logging-lokistack-ruler"
+  },
+  "annotations": {
+    "description": "StatefulSet openshift-logging/logging-lokistack-ruler has not matched the expected number of replicas for longer than 15 minutes.",
+    "summary": "Deployment has not matched the expected number of replicas."
+  },
+  "startsAt": "2022-09-14T16:30:47.864Z",
+  "endsAt": "2022-09-15T14:25:47.864Z",
+  "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=%28kube_statefulset_status_replicas_ready%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D+%21%3D+kube_statefulset_status_replicas%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D%29+and+%28changes%28kube_statefulset_status_replicas_updated%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D%5B10m%5D%29+%3D%3D+0%29&g0.tab=1",
+  "status": {
+    "state": "active",
+    "silencedBy": null,
+    "inhibitedBy": null
+  },
+  "receivers": [
+    "Default"
+  ],
+  "fingerprint": "3b4d6be251644710"
+}
+{
+  "labels": {
+    "alertname": "UpdateAvailable",
+    "channel": "stable-4.11",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info",
+    "upstream": "<default>"
+  },
+  "annotations": {
+    "description": "For more information refer to 'oc adm upgrade' or https://console-openshift-console.apps.snoflake.my.test/settings/cluster/.",
+    "summary": "Your upstream update recommendation service recommends you update your cluster."
+  },
+  "startsAt": "2022-09-15T01:04:57.58Z",
+  "endsAt": "2022-09-15T14:25:27.58Z",
+  "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=sum+by%28channel%2C+upstream%29+%28cluster_version_available_updates%29+%3E+0&g0.tab=1",
+  "status": {
+    "state": "active",
+    "silencedBy": null,
+    "inhibitedBy": null
+  },
+  "receivers": [
+    "Default"
+  ],
+  "fingerprint": "3efed92968b4bdd8"
+}
+{
+  "labels": {
+    "alertname": "KubeContainerWaiting",
+    "container": "csi-registrar",
+    "namespace": "openshift-storage",
+    "pod": "topolvm-node-tmd4n",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "pod/topolvm-node-tmd4n in namespace openshift-storage on container csi-registrar has been in waiting state for longer than 1 hour.",
+    "summary": "Pod container waiting longer than 1 hour"
+  },
+  "startsAt": "2022-09-14T20:25:47.864Z",
+  "endsAt": "2022-09-15T14:26:47.864Z",
+  "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=sum+by%28namespace%2C+pod%2C+container%2C+cluster%29+%28kube_pod_container_status_waiting_reason%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D%29+%3E+0&g0.tab=1",
+  "status": {
+    "state": "active",
+    "silencedBy": null,
+    "inhibitedBy": null
+  },
+  "receivers": [
+    "Default"
+  ],
+  "fingerprint": "581e0f65fb4eaf48"
+}
+{
+  "labels": {
+    "alertname": "KubePodNotReady",
+    "namespace": "openshift-logging",
+    "pod": "logging-lokistack-ruler-0",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Pod openshift-logging/logging-lokistack-ruler-0 has been in a non-ready state for longer than 15 minutes.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/KubePodNotReady.md",
+    "summary": "Pod has been in a non-ready state for more than 15 minutes."
+  },
+  "startsAt": "2022-09-14T16:30:47.864Z",
+  "endsAt": "2022-09-15T14:25:47.864Z",
+  "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=sum+by%28namespace%2C+pod%2C+cluster%29+%28max+by%28namespace%2C+pod%2C+cluster%29+%28kube_pod_status_phase%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%2Cphase%3D~%22Pending%7CUnknown%22%7D%29+%2A+on%28namespace%2C+pod%2C+cluster%29+group_left%28owner_kind%29+topk+by%28namespace%2C+pod%2C+cluster%29+%281%2C+max+by%28namespace%2C+pod%2C+owner_kind%2C+cluster%29+%28kube_pod_owner%7Bowner_kind%21%3D%22Job%22%7D%29%29%29+%3E+0&g0.tab=1",
+  "status": {
+    "state": "active",
+    "silencedBy": null,
+    "inhibitedBy": null
+  },
+  "receivers": [
+    "Default"
+  ],
+  "fingerprint": "703e216d11c38348"
+}
+{
+  "labels": {
+    "alertname": "KubeContainerWaiting",
+    "container": "liveness-probe",
+    "namespace": "openshift-storage",
+    "pod": "topolvm-node-tmd4n",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "pod/topolvm-node-tmd4n in namespace openshift-storage on container liveness-probe has been in waiting state for longer than 1 hour.",
+    "summary": "Pod container waiting longer than 1 hour"
+  },
+  "startsAt": "2022-09-14T20:25:47.864Z",
+  "endsAt": "2022-09-15T14:26:47.864Z",
+  "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=sum+by%28namespace%2C+pod%2C+container%2C+cluster%29+%28kube_pod_container_status_waiting_reason%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D%29+%3E+0&g0.tab=1",
+  "status": {
+    "state": "active",
+    "silencedBy": null,
+    "inhibitedBy": null
+  },
+  "receivers": [
+    "Default"
+  ],
+  "fingerprint": "8c2e9dee77262879"
+}
+{
+  "labels": {
+    "alertname": "PodSecurityViolation",
+    "namespace": "openshift-kube-apiserver",
+    "policy_level": "restricted",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info"
+  },
+  "annotations": {
+    "description": "A workload (pod, deployment, deamonset, ...) was created somewhere in the cluster but it did not match the PodSecurity \"restricted\" profile defined by its namespace either via the cluster-wide configuration (which triggers on a \"restricted\" profile violations) or by the namespace local Pod Security labels. Refer to Kubernetes documentation on Pod Security Admission to learn more about these violations.",
+    "summary": "One or more workloads users created in the cluster don't match their Pod Security profile"
+  },
+  "startsAt": "2022-09-14T16:13:48.253Z",
+  "endsAt": "2022-09-15T14:26:48.253Z",
+  "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=sum+by%28policy_level%29+%28increase%28pod_security_evaluations_total%7Bdecision%3D%22deny%22%2Cmode%3D%22audit%22%2Cresource%3D%22pod%22%7D%5B1d%5D%29%29+%3E+0&g0.tab=1",
+  "status": {
+    "state": "active",
+    "silencedBy": null,
+    "inhibitedBy": null
+  },
+  "receivers": [
+    "Default"
+  ],
+  "fingerprint": "a28515629b18783a"
+}
+{
+  "labels": {
+    "alertname": "Watchdog",
+    "namespace": "openshift-monitoring",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "none"
+  },
+  "annotations": {
+    "description": "This is an alert meant to ensure that the entire alerting pipeline is functional.\nThis alert is always firing, therefore it should always be firing in Alertmanager\nand always fire against a receiver. There are integrations with various notification\nmechanisms that send a notification when this alert is not firing. For example the\n\"DeadMansSnitch\" integration in PagerDuty.\n",
+    "summary": "An alert that should always be firing to certify that Alertmanager is working properly."
+  },
+  "startsAt": "2022-09-14T16:13:41.632Z",
+  "endsAt": "2022-09-15T14:26:41.632Z",
+  "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=vector%281%29&g0.tab=1",
+  "status": {
+    "state": "active",
+    "silencedBy": null,
+    "inhibitedBy": null
+  },
+  "receivers": [
+    "Watchdog"
+  ],
+  "fingerprint": "b08f6eea6af47f52"
+}
+{
+  "labels": {
+    "alertname": "KubePodNotReady",
+    "namespace": "openshift-storage",
+    "pod": "topolvm-node-tmd4n",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Pod openshift-storage/topolvm-node-tmd4n has been in a non-ready state for longer than 15 minutes.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/KubePodNotReady.md",
+    "summary": "Pod has been in a non-ready state for more than 15 minutes."
+  },
+  "startsAt": "2022-09-14T17:02:47.864Z",
+  "endsAt": "2022-09-15T14:26:17.864Z",
+  "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=sum+by%28namespace%2C+pod%2C+cluster%29+%28max+by%28namespace%2C+pod%2C+cluster%29+%28kube_pod_status_phase%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%2Cphase%3D~%22Pending%7CUnknown%22%7D%29+%2A+on%28namespace%2C+pod%2C+cluster%29+group_left%28owner_kind%29+topk+by%28namespace%2C+pod%2C+cluster%29+%281%2C+max+by%28namespace%2C+pod%2C+owner_kind%2C+cluster%29+%28kube_pod_owner%7Bowner_kind%21%3D%22Job%22%7D%29%29%29+%3E+0&g0.tab=1",
+  "status": {
+    "state": "active",
+    "silencedBy": null,
+    "inhibitedBy": null
+  },
+  "receivers": [
+    "Default"
+  ],
+  "fingerprint": "c4a3642127be80c3"
+}
+{
+  "labels": {
+    "alertname": "KubeContainerWaiting",
+    "container": "topolvm-node",
+    "namespace": "openshift-storage",
+    "pod": "topolvm-node-tmd4n",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "pod/topolvm-node-tmd4n in namespace openshift-storage on container topolvm-node has been in waiting state for longer than 1 hour.",
+    "summary": "Pod container waiting longer than 1 hour"
+  },
+  "startsAt": "2022-09-14T20:25:47.864Z",
+  "endsAt": "2022-09-15T14:26:47.864Z",
+  "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=sum+by%28namespace%2C+pod%2C+container%2C+cluster%29+%28kube_pod_container_status_waiting_reason%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D%29+%3E+0&g0.tab=1",
+  "status": {
+    "state": "active",
+    "silencedBy": null,
+    "inhibitedBy": null
+  },
+  "receivers": [
+    "Default"
+  ],
+  "fingerprint": "c5aab026a0f717eb"
+}

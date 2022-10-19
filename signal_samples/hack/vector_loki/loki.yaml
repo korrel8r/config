@@ -1,0 +1,41 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: loki
+  namespace: openshift-logging
+  labels:
+    app: loki
+spec:
+  containers:
+    - name: loki
+      image: grafana/loki:2.2.1 # quay.io/openshift-logging/loki
+      command: ["loki", "-config.file=/etc/loki/local-config.yaml", "server.tls.insecure_skip_verify=true"]
+      imagePullPolicy: Always
+      ports:
+        - name: loki
+          containerPort: 3100
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: loki
+  namespace: openshift-logging
+spec:
+  selector:
+    app: loki
+  ports:
+    - name: loki
+      port: 3100
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: loki
+  namespace: openshift-logging
+spec:
+  port:
+    targetPort: 3100
+  to:
+    name: loki
+    kind: Service

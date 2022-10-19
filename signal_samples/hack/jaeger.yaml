@@ -1,0 +1,85 @@
+apiVersion: jaegertracing.io/v1
+kind: Jaeger
+metadata:
+  creationTimestamp: "2022-09-15T17:56:50Z"
+  generation: 2
+  labels:
+    jaegertracing.io/operated-by: openshift-distributed-tracing.jaeger-operator
+  name: jaeger-all-in-one-inmemory
+  namespace: tracing-system
+  resourceVersion: "5982920"
+  uid: 17ad144c-f0bc-4be3-8c2c-dfdc1b839c89
+spec:
+  agent:
+    config: {}
+    options: {}
+    resources: {}
+  allInOne:
+    config: {}
+    metricsStorage: {}
+    options:
+      log-level: info
+    resources: {}
+  collector:
+    config: {}
+    kafkaSecretName: ""
+    options: {}
+    resources: {}
+  ingester:
+    config: {}
+    kafkaSecretName: ""
+    options: {}
+    resources: {}
+  ingress:
+    openshift:
+      sar: '{"namespace": "tracing-system", "resource": "pods", "verb": "get"}'
+    options: {}
+    resources: {}
+    security: none # Default is oauth-proxy
+  query:
+    metricsStorage: {}
+    options: {}
+    resources: {}
+  resources: {}
+  sampling:
+    options: {}
+  storage:
+    cassandraCreateSchema: {}
+    dependencies:
+      resources: {}
+      schedule: 55 23 * * *
+    elasticsearch:
+      name: elasticsearch
+      nodeCount: 3
+      redundancyPolicy: SingleRedundancy
+      resources:
+        limits:
+          memory: 16Gi
+        requests:
+          cpu: "1"
+          memory: 16Gi
+      storage: {}
+    esIndexCleaner:
+      numberOfDays: 7
+      resources: {}
+      schedule: 55 23 * * *
+    esRollover:
+      resources: {}
+      schedule: 0 0 * * *
+    grpcPlugin: {}
+    options: {}
+    type: memory
+  strategy: allinone
+  ui:
+    options:
+      menu:
+      - items:
+        - label: Documentation
+          url: https://access.redhat.com/documentation/en-us/openshift_container_platform/4.9/html/distributed_tracing/index
+        label: About
+      - anchorTarget: _self
+        label: Log Out
+        url: /oauth/sign_in
+status:
+  phase: Running
+  version: 1.36.0

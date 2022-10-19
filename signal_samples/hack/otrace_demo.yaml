@@ -1,0 +1,51 @@
+# https://www.opensourcerers.org/2022/05/30/using-opentracing-and-jaeger-with-your-own-services-application/
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: otracing-demo-app
+  name: otracing-demo-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: otracing-demo-app
+  template:
+    metadata:
+      labels:
+        app: otracing-demo-app
+    spec:
+      containers:
+      - image: quay.io/rbaumgar/otracing-demo-app-jvm
+        imagePullPolicy: IfNotPresent
+        name: otracing-demo-app
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: otracing-demo-app
+  name: otracing-demo-app
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+    name: web
+  selector:
+    app: otracing-demo-app
+  type: ClusterIP
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: otracing-demo-app
+  name: otracing-demo-app
+spec:
+  path: /
+  to:
+    kind: Service
+    name: otracing-demo-app
+  port:
+    targetPort: web
