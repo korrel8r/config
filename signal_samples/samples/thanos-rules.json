@@ -1,0 +1,3 @@
+make[1]: Entering directory '/home/aconway/src/korrel8/config/signal_samples'
+curl -sS --fail-with-body -k -H "Authorization: Bearer sha256~6x7OwN4Dt3DWBe4KrfXkpqL88TRVN_VwO5COQon-c6g" --get --data-urlencode 'type=alert' "https://thanos-querier-openshift-monitoring.apps.snoflake.my.test/api/v1/rules" | jq -M .data.result[]
+make[1]: Leaving directory '/home/aconway/src/korrel8/config/signal_samples'

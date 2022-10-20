@@ -1,0 +1,3300 @@
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "Use \"logger [command] --help\" for more information about a command."
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": ""
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --url string                      Alt. destination flag (see --destination-url)"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --totalLogLines int               Total number of log lines per thread (default 0 - infinite)"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --threads int                     Number of threads.(default 1) (default 1)"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --tenant string                   Alt. Loki tenantID flag (see --loki-tenant-ID) (default \"fake\")"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --synthetic-payload-size int      Payload length [int] (default = 100) (default 100)"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --source string                   Log lines Source: simple, application, synthetic. (default simple) (default \"simple\")"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --query-range string              The interval of time that logs were recorded in should be collected for (default \"1m\")"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --query-file string               Query file name (default = none)"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --queries stringArray             list of queries e.g. {client=\"promtail\"} (default = none)"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --output-format string            The output format: default, crio (mimic CRIO output), csv, json (default \"default\")"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --loki-tenant-ID string           Loki tenantID (default = fake)"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --loki-labels string              Loki labels: none,host,random (default = random) (default \"random\")"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --loki-bearer-token-file string   Path to file containing bearer token (default \"/var/run/secrets/kubernetes.io/serviceaccount/token\")"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --log-lines-rate int              The total amount of log lines per thread per second to generate.(default 1) (default 1)"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --log-level string                Log level: debug, info, warning, error (default = error) (default \"error\")"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "  -h, --help                            help for logger"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --file string                     The file to output (default: output) (default \"output\")"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --disable-security-check          Disable security check in HTTPS client. (default false)"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --destination-url string          send logs via api using the provided url (e.g http://localhost:3100/api/prom/push)"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --destination string              Log Destination: loki, elasticsearch, stdout, file. (default stdout) (default \"stdout\")"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --config string                   config file (default is $HOME/logger.yaml)"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "Flags:"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": ""
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "  query       query the log storage"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "  help        Help about any command"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "  generate    send randomly generated log lines to Destination"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "Available Commands:"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": ""
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "  logger [command]"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639651564Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "Usage:"
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639119739Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": ""
+}
+{
+  "@timestamp": "2022-10-20T14:28:15.639119739Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "A log benchmark tool"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "Use \"logger [command] --help\" for more information about a command."
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": ""
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --url string                      Alt. destination flag (see --destination-url)"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --totalLogLines int               Total number of log lines per thread (default 0 - infinite)"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --threads int                     Number of threads.(default 1) (default 1)"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --tenant string                   Alt. Loki tenantID flag (see --loki-tenant-ID) (default \"fake\")"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --synthetic-payload-size int      Payload length [int] (default = 100) (default 100)"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --source string                   Log lines Source: simple, application, synthetic. (default simple) (default \"simple\")"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --query-range string              The interval of time that logs were recorded in should be collected for (default \"1m\")"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --query-file string               Query file name (default = none)"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --queries stringArray             list of queries e.g. {client=\"promtail\"} (default = none)"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --output-format string            The output format: default, crio (mimic CRIO output), csv, json (default \"default\")"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --loki-tenant-ID string           Loki tenantID (default = fake)"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --loki-labels string              Loki labels: none,host,random (default = random) (default \"random\")"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --loki-bearer-token-file string   Path to file containing bearer token (default \"/var/run/secrets/kubernetes.io/serviceaccount/token\")"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --log-lines-rate int              The total amount of log lines per thread per second to generate.(default 1) (default 1)"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --log-level string                Log level: debug, info, warning, error (default = error) (default \"error\")"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "  -h, --help                            help for logger"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --file string                     The file to output (default: output) (default \"output\")"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --disable-security-check          Disable security check in HTTPS client. (default false)"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --destination-url string          send logs via api using the provided url (e.g http://localhost:3100/api/prom/push)"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --destination string              Log Destination: loki, elasticsearch, stdout, file. (default stdout) (default \"stdout\")"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --config string                   config file (default is $HOME/logger.yaml)"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "Flags:"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": ""
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "  query       query the log storage"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "  help        Help about any command"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "  generate    send randomly generated log lines to Destination"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "Available Commands:"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": ""
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "  logger [command]"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.632403509Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "Usage:"
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.631877407Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": ""
+}
+{
+  "@timestamp": "2022-10-20T14:23:07.631877407Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "A log benchmark tool"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "Use \"logger [command] --help\" for more information about a command."
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": ""
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --url string                      Alt. destination flag (see --destination-url)"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --totalLogLines int               Total number of log lines per thread (default 0 - infinite)"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --threads int                     Number of threads.(default 1) (default 1)"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --tenant string                   Alt. Loki tenantID flag (see --loki-tenant-ID) (default \"fake\")"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --synthetic-payload-size int      Payload length [int] (default = 100) (default 100)"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --source string                   Log lines Source: simple, application, synthetic. (default simple) (default \"simple\")"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --query-range string              The interval of time that logs were recorded in should be collected for (default \"1m\")"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --query-file string               Query file name (default = none)"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --queries stringArray             list of queries e.g. {client=\"promtail\"} (default = none)"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --output-format string            The output format: default, crio (mimic CRIO output), csv, json (default \"default\")"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --loki-tenant-ID string           Loki tenantID (default = fake)"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --loki-labels string              Loki labels: none,host,random (default = random) (default \"random\")"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --loki-bearer-token-file string   Path to file containing bearer token (default \"/var/run/secrets/kubernetes.io/serviceaccount/token\")"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --log-lines-rate int              The total amount of log lines per thread per second to generate.(default 1) (default 1)"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --log-level string                Log level: debug, info, warning, error (default = error) (default \"error\")"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "  -h, --help                            help for logger"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --file string                     The file to output (default: output) (default \"output\")"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --disable-security-check          Disable security check in HTTPS client. (default false)"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --destination-url string          send logs via api using the provided url (e.g http://localhost:3100/api/prom/push)"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --destination string              Log Destination: loki, elasticsearch, stdout, file. (default stdout) (default \"stdout\")"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "      --config string                   config file (default is $HOME/logger.yaml)"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "Flags:"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": ""
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "  query       query the log storage"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "  help        Help about any command"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "  generate    send randomly generated log lines to Destination"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "Available Commands:"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": ""
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "  logger [command]"
+}
+{
+  "@timestamp": "2022-10-20T14:18:04.631100661Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "hostname": "oscar7",
+  "kubernetes": {
+    "annotations": {
+      "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.128.0.193/23\"],\"mac_address\":\"0a:58:0a:80:00:c1\",\"gateway_ips\":[\"10.128.0.1\"],\"ip_address\":\"10.128.0.193/23\",\"gateway_ip\":\"10.128.0.1\"}}",
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "privileged"
+    },
+    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
+    "container_name": "test-log-generator",
+    "labels": {
+      "run": "test-log-generator"
+    },
+    "namespace_labels": {
+      "kubernetes.io/metadata.name": "test-log-generator",
+      "pod-security.kubernetes.io/audit": "restricted",
+      "pod-security.kubernetes.io/audit-version": "v1.24",
+      "pod-security.kubernetes.io/warn": "restricted",
+      "pod-security.kubernetes.io/warn-version": "v1.24"
+    },
+    "namespace_name": "test-log-generator",
+    "pod_id": "cbc621a0-6b87-43bf-843c-ffeed2f1207d",
+    "pod_ip": "10.128.0.193",
+    "pod_name": "test-log-generator"
+  },
+  "level": "default",
+  "log_type": "application",
+  "message": "Usage:"
+}
