@@ -14,6 +14,6 @@ spec:
     secret:
       name: minio
       type: s3
-  storageClassName: default
+  storageClassName: local-storage
   tenants:
     mode: openshift-logging

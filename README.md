@@ -3,8 +3,7 @@
 ## Pre-requisites
 
 -   Administrative login to an Openshift cluster.
--   Cluster has a default storage class (`oc get sc` shows \"(default)\"
-    beside one storage class)
+    Beside one storage class)
 
 ## Logs
 
@@ -23,6 +22,14 @@ See instructions in the repository:
 
 -   <https://github.com/openshift/cluster-logging-operator>
 -   <https://github.com/grafana/loki/tree/main/operator>
+
+### Modify resources
+
+Edit logging/lokistack.yaml field "storageClassName" to a storage class in your cluster.
+
+``` shell
+oc get storageclass
+```
 
 ### Create resources
 

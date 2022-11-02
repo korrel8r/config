@@ -12,7 +12,7 @@
     "summary": "One or more workloads users created in the cluster don't match their Pod Security profile"
   },
   "startsAt": "2022-10-17T20:35:12.63Z",
-  "endsAt": "2022-10-20T15:12:12.63Z",
+  "endsAt": "2022-10-20T15:15:12.63Z",
   "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=sum+by%28policy_level%29+%28increase%28pod_security_evaluations_total%7Bdecision%3D%22deny%22%2Cmode%3D%22audit%22%2Cresource%3D%22pod%22%7D%5B1d%5D%29%29+%3E+0&g0.tab=1",
   "status": {
     "state": "active",
@@ -36,7 +36,7 @@
     "summary": "Memory utilization across all control plane nodes is high, and could impact responsiveness and stability."
   },
   "startsAt": "2022-10-20T12:20:39.607Z",
-  "endsAt": "2022-10-20T15:12:39.607Z",
+  "endsAt": "2022-10-20T15:15:39.607Z",
   "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=%281+-+sum%28node_memory_MemFree_bytes+%2B+node_memory_Buffers_bytes+%2B+node_memory_Cached_bytes+and+on%28instance%29+label_replace%28kube_node_role%7Brole%3D%22master%22%7D%2C+%22instance%22%2C+%22%241%22%2C+%22node%22%2C+%22%28.%2B%29%22%29%29+%2F+sum%28node_memory_MemTotal_bytes+and+on%28instance%29+label_replace%28kube_node_role%7Brole%3D%22master%22%7D%2C+%22instance%22%2C+%22%241%22%2C+%22node%22%2C+%22%28.%2B%29%22%29%29%29+%2A+100+%3E+60&g0.tab=1",
   "status": {
     "state": "active",
@@ -67,7 +67,7 @@
     "summary": "Deployment has not matched the expected number of replicas"
   },
   "startsAt": "2022-10-19T20:54:04.19Z",
-  "endsAt": "2022-10-20T15:13:04.19Z",
+  "endsAt": "2022-10-20T15:14:34.19Z",
   "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=%28%28%28kube_deployment_spec_replicas%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D+%3E+kube_deployment_status_replicas_available%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D%29+and+%28changes%28kube_deployment_status_replicas_updated%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%7D%5B5m%5D%29+%3D%3D+0%29%29+%2A+on%28%29+group_left%28%29+cluster%3Acontrol_plane%3Aall_nodes_ready%29+%3E+0&g0.tab=1",
   "status": {
     "state": "active",
@@ -92,7 +92,7 @@
     "summary": "An alert that should always be firing to certify that Alertmanager is working properly."
   },
   "startsAt": "2022-10-17T20:30:53.481Z",
-  "endsAt": "2022-10-20T15:12:23.481Z",
+  "endsAt": "2022-10-20T15:15:23.481Z",
   "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=vector%281%29&g0.tab=1",
   "status": {
     "state": "active",
@@ -117,7 +117,7 @@
     "summary": "Receivers (notification integrations) are not configured on Alertmanager"
   },
   "startsAt": "2022-10-17T20:32:04.19Z",
-  "endsAt": "2022-10-20T15:13:34.19Z",
+  "endsAt": "2022-10-20T15:15:04.19Z",
   "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=cluster%3Aalertmanager_integrations%3Amax+%3D%3D+0&g0.tab=1",
   "status": {
     "state": "active",
@@ -144,7 +144,7 @@
     "summary": "Pod has been in a non-ready state for more than 15 minutes."
   },
   "startsAt": "2022-10-19T20:54:08.915Z",
-  "endsAt": "2022-10-20T15:13:08.915Z",
+  "endsAt": "2022-10-20T15:14:38.915Z",
   "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=sum+by%28namespace%2C+pod%2C+cluster%29+%28max+by%28namespace%2C+pod%2C+cluster%29+%28kube_pod_status_phase%7Bjob%3D%22kube-state-metrics%22%2Cnamespace%3D~%22%28openshift-.%2A%7Ckube-.%2A%7Cdefault%29%22%2Cphase%3D~%22Pending%7CUnknown%22%7D%29+%2A+on%28namespace%2C+pod%2C+cluster%29+group_left%28owner_kind%29+topk+by%28namespace%2C+pod%2C+cluster%29+%281%2C+max+by%28namespace%2C+pod%2C+owner_kind%2C+cluster%29+%28kube_pod_owner%7Bowner_kind%21%3D%22Job%22%7D%29%29%29+%3E+0&g0.tab=1",
   "status": {
     "state": "active",
@@ -171,7 +171,7 @@
     "summary": "One or more cluster operators have been blocking minor version cluster upgrades for at least an hour."
   },
   "startsAt": "2022-10-18T20:37:56.403Z",
-  "endsAt": "2022-10-20T15:13:26.403Z",
+  "endsAt": "2022-10-20T15:14:56.403Z",
   "generatorURL": "https:///console-openshift-console.apps.snoflake.my.test/monitoring/graph?g0.expr=max+by%28name%2C+condition%2C+endpoint%29+%28cluster_operator_conditions%7Bcondition%3D%22Upgradeable%22%2Cendpoint%3D%22metrics%22%2Cname%3D%22version%22%7D+%3D%3D+0%29&g0.tab=1",
   "status": {
     "state": "active",

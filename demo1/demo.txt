@@ -1,0 +1,8 @@
+
+> korrel8 correlate alert/alert loki/infrastructure ?query=$(urlencode 'alertname=~"KubeDeploymentReplicasMismatch"') --export console
+2022-11-01T08:27:26.004-0400	INFO	following rule	{"rule": "AlertToDeployment", "goal": "Deployment.v1.apps"}
+2022-11-01T08:27:26.055-0400	INFO	following rule	{"rule": "DeploymentToPodSelector", "goal": "Pod.v1"}
+2022-11-01T08:27:26.061-0400	INFO	following rule	{"rule": "PodToInfrastrctureLogs", "goal": "infrastructure"}
+https://console-openshift-console.apps.snoflake.my.test/monitoring/logs?q=%7Bkubernetes_namespace_name%3D%22default%22%2Ckubernetes_pod_name%3D%22log-demo-c8c45b655-8jvfz%22%7D+%7C+json&tenant=infrastructure
+https://console-openshift-console.apps.snoflake.my.test/monitoring/logs?q=%7Bkubernetes_namespace_name%3D%22default%22%2Ckubernetes_pod_name%3D%22log-demo-c8c45b655-dhgd4%22%7D+%7C+json&tenant=infrastructure
+https://console-openshift-console.apps.snoflake.my.test/monitoring/logs?q=%7Bkubernetes_namespace_name%3D%22default%22%2Ckubernetes_pod_name%3D%22log-demo-c8c45b655-fr8qw%22%7D+%7C+json&tenant=infrastructure

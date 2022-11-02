@@ -1,67 +1,67 @@
 {
   "metric": {
     "__name__": "rest_client_exec_plugin_ttl_seconds",
-    "endpoint": "https-metrics",
-    "instance": "192.168.1.207:10250",
-    "job": "kubelet",
-    "metrics_path": "/metrics",
-    "namespace": "kube-system",
-    "node": "oscar7",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "kubelet"
-  },
-  "value": [
-    1666276262.035,
-    "+Inf"
-  ]
-}
-{
-  "metric": {
-    "__name__": "rest_client_exec_plugin_ttl_seconds",
-    "container": "cluster-storage-operator",
+    "container": "kube-apiserver-operator",
     "endpoint": "https",
-    "instance": "10.128.0.50:8443",
-    "job": "cluster-storage-operator-metrics",
-    "namespace": "openshift-cluster-storage-operator",
-    "pod": "cluster-storage-operator-5c695997df-rkws2",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "cluster-storage-operator-metrics"
-  },
-  "value": [
-    1666276262.035,
-    "+Inf"
-  ]
-}
-{
-  "metric": {
-    "__name__": "rest_client_exec_plugin_ttl_seconds",
-    "container": "kube-controller-manager",
-    "endpoint": "https",
-    "instance": "192.168.1.207:10257",
-    "job": "kube-controller-manager",
-    "namespace": "openshift-kube-controller-manager",
-    "pod": "kube-controller-manager-oscar7",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "kube-controller-manager"
-  },
-  "value": [
-    1666276262.035,
-    "+Inf"
-  ]
-}
-{
-  "metric": {
-    "__name__": "rest_client_exec_plugin_ttl_seconds",
-    "endpoint": "https",
-    "instance": "10.128.0.7:8443",
+    "instance": "10.128.0.47:8443",
     "job": "metrics",
-    "namespace": "openshift-kube-scheduler-operator",
-    "pod": "openshift-kube-scheduler-operator-598df6756b-m2r22",
+    "namespace": "openshift-kube-apiserver-operator",
+    "pod": "kube-apiserver-operator-5fb985b788-94hhb",
     "prometheus": "openshift-monitoring/k8s",
     "service": "metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
+    "+Inf"
+  ]
+}
+{
+  "metric": {
+    "__name__": "rest_client_exec_plugin_ttl_seconds",
+    "endpoint": "https",
+    "instance": "10.128.0.10:8443",
+    "job": "metrics",
+    "namespace": "openshift-authentication-operator",
+    "pod": "authentication-operator-564dd5496b-8rlcg",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "metrics"
+  },
+  "value": [
+    1666278697.872,
+    "+Inf"
+  ]
+}
+{
+  "metric": {
+    "__name__": "rest_client_exec_plugin_ttl_seconds",
+    "container": "network-operator",
+    "endpoint": "metrics",
+    "instance": "192.168.1.207:9104",
+    "job": "metrics",
+    "namespace": "openshift-network-operator",
+    "pod": "network-operator-68f464558c-t79m6",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "metrics"
+  },
+  "value": [
+    1666278697.872,
+    "+Inf"
+  ]
+}
+{
+  "metric": {
+    "__name__": "rest_client_exec_plugin_ttl_seconds",
+    "container": "openshift-apiserver-check-endpoints",
+    "endpoint": "check-endpoints",
+    "instance": "10.128.1.220:17698",
+    "job": "check-endpoints",
+    "namespace": "openshift-apiserver",
+    "pod": "apiserver-795c8f866d-sf8tc",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "check-endpoints"
+  },
+  "value": [
+    1666278697.872,
     "+Inf"
   ]
 }
@@ -78,7 +78,7 @@
     "service": "metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "+Inf"
   ]
 }
@@ -94,7 +94,40 @@
     "service": "metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
+    "+Inf"
+  ]
+}
+{
+  "metric": {
+    "__name__": "rest_client_exec_plugin_ttl_seconds",
+    "endpoint": "https",
+    "instance": "10.128.0.14:8443",
+    "job": "metrics",
+    "namespace": "openshift-service-ca-operator",
+    "pod": "service-ca-operator-6b677cbf7d-h2c9l",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "metrics"
+  },
+  "value": [
+    1666278697.872,
+    "+Inf"
+  ]
+}
+{
+  "metric": {
+    "__name__": "rest_client_exec_plugin_ttl_seconds",
+    "container": "kube-controller-manager",
+    "endpoint": "https",
+    "instance": "192.168.1.207:10257",
+    "job": "kube-controller-manager",
+    "namespace": "openshift-kube-controller-manager",
+    "pod": "kube-controller-manager-oscar7",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "kube-controller-manager"
+  },
+  "value": [
+    1666278697.872,
     "+Inf"
   ]
 }
@@ -111,24 +144,107 @@
     "service": "metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "+Inf"
   ]
 }
 {
   "metric": {
     "__name__": "rest_client_exec_plugin_ttl_seconds",
-    "container": "kube-apiserver-operator",
+    "container": "cluster-storage-operator",
     "endpoint": "https",
-    "instance": "10.128.0.47:8443",
+    "instance": "10.128.0.50:8443",
+    "job": "cluster-storage-operator-metrics",
+    "namespace": "openshift-cluster-storage-operator",
+    "pod": "cluster-storage-operator-5c695997df-rkws2",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "cluster-storage-operator-metrics"
+  },
+  "value": [
+    1666278697.872,
+    "+Inf"
+  ]
+}
+{
+  "metric": {
+    "__name__": "rest_client_exec_plugin_ttl_seconds",
+    "container": "check-endpoints",
+    "endpoint": "check-endpoints",
+    "instance": "10.128.0.31:17698",
+    "job": "network-check-source",
+    "namespace": "openshift-network-diagnostics",
+    "pod": "network-check-source-57b4967df6-klz6m",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "network-check-source"
+  },
+  "value": [
+    1666278697.872,
+    "+Inf"
+  ]
+}
+{
+  "metric": {
+    "__name__": "rest_client_exec_plugin_ttl_seconds",
+    "container": "kube-controller-manager-operator",
+    "endpoint": "https",
+    "instance": "10.128.0.5:8443",
     "job": "metrics",
-    "namespace": "openshift-kube-apiserver-operator",
-    "pod": "kube-apiserver-operator-5fb985b788-94hhb",
+    "namespace": "openshift-kube-controller-manager-operator",
+    "pod": "kube-controller-manager-operator-84cd6f9bcd-bd7vw",
     "prometheus": "openshift-monitoring/k8s",
     "service": "metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
+    "+Inf"
+  ]
+}
+{
+  "metric": {
+    "__name__": "rest_client_exec_plugin_ttl_seconds",
+    "endpoint": "https",
+    "instance": "10.128.0.7:8443",
+    "job": "metrics",
+    "namespace": "openshift-kube-scheduler-operator",
+    "pod": "openshift-kube-scheduler-operator-598df6756b-m2r22",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "metrics"
+  },
+  "value": [
+    1666278697.872,
+    "+Inf"
+  ]
+}
+{
+  "metric": {
+    "__name__": "rest_client_exec_plugin_ttl_seconds",
+    "apiserver": "kube-apiserver",
+    "endpoint": "https",
+    "instance": "192.168.1.207:6443",
+    "job": "apiserver",
+    "namespace": "default",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "kubernetes"
+  },
+  "value": [
+    1666278697.872,
+    "+Inf"
+  ]
+}
+{
+  "metric": {
+    "__name__": "rest_client_exec_plugin_ttl_seconds",
+    "container": "openshift-controller-manager-operator",
+    "endpoint": "https",
+    "instance": "10.128.0.19:8443",
+    "job": "metrics",
+    "namespace": "openshift-controller-manager-operator",
+    "pod": "openshift-controller-manager-operator-7fdc748744-zht5f",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "metrics"
+  },
+  "value": [
+    1666278697.872,
     "+Inf"
   ]
 }
@@ -145,7 +261,41 @@
     "service": "metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
+    "+Inf"
+  ]
+}
+{
+  "metric": {
+    "__name__": "rest_client_exec_plugin_ttl_seconds",
+    "container": "openshift-config-operator",
+    "endpoint": "https",
+    "instance": "10.128.0.18:8443",
+    "job": "metrics",
+    "namespace": "openshift-config-operator",
+    "pod": "openshift-config-operator-8f86cb6f7-wzc46",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "metrics"
+  },
+  "value": [
+    1666278697.872,
+    "+Inf"
+  ]
+}
+{
+  "metric": {
+    "__name__": "rest_client_exec_plugin_ttl_seconds",
+    "endpoint": "https-metrics",
+    "instance": "192.168.1.207:10250",
+    "job": "kubelet",
+    "metrics_path": "/metrics",
+    "namespace": "kube-system",
+    "node": "oscar7",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "kubelet"
+  },
+  "value": [
+    1666278697.872,
     "+Inf"
   ]
 }
@@ -163,140 +313,7 @@
     "service": "api"
   },
   "value": [
-    1666276262.035,
-    "+Inf"
-  ]
-}
-{
-  "metric": {
-    "__name__": "rest_client_exec_plugin_ttl_seconds",
-    "container": "check-endpoints",
-    "endpoint": "check-endpoints",
-    "instance": "10.128.0.31:17698",
-    "job": "network-check-source",
-    "namespace": "openshift-network-diagnostics",
-    "pod": "network-check-source-57b4967df6-klz6m",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "network-check-source"
-  },
-  "value": [
-    1666276262.035,
-    "+Inf"
-  ]
-}
-{
-  "metric": {
-    "__name__": "rest_client_exec_plugin_ttl_seconds",
-    "endpoint": "https",
-    "instance": "10.128.0.10:8443",
-    "job": "metrics",
-    "namespace": "openshift-authentication-operator",
-    "pod": "authentication-operator-564dd5496b-8rlcg",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "metrics"
-  },
-  "value": [
-    1666276262.035,
-    "+Inf"
-  ]
-}
-{
-  "metric": {
-    "__name__": "rest_client_exec_plugin_ttl_seconds",
-    "container": "network-operator",
-    "endpoint": "metrics",
-    "instance": "192.168.1.207:9104",
-    "job": "metrics",
-    "namespace": "openshift-network-operator",
-    "pod": "network-operator-68f464558c-t79m6",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "metrics"
-  },
-  "value": [
-    1666276262.035,
-    "+Inf"
-  ]
-}
-{
-  "metric": {
-    "__name__": "rest_client_exec_plugin_ttl_seconds",
-    "endpoint": "https",
-    "instance": "10.128.0.14:8443",
-    "job": "metrics",
-    "namespace": "openshift-service-ca-operator",
-    "pod": "service-ca-operator-6b677cbf7d-h2c9l",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "metrics"
-  },
-  "value": [
-    1666276262.035,
-    "+Inf"
-  ]
-}
-{
-  "metric": {
-    "__name__": "rest_client_exec_plugin_ttl_seconds",
-    "container": "openshift-config-operator",
-    "endpoint": "https",
-    "instance": "10.128.0.18:8443",
-    "job": "metrics",
-    "namespace": "openshift-config-operator",
-    "pod": "openshift-config-operator-8f86cb6f7-wzc46",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "metrics"
-  },
-  "value": [
-    1666276262.035,
-    "+Inf"
-  ]
-}
-{
-  "metric": {
-    "__name__": "rest_client_exec_plugin_ttl_seconds",
-    "container": "openshift-controller-manager-operator",
-    "endpoint": "https",
-    "instance": "10.128.0.19:8443",
-    "job": "metrics",
-    "namespace": "openshift-controller-manager-operator",
-    "pod": "openshift-controller-manager-operator-7fdc748744-zht5f",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "metrics"
-  },
-  "value": [
-    1666276262.035,
-    "+Inf"
-  ]
-}
-{
-  "metric": {
-    "__name__": "rest_client_exec_plugin_ttl_seconds",
-    "apiserver": "kube-apiserver",
-    "endpoint": "https",
-    "instance": "192.168.1.207:6443",
-    "job": "apiserver",
-    "namespace": "default",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "kubernetes"
-  },
-  "value": [
-    1666276262.035,
-    "+Inf"
-  ]
-}
-{
-  "metric": {
-    "__name__": "rest_client_exec_plugin_ttl_seconds",
-    "container": "openshift-apiserver-check-endpoints",
-    "endpoint": "check-endpoints",
-    "instance": "10.128.1.220:17698",
-    "job": "check-endpoints",
-    "namespace": "openshift-apiserver",
-    "pod": "apiserver-795c8f866d-sf8tc",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "check-endpoints"
-  },
-  "value": [
-    1666276262.035,
+    1666278697.872,
     "+Inf"
   ]
 }
@@ -313,41 +330,24 @@
     "service": "scheduler"
   },
   "value": [
-    1666276262.035,
-    "+Inf"
-  ]
-}
-{
-  "metric": {
-    "__name__": "rest_client_exec_plugin_ttl_seconds",
-    "container": "kube-controller-manager-operator",
-    "endpoint": "https",
-    "instance": "10.128.0.5:8443",
-    "job": "metrics",
-    "namespace": "openshift-kube-controller-manager-operator",
-    "pod": "kube-controller-manager-operator-84cd6f9bcd-bd7vw",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "metrics"
-  },
-  "value": [
-    1666276262.035,
+    1666278697.872,
     "+Inf"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "container": "insights-operator",
+    "container": "kube-rbac-proxy",
     "endpoint": "https",
-    "instance": "10.128.0.41:8443",
-    "job": "metrics",
-    "namespace": "openshift-insights",
-    "pod": "insights-operator-76b8f945c7-vw4xn",
+    "instance": "oscar7",
+    "job": "node-exporter",
+    "namespace": "openshift-monitoring",
+    "pod": "node-exporter-rh9qx",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "metrics"
+    "service": "node-exporter"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -364,7 +364,7 @@
     "service": "thanos-querier"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -381,24 +381,24 @@
     "service": "logging-loki-distributor-http"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "container": "loki-querier",
+    "container": "network-operator",
     "endpoint": "metrics",
-    "instance": "10.128.0.181:3100",
-    "job": "logging-loki-querier-http",
-    "namespace": "openshift-logging",
-    "pod": "logging-loki-querier-75c77956bf-gmlss",
+    "instance": "192.168.1.207:9104",
+    "job": "metrics",
+    "namespace": "openshift-network-operator",
+    "pod": "network-operator-68f464558c-t79m6",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "logging-loki-querier-http"
+    "service": "metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -415,24 +415,23 @@
     "service": "metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "container": "openshift-config-operator",
-    "endpoint": "https",
-    "instance": "10.128.0.18:8443",
-    "job": "metrics",
-    "namespace": "openshift-config-operator",
-    "pod": "openshift-config-operator-8f86cb6f7-wzc46",
+    "endpoint": "crio",
+    "instance": "192.168.1.207:9537",
+    "job": "crio",
+    "namespace": "kube-system",
+    "node": "oscar7",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "metrics"
+    "service": "kubelet"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -449,56 +448,56 @@
     "service": "router-internal-default"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "endpoint": "https",
-    "instance": "10.128.0.14:8443",
-    "job": "metrics",
-    "namespace": "openshift-service-ca-operator",
-    "pod": "service-ca-operator-6b677cbf7d-h2c9l",
+    "endpoint": "http-metrics",
+    "instance": "10.128.1.117:8686",
+    "job": "cluster-logging-operator-metrics",
+    "namespace": "openshift-logging",
+    "pod": "cluster-logging-operator-544496b95-jqn97",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "metrics"
+    "service": "cluster-logging-operator-metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "endpoint": "https",
-    "instance": "10.128.0.77:8443",
-    "job": "metrics",
-    "namespace": "openshift-console-operator",
-    "pod": "console-operator-7dfc9ff59c-prwdg",
+    "endpoint": "https-metrics",
+    "instance": "10.128.0.13:8081",
+    "job": "marketplace-operator-metrics",
+    "namespace": "openshift-marketplace",
+    "pod": "marketplace-operator-849b569b6b-69h9c",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "metrics"
+    "service": "marketplace-operator-metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "container": "kube-rbac-proxy",
-    "endpoint": "metrics",
-    "instance": "10.128.0.24:9092",
-    "job": "prometheus-k8s",
-    "namespace": "openshift-monitoring",
-    "pod": "prometheus-k8s-0",
+    "endpoint": "https-metrics",
+    "instance": "192.168.1.207:10250",
+    "job": "kubelet",
+    "metrics_path": "/metrics",
+    "namespace": "kube-system",
+    "node": "oscar7",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "prometheus-k8s"
+    "service": "kubelet"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -514,24 +513,7 @@
     "service": "etcd"
   },
   "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "haproxy_process_virtual_memory_max_bytes",
-    "container": "router",
-    "endpoint": "metrics",
-    "instance": "192.168.1.207:1936",
-    "job": "router-internal-default",
-    "namespace": "openshift-ingress",
-    "pod": "router-default-867c8f6d7-kgzwc",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "router-internal-default"
-  },
-  "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -548,108 +530,7 @@
     "service": "logging-loki-ingester-http"
   },
   "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "kube-rbac-proxy",
-    "endpoint": "8443",
-    "instance": "10.128.1.115:8443",
-    "job": "loki-operator-controller-manager-metrics-service",
-    "namespace": "openshift-operators-redhat",
-    "pod": "loki-operator-controller-manager-7bf55ff7f6-6v8j5",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "loki-operator-controller-manager-metrics-service"
-  },
-  "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "gateway",
-    "endpoint": "metrics",
-    "instance": "10.128.0.182:8081",
-    "job": "logging-loki-gateway-http",
-    "namespace": "openshift-logging",
-    "pod": "logging-loki-gateway-7dd68dddd9-v6sl5",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "logging-loki-gateway-http"
-  },
-  "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "apiserver": "kube-apiserver",
-    "endpoint": "https",
-    "instance": "192.168.1.207:6443",
-    "job": "apiserver",
-    "namespace": "default",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "kubernetes"
-  },
-  "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "cluster-samples-operator",
-    "endpoint": "60000",
-    "instance": "10.128.0.40:60000",
-    "job": "metrics",
-    "namespace": "openshift-cluster-samples-operator",
-    "pod": "cluster-samples-operator-6769764bc-h92dz",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "metrics"
-  },
-  "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "cluster-storage-operator",
-    "endpoint": "https",
-    "instance": "10.128.0.50:8443",
-    "job": "cluster-storage-operator-metrics",
-    "namespace": "openshift-cluster-storage-operator",
-    "pod": "cluster-storage-operator-5c695997df-rkws2",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "cluster-storage-operator-metrics"
-  },
-  "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "ovs_vswitchd_process_virtual_memory_max_bytes",
-    "container": "kube-rbac-proxy-ovn-metrics",
-    "endpoint": "ovn-metrics",
-    "instance": "192.168.1.207:9105",
-    "job": "ovnkube-node",
-    "namespace": "openshift-ovn-kubernetes",
-    "pod": "ovnkube-node-nc6pb",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "ovn-kubernetes-node"
-  },
-  "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -666,7 +547,127 @@
     "service": "kube-controller-manager"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "ovs_db_process_virtual_memory_max_bytes",
+    "container": "kube-rbac-proxy-ovn-metrics",
+    "endpoint": "ovn-metrics",
+    "instance": "192.168.1.207:9105",
+    "job": "ovnkube-node",
+    "namespace": "openshift-ovn-kubernetes",
+    "pod": "ovnkube-node-nc6pb",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "ovn-kubernetes-node"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "loki-index-gateway",
+    "endpoint": "metrics",
+    "instance": "10.128.0.186:3100",
+    "job": "logging-loki-index-gateway-http",
+    "namespace": "openshift-logging",
+    "pod": "logging-loki-index-gateway-0",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "logging-loki-index-gateway-http"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "apiserver": "openshift-apiserver",
+    "container": "openshift-apiserver",
+    "endpoint": "https",
+    "instance": "10.128.1.220:8443",
+    "job": "api",
+    "namespace": "openshift-apiserver",
+    "pod": "apiserver-795c8f866d-sf8tc",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "api"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "kube-apiserver-operator",
+    "endpoint": "https",
+    "instance": "10.128.0.47:8443",
+    "job": "metrics",
+    "namespace": "openshift-kube-apiserver-operator",
+    "pod": "kube-apiserver-operator-5fb985b788-94hhb",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "metrics"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "console",
+    "endpoint": "https",
+    "instance": "10.128.0.78:8443",
+    "job": "console",
+    "namespace": "openshift-console",
+    "pod": "console-589887b6f6-grk8c",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "console"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "kube-rbac-proxy",
+    "endpoint": "https",
+    "instance": "10.128.0.45:8443",
+    "job": "telemeter-client",
+    "namespace": "openshift-monitoring",
+    "pod": "telemeter-client-594456ccbb-vdnkl",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "telemeter-client"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "kube-controller-manager-operator",
+    "endpoint": "https",
+    "instance": "10.128.0.5:8443",
+    "job": "metrics",
+    "namespace": "openshift-kube-controller-manager-operator",
+    "pod": "kube-controller-manager-operator-84cd6f9bcd-bd7vw",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "metrics"
+  },
+  "value": [
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -683,24 +684,7 @@
     "service": "prometheus-operator"
   },
   "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "kube-rbac-proxy",
-    "endpoint": "https",
-    "instance": "10.128.0.51:8443",
-    "job": "machine-api-operator",
-    "namespace": "openshift-machine-api",
-    "pod": "machine-api-operator-7df768587c-2qskx",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "machine-api-operator"
-  },
-  "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -709,15 +693,32 @@
     "__name__": "process_virtual_memory_max_bytes",
     "container": "kube-rbac-proxy",
     "endpoint": "metrics",
-    "instance": "10.128.0.11:8443",
-    "job": "cco-metrics",
-    "namespace": "openshift-cloud-credential-operator",
-    "pod": "cloud-credential-operator-75f8d887bd-5wwmz",
+    "instance": "10.128.0.29:9154",
+    "job": "dns-default",
+    "namespace": "openshift-dns",
+    "pod": "dns-default-xvrdl",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "cco-metrics"
+    "service": "dns-default"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "kube-rbac-proxy",
+    "endpoint": "metrics",
+    "instance": "10.128.0.24:9092",
+    "job": "prometheus-k8s",
+    "namespace": "openshift-monitoring",
+    "pod": "prometheus-k8s-0",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "prometheus-k8s"
+  },
+  "value": [
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -734,7 +735,7 @@
     "service": "metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -751,7 +752,7 @@
     "service": "alertmanager-main"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -768,7 +769,7 @@
     "service": "logging-loki-compactor-http"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -785,24 +786,24 @@
     "service": "collector"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "container": "loki-query-frontend",
+    "container": "loki-querier",
     "endpoint": "metrics",
-    "instance": "10.128.0.179:3100",
-    "job": "logging-loki-query-frontend-http",
+    "instance": "10.128.0.181:3100",
+    "job": "logging-loki-querier-http",
     "namespace": "openshift-logging",
-    "pod": "logging-loki-query-frontend-7d976c4bd5-t674j",
+    "pod": "logging-loki-querier-75c77956bf-gmlss",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "logging-loki-query-frontend-http"
+    "service": "logging-loki-querier-http"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -820,58 +821,40 @@
     "service": "machine-config-controller"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "container": "kube-rbac-proxy",
-    "endpoint": "metrics",
-    "instance": "192.168.1.207:9102",
-    "job": "ovnkube-master",
-    "namespace": "openshift-ovn-kubernetes",
-    "pod": "ovnkube-master-vjvfc",
+    "container": "insights-operator",
+    "endpoint": "https",
+    "instance": "10.128.0.41:8443",
+    "job": "metrics",
+    "namespace": "openshift-insights",
+    "pod": "insights-operator-76b8f945c7-vw4xn",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "ovn-kubernetes-master"
+    "service": "metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "container": "kube-rbac-proxy",
-    "endpoint": "metrics",
-    "instance": "192.168.1.207:9103",
-    "job": "ovnkube-node",
-    "namespace": "openshift-ovn-kubernetes",
-    "pod": "ovnkube-node-nc6pb",
+    "apiserver": "kube-apiserver",
+    "endpoint": "https",
+    "instance": "192.168.1.207:6443",
+    "job": "apiserver",
+    "namespace": "default",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "ovn-kubernetes-node"
+    "service": "kubernetes"
   },
   "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "kube-rbac-proxy-self",
-    "endpoint": "https-self",
-    "instance": "10.128.0.36:9443",
-    "job": "openshift-state-metrics",
-    "namespace": "openshift-monitoring",
-    "pod": "openshift-state-metrics-68cf469d6c-mdzlw",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "openshift-state-metrics"
-  },
-  "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -888,7 +871,41 @@
     "service": "metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "openshift-config-operator",
+    "endpoint": "https",
+    "instance": "10.128.0.18:8443",
+    "job": "metrics",
+    "namespace": "openshift-config-operator",
+    "pod": "openshift-config-operator-8f86cb6f7-wzc46",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "metrics"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "kube-rbac-proxy",
+    "endpoint": "metrics",
+    "instance": "192.168.1.207:9102",
+    "job": "ovnkube-master",
+    "namespace": "openshift-ovn-kubernetes",
+    "pod": "ovnkube-master-vjvfc",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "ovn-kubernetes-master"
+  },
+  "value": [
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -905,40 +922,24 @@
     "service": "prometheus-adapter"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "container": "registry",
-    "endpoint": "5000-tcp",
-    "instance": "10.128.1.215:5000",
-    "job": "image-registry",
-    "namespace": "openshift-image-registry",
-    "pod": "image-registry-7d9799858-f7jc9",
+    "container": "kube-rbac-proxy",
+    "endpoint": "metrics",
+    "instance": "192.168.1.207:9103",
+    "job": "ovnkube-node",
+    "namespace": "openshift-ovn-kubernetes",
+    "pod": "ovnkube-node-nc6pb",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "image-registry"
+    "service": "ovn-kubernetes-node"
   },
   "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "endpoint": "http-metrics",
-    "instance": "10.128.1.117:8686",
-    "job": "cluster-logging-operator-metrics",
-    "namespace": "openshift-logging",
-    "pod": "cluster-logging-operator-544496b95-jqn97",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "cluster-logging-operator-metrics"
-  },
-  "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -954,24 +955,7 @@
     "service": "metrics"
   },
   "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "kube-rbac-proxy-self",
-    "endpoint": "https-self",
-    "instance": "10.128.0.37:9443",
-    "job": "kube-state-metrics",
-    "namespace": "openshift-monitoring",
-    "pod": "kube-state-metrics-54db5d54f8-dgk8m",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "kube-state-metrics"
-  },
-  "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -987,56 +971,23 @@
     "service": "metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "endpoint": "https-metrics",
-    "instance": "192.168.1.207:10250",
-    "job": "kubelet",
-    "metrics_path": "/metrics",
-    "namespace": "kube-system",
-    "node": "oscar7",
+    "endpoint": "https",
+    "instance": "10.128.0.77:8443",
+    "job": "metrics",
+    "namespace": "openshift-console-operator",
+    "pod": "console-operator-7dfc9ff59c-prwdg",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "kubelet"
+    "service": "metrics"
   },
   "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "endpoint": "https-metrics",
-    "instance": "10.128.0.13:8081",
-    "job": "marketplace-operator-metrics",
-    "namespace": "openshift-marketplace",
-    "pod": "marketplace-operator-849b569b6b-69h9c",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "marketplace-operator-metrics"
-  },
-  "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "endpoint": "metrics",
-    "instance": "192.168.1.207:9099",
-    "job": "cluster-version-operator",
-    "namespace": "openshift-cluster-version",
-    "pod": "cluster-version-operator-678f49cffd-nbkmr",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "cluster-version-operator"
-  },
-  "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -1053,23 +1004,90 @@
     "service": "olm-operator-metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "endpoint": "crio",
-    "instance": "192.168.1.207:9537",
-    "job": "crio",
-    "namespace": "kube-system",
-    "node": "oscar7",
+    "endpoint": "metrics",
+    "instance": "192.168.1.207:9099",
+    "job": "cluster-version-operator",
+    "namespace": "openshift-cluster-version",
+    "pod": "cluster-version-operator-678f49cffd-nbkmr",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "kubelet"
+    "service": "cluster-version-operator"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "endpoint": "https",
+    "instance": "10.128.0.14:8443",
+    "job": "metrics",
+    "namespace": "openshift-service-ca-operator",
+    "pod": "service-ca-operator-6b677cbf7d-h2c9l",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "metrics"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "openshift-apiserver-operator",
+    "endpoint": "https",
+    "instance": "10.128.0.4:8443",
+    "job": "metrics",
+    "namespace": "openshift-apiserver-operator",
+    "pod": "openshift-apiserver-operator-85d4f689c5-b7xwb",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "metrics"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "openshift-apiserver-check-endpoints",
+    "endpoint": "check-endpoints",
+    "instance": "10.128.1.220:17698",
+    "job": "check-endpoints",
+    "namespace": "openshift-apiserver",
+    "pod": "apiserver-795c8f866d-sf8tc",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "check-endpoints"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "kube-rbac-proxy",
+    "endpoint": "https",
+    "instance": "10.128.0.51:8443",
+    "job": "machine-api-operator",
+    "namespace": "openshift-machine-api",
+    "pod": "machine-api-operator-7df768587c-2qskx",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "machine-api-operator"
+  },
+  "value": [
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -1087,30 +1105,13 @@
     "service": "machine-config-daemon"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "kube-apiserver-operator",
-    "endpoint": "https",
-    "instance": "10.128.0.47:8443",
-    "job": "metrics",
-    "namespace": "openshift-kube-apiserver-operator",
-    "pod": "kube-apiserver-operator-5fb985b788-94hhb",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "metrics"
-  },
-  "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "ovs_db_process_virtual_memory_max_bytes",
+    "__name__": "ovs_vswitchd_process_virtual_memory_max_bytes",
     "container": "kube-rbac-proxy-ovn-metrics",
     "endpoint": "ovn-metrics",
     "instance": "192.168.1.207:9105",
@@ -1121,144 +1122,24 @@
     "service": "ovn-kubernetes-node"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "container": "loki-index-gateway",
-    "endpoint": "metrics",
-    "instance": "10.128.0.186:3100",
-    "job": "logging-loki-index-gateway-http",
-    "namespace": "openshift-logging",
-    "pod": "logging-loki-index-gateway-0",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "logging-loki-index-gateway-http"
-  },
-  "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "kube-rbac-proxy",
-    "endpoint": "metrics",
-    "instance": "10.128.0.29:9154",
-    "job": "dns-default",
-    "namespace": "openshift-dns",
-    "pod": "dns-default-xvrdl",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "dns-default"
-  },
-  "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "apiserver": "openshift-apiserver",
-    "container": "openshift-apiserver",
-    "endpoint": "https",
-    "instance": "10.128.1.220:8443",
-    "job": "api",
-    "namespace": "openshift-apiserver",
-    "pod": "apiserver-795c8f866d-sf8tc",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "api"
-  },
-  "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "kube-rbac-proxy-thanos",
-    "endpoint": "thanos-proxy",
-    "instance": "10.128.0.24:10902",
-    "job": "prometheus-k8s-thanos-sidecar",
+    "container": "kube-rbac-proxy-self",
+    "endpoint": "https-self",
+    "instance": "10.128.0.36:9443",
+    "job": "openshift-state-metrics",
     "namespace": "openshift-monitoring",
-    "pod": "prometheus-k8s-0",
+    "pod": "openshift-state-metrics-68cf469d6c-mdzlw",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "prometheus-k8s-thanos-sidecar"
+    "service": "openshift-state-metrics"
   },
   "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "kube-scheduler",
-    "endpoint": "https",
-    "instance": "192.168.1.207:10259",
-    "job": "scheduler",
-    "namespace": "openshift-kube-scheduler",
-    "pod": "openshift-kube-scheduler-oscar7",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "scheduler"
-  },
-  "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "openshift-apiserver-operator",
-    "endpoint": "https",
-    "instance": "10.128.0.4:8443",
-    "job": "metrics",
-    "namespace": "openshift-apiserver-operator",
-    "pod": "openshift-apiserver-operator-85d4f689c5-b7xwb",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "metrics"
-  },
-  "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "check-endpoints",
-    "endpoint": "check-endpoints",
-    "instance": "10.128.0.31:17698",
-    "job": "network-check-source",
-    "namespace": "openshift-network-diagnostics",
-    "pod": "network-check-source-57b4967df6-klz6m",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "network-check-source"
-  },
-  "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "catalog-operator",
-    "endpoint": "https-metrics",
-    "instance": "10.128.0.48:8443",
-    "job": "catalog-operator-metrics",
-    "namespace": "openshift-operator-lifecycle-manager",
-    "pod": "catalog-operator-74b4cdb745-rlh66",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "catalog-operator-metrics"
-  },
-  "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -1275,41 +1156,143 @@
     "service": "cluster-autoscaler-operator"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "container": "console",
-    "endpoint": "https",
-    "instance": "10.128.0.78:8443",
-    "job": "console",
-    "namespace": "openshift-console",
-    "pod": "console-589887b6f6-grk8c",
+    "container": "catalog-operator",
+    "endpoint": "https-metrics",
+    "instance": "10.128.0.48:8443",
+    "job": "catalog-operator-metrics",
+    "namespace": "openshift-operator-lifecycle-manager",
+    "pod": "catalog-operator-74b4cdb745-rlh66",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "console"
+    "service": "catalog-operator-metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "container": "etcd-operator",
+    "container": "kube-rbac-proxy-self",
+    "endpoint": "https-self",
+    "instance": "10.128.0.37:9443",
+    "job": "kube-state-metrics",
+    "namespace": "openshift-monitoring",
+    "pod": "kube-state-metrics-54db5d54f8-dgk8m",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "kube-state-metrics"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "kube-rbac-proxy-thanos",
+    "endpoint": "thanos-proxy",
+    "instance": "10.128.0.24:10902",
+    "job": "prometheus-k8s-thanos-sidecar",
+    "namespace": "openshift-monitoring",
+    "pod": "prometheus-k8s-0",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "prometheus-k8s-thanos-sidecar"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "kube-scheduler",
     "endpoint": "https",
-    "instance": "10.128.0.16:8443",
+    "instance": "192.168.1.207:10259",
+    "job": "scheduler",
+    "namespace": "openshift-kube-scheduler",
+    "pod": "openshift-kube-scheduler-oscar7",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "scheduler"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "loki-query-frontend",
+    "endpoint": "metrics",
+    "instance": "10.128.0.179:3100",
+    "job": "logging-loki-query-frontend-http",
+    "namespace": "openshift-logging",
+    "pod": "logging-loki-query-frontend-7d976c4bd5-t674j",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "logging-loki-query-frontend-http"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "haproxy_process_virtual_memory_max_bytes",
+    "container": "router",
+    "endpoint": "metrics",
+    "instance": "192.168.1.207:1936",
+    "job": "router-internal-default",
+    "namespace": "openshift-ingress",
+    "pod": "router-default-867c8f6d7-kgzwc",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "router-internal-default"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "cluster-samples-operator",
+    "endpoint": "60000",
+    "instance": "10.128.0.40:60000",
     "job": "metrics",
-    "namespace": "openshift-etcd-operator",
-    "pod": "etcd-operator-8668df65d-6jpkz",
+    "namespace": "openshift-cluster-samples-operator",
+    "pod": "cluster-samples-operator-6769764bc-h92dz",
     "prometheus": "openshift-monitoring/k8s",
     "service": "metrics"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "cluster-storage-operator",
+    "endpoint": "https",
+    "instance": "10.128.0.50:8443",
+    "job": "cluster-storage-operator-metrics",
+    "namespace": "openshift-cluster-storage-operator",
+    "pod": "cluster-storage-operator-5c695997df-rkws2",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "cluster-storage-operator-metrics"
+  },
+  "value": [
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -1326,75 +1309,24 @@
     "service": "controller-manager"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
 {
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
-    "container": "network-operator",
-    "endpoint": "metrics",
-    "instance": "192.168.1.207:9104",
+    "container": "etcd-operator",
+    "endpoint": "https",
+    "instance": "10.128.0.16:8443",
     "job": "metrics",
-    "namespace": "openshift-network-operator",
-    "pod": "network-operator-68f464558c-t79m6",
+    "namespace": "openshift-etcd-operator",
+    "pod": "etcd-operator-8668df65d-6jpkz",
     "prometheus": "openshift-monitoring/k8s",
     "service": "metrics"
   },
   "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "kube-controller-manager-operator",
-    "endpoint": "https",
-    "instance": "10.128.0.5:8443",
-    "job": "metrics",
-    "namespace": "openshift-kube-controller-manager-operator",
-    "pod": "kube-controller-manager-operator-84cd6f9bcd-bd7vw",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "metrics"
-  },
-  "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "kube-rbac-proxy",
-    "endpoint": "8443",
-    "instance": "10.128.1.115:8443",
-    "job": "loki-operator-webhook-service",
-    "namespace": "openshift-operators-redhat",
-    "pod": "loki-operator-controller-manager-7bf55ff7f6-6v8j5",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "loki-operator-webhook-service"
-  },
-  "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "kube-rbac-proxy",
-    "endpoint": "https",
-    "instance": "10.128.0.12:8443",
-    "job": "cluster-monitoring-operator",
-    "namespace": "openshift-monitoring",
-    "pod": "cluster-monitoring-operator-6895797dd-8fd8j",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "cluster-monitoring-operator"
-  },
-  "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -1411,7 +1343,41 @@
     "service": "oauth-openshift"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "kube-rbac-proxy",
+    "endpoint": "8443",
+    "instance": "10.128.1.115:8443",
+    "job": "loki-operator-controller-manager-metrics-service",
+    "namespace": "openshift-operators-redhat",
+    "pod": "loki-operator-controller-manager-7bf55ff7f6-6v8j5",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "loki-operator-controller-manager-metrics-service"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "kube-rbac-proxy",
+    "endpoint": "8443",
+    "instance": "10.128.1.115:8443",
+    "job": "loki-operator-webhook-service",
+    "namespace": "openshift-operators-redhat",
+    "pod": "loki-operator-controller-manager-7bf55ff7f6-6v8j5",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "loki-operator-webhook-service"
+  },
+  "value": [
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -1420,15 +1386,15 @@
     "__name__": "process_virtual_memory_max_bytes",
     "container": "kube-rbac-proxy",
     "endpoint": "https",
-    "instance": "10.128.0.45:8443",
-    "job": "telemeter-client",
+    "instance": "10.128.0.12:8443",
+    "job": "cluster-monitoring-operator",
     "namespace": "openshift-monitoring",
-    "pod": "telemeter-client-594456ccbb-vdnkl",
+    "pod": "cluster-monitoring-operator-6895797dd-8fd8j",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "telemeter-client"
+    "service": "cluster-monitoring-operator"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -1445,7 +1411,41 @@
     "service": "machine-approver"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "check-endpoints",
+    "endpoint": "check-endpoints",
+    "instance": "10.128.0.31:17698",
+    "job": "network-check-source",
+    "namespace": "openshift-network-diagnostics",
+    "pod": "network-check-source-57b4967df6-klz6m",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "network-check-source"
+  },
+  "value": [
+    1666278697.872,
+    "18446744073709552000"
+  ]
+}
+{
+  "metric": {
+    "__name__": "process_virtual_memory_max_bytes",
+    "container": "gateway",
+    "endpoint": "metrics",
+    "instance": "10.128.0.182:8081",
+    "job": "logging-loki-gateway-http",
+    "namespace": "openshift-logging",
+    "pod": "logging-loki-gateway-7dd68dddd9-v6sl5",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "logging-loki-gateway-http"
+  },
+  "value": [
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -1453,33 +1453,16 @@
   "metric": {
     "__name__": "process_virtual_memory_max_bytes",
     "container": "kube-rbac-proxy",
-    "endpoint": "https",
-    "instance": "oscar7",
-    "job": "node-exporter",
-    "namespace": "openshift-monitoring",
-    "pod": "node-exporter-rh9qx",
+    "endpoint": "metrics",
+    "instance": "10.128.0.11:8443",
+    "job": "cco-metrics",
+    "namespace": "openshift-cloud-credential-operator",
+    "pod": "cloud-credential-operator-75f8d887bd-5wwmz",
     "prometheus": "openshift-monitoring/k8s",
-    "service": "node-exporter"
+    "service": "cco-metrics"
   },
   "value": [
-    1666276262.035,
-    "18446744073709552000"
-  ]
-}
-{
-  "metric": {
-    "__name__": "process_virtual_memory_max_bytes",
-    "container": "openshift-apiserver-check-endpoints",
-    "endpoint": "check-endpoints",
-    "instance": "10.128.1.220:17698",
-    "job": "check-endpoints",
-    "namespace": "openshift-apiserver",
-    "pod": "apiserver-795c8f866d-sf8tc",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "check-endpoints"
-  },
-  "value": [
-    1666276262.035,
+    1666278697.872,
     "18446744073709552000"
   ]
 }
@@ -1496,7 +1479,7 @@
     "service": "alertmanager-main"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "101869802745177"
   ]
 }
@@ -1513,7 +1496,7 @@
     "service": "node-exporter"
   },
   "value": [
-    1666276262.035,
+    1666278697.872,
     "35184372087808"
   ]
 }
@@ -1530,8 +1513,8 @@
     "service": "prometheus-k8s"
   },
   "value": [
-    1666276262.035,
-    "34035874391723"
+    1666278697.872,
+    "35119119205769"
   ]
 }
 {
@@ -1546,24 +1529,8 @@
     "service": "kubernetes"
   },
   "value": [
-    1666276262.035,
-    "10886652671032"
-  ]
-}
-{
-  "metric": {
-    "__name__": "go_gc_heap_allocs_by_size_bytes_total_sum",
-    "apiserver": "kube-apiserver",
-    "endpoint": "https",
-    "instance": "192.168.1.207:6443",
-    "job": "apiserver",
-    "namespace": "default",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "kubernetes"
-  },
-  "value": [
-    1666276262.035,
-    "10886652671032"
+    1666278697.872,
+    "10950535034264"
   ]
 }
 {
@@ -1578,8 +1545,40 @@
     "service": "kubernetes"
   },
   "value": [
-    1666276262.035,
-    "10886652671032"
+    1666278697.872,
+    "10950535034264"
+  ]
+}
+{
+  "metric": {
+    "__name__": "go_gc_heap_allocs_by_size_bytes_total_sum",
+    "apiserver": "kube-apiserver",
+    "endpoint": "https",
+    "instance": "192.168.1.207:6443",
+    "job": "apiserver",
+    "namespace": "default",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "kubernetes"
+  },
+  "value": [
+    1666278697.872,
+    "10950535034264"
+  ]
+}
+{
+  "metric": {
+    "__name__": "go_gc_heap_frees_by_size_bytes_total_sum",
+    "apiserver": "kube-apiserver",
+    "endpoint": "https",
+    "instance": "192.168.1.207:6443",
+    "job": "apiserver",
+    "namespace": "default",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "kubernetes"
+  },
+  "value": [
+    1666278697.872,
+    "10949303293928"
   ]
 }
 {
@@ -1594,58 +1593,8 @@
     "service": "kubernetes"
   },
   "value": [
-    1666276262.035,
-    "10884648803288"
-  ]
-}
-{
-  "metric": {
-    "__name__": "go_gc_heap_frees_by_size_bytes_total_sum",
-    "apiserver": "kube-apiserver",
-    "endpoint": "https",
-    "instance": "192.168.1.207:6443",
-    "job": "apiserver",
-    "namespace": "default",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "kubernetes"
-  },
-  "value": [
-    1666276262.035,
-    "10884648803288"
-  ]
-}
-{
-  "metric": {
-    "__name__": "go_gc_heap_allocs_bytes_total",
-    "endpoint": "https-metrics",
-    "instance": "192.168.1.207:10250",
-    "job": "kubelet",
-    "metrics_path": "/metrics",
-    "namespace": "kube-system",
-    "node": "oscar7",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "kubelet"
-  },
-  "value": [
-    1666276262.035,
-    "4435549890544"
-  ]
-}
-{
-  "metric": {
-    "__name__": "go_memstats_alloc_bytes_total",
-    "endpoint": "https-metrics",
-    "instance": "192.168.1.207:10250",
-    "job": "kubelet",
-    "metrics_path": "/metrics",
-    "namespace": "kube-system",
-    "node": "oscar7",
-    "prometheus": "openshift-monitoring/k8s",
-    "service": "kubelet"
-  },
-  "value": [
-    1666276262.035,
-    "4435549890544"
+    1666278697.872,
+    "10949303293928"
   ]
 }
 {
@@ -1661,8 +1610,42 @@
     "service": "kubelet"
   },
   "value": [
-    1666276262.035,
-    "4435549890544"
+    1666278697.872,
+    "4481762099200"
+  ]
+}
+{
+  "metric": {
+    "__name__": "go_gc_heap_allocs_bytes_total",
+    "endpoint": "https-metrics",
+    "instance": "192.168.1.207:10250",
+    "job": "kubelet",
+    "metrics_path": "/metrics",
+    "namespace": "kube-system",
+    "node": "oscar7",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "kubelet"
+  },
+  "value": [
+    1666278697.872,
+    "4481762099200"
+  ]
+}
+{
+  "metric": {
+    "__name__": "go_memstats_alloc_bytes_total",
+    "endpoint": "https-metrics",
+    "instance": "192.168.1.207:10250",
+    "job": "kubelet",
+    "metrics_path": "/metrics",
+    "namespace": "kube-system",
+    "node": "oscar7",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "kubelet"
+  },
+  "value": [
+    1666278697.872,
+    "4481762099200"
   ]
 }
 {
@@ -1678,7 +1661,24 @@
     "service": "kubelet"
   },
   "value": [
-    1666276262.035,
-    "4435412440224"
+    1666278697.872,
+    "4481601804968"
+  ]
+}
+{
+  "metric": {
+    "__name__": "go_gc_heap_frees_bytes_total",
+    "endpoint": "https-metrics",
+    "instance": "192.168.1.207:10250",
+    "job": "kubelet",
+    "metrics_path": "/metrics",
+    "namespace": "kube-system",
+    "node": "oscar7",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "kubelet"
+  },
+  "value": [
+    1666278697.872,
+    "4481601804968"
   ]
 }

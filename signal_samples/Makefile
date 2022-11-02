@@ -54,7 +54,7 @@ thanos-rules: ### Alerting rules from Thanos
 	$(CURL) --get --data-urlencode 'type=alert' "https://$(THANOS_HOST)/api/v1/rules" | $(JQ) .data.groups[].rules[] $(REDIRECT)
 
 cluster-rules: ### Cluster alerting rule objects from API server.
-	oc get prometheusrule -A -o json | $(JQ) .items[]  $(REDIRECT)
+	oc get prometheusrule -A -o json | $(JQ) .items[].spec.groups[].rules[]  $(REDIRECT)
 
 ALERTMANAGER_HOST=$(shell oc get route alertmanager-main -n openshift-monitoring -o jsonpath='{@.spec.host}')
 

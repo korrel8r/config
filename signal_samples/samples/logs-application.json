@@ -1,6 +1,6 @@
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -9,7 +9,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -32,8 +32,8 @@
   "message": "Use \"logger [command] --help\" for more information about a command."
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -42,7 +42,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -65,8 +65,8 @@
   "message": ""
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -75,7 +75,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -98,8 +98,8 @@
   "message": "      --url string                      Alt. destination flag (see --destination-url)"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -108,7 +108,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -131,8 +131,8 @@
   "message": "      --totalLogLines int               Total number of log lines per thread (default 0 - infinite)"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -141,7 +141,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -164,8 +164,8 @@
   "message": "      --threads int                     Number of threads.(default 1) (default 1)"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -174,7 +174,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -197,8 +197,8 @@
   "message": "      --tenant string                   Alt. Loki tenantID flag (see --loki-tenant-ID) (default \"fake\")"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -207,7 +207,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -230,8 +230,8 @@
   "message": "      --synthetic-payload-size int      Payload length [int] (default = 100) (default 100)"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -240,7 +240,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -263,8 +263,8 @@
   "message": "      --source string                   Log lines Source: simple, application, synthetic. (default simple) (default \"simple\")"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -273,7 +273,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -296,8 +296,8 @@
   "message": "      --query-range string              The interval of time that logs were recorded in should be collected for (default \"1m\")"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -306,7 +306,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -329,8 +329,8 @@
   "message": "      --query-file string               Query file name (default = none)"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -339,7 +339,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -362,8 +362,8 @@
   "message": "      --queries stringArray             list of queries e.g. {client=\"promtail\"} (default = none)"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -372,7 +372,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -395,8 +395,8 @@
   "message": "      --output-format string            The output format: default, crio (mimic CRIO output), csv, json (default \"default\")"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -405,7 +405,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -428,8 +428,8 @@
   "message": "      --loki-tenant-ID string           Loki tenantID (default = fake)"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -438,7 +438,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -461,8 +461,8 @@
   "message": "      --loki-labels string              Loki labels: none,host,random (default = random) (default \"random\")"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -471,7 +471,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -494,8 +494,8 @@
   "message": "      --loki-bearer-token-file string   Path to file containing bearer token (default \"/var/run/secrets/kubernetes.io/serviceaccount/token\")"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -504,7 +504,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -527,8 +527,8 @@
   "message": "      --log-lines-rate int              The total amount of log lines per thread per second to generate.(default 1) (default 1)"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -537,7 +537,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -560,8 +560,8 @@
   "message": "      --log-level string                Log level: debug, info, warning, error (default = error) (default \"error\")"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -570,7 +570,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -593,8 +593,8 @@
   "message": "  -h, --help                            help for logger"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -603,7 +603,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -626,8 +626,8 @@
   "message": "      --file string                     The file to output (default: output) (default \"output\")"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -636,7 +636,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -659,8 +659,8 @@
   "message": "      --disable-security-check          Disable security check in HTTPS client. (default false)"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -669,7 +669,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -692,8 +692,8 @@
   "message": "      --destination-url string          send logs via api using the provided url (e.g http://localhost:3100/api/prom/push)"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -702,7 +702,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -725,8 +725,8 @@
   "message": "      --destination string              Log Destination: loki, elasticsearch, stdout, file. (default stdout) (default \"stdout\")"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -735,7 +735,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -758,8 +758,8 @@
   "message": "      --config string                   config file (default is $HOME/logger.yaml)"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -768,7 +768,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -791,8 +791,8 @@
   "message": "Flags:"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -801,7 +801,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -824,8 +824,8 @@
   "message": ""
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -834,7 +834,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -857,8 +857,8 @@
   "message": "  query       query the log storage"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -867,7 +867,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -890,8 +890,8 @@
   "message": "  help        Help about any command"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -900,7 +900,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -923,8 +923,8 @@
   "message": "  generate    send randomly generated log lines to Destination"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -933,7 +933,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -956,8 +956,8 @@
   "message": "Available Commands:"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -966,7 +966,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -989,8 +989,8 @@
   "message": ""
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -999,7 +999,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1022,8 +1022,8 @@
   "message": "  logger [command]"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639651564Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653917399Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1032,7 +1032,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1055,8 +1055,8 @@
   "message": "Usage:"
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639119739Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653239692Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1065,7 +1065,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1088,8 +1088,8 @@
   "message": ""
 }
 {
-  "@timestamp": "2022-10-20T14:28:15.639119739Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/10.log",
+  "@timestamp": "2022-10-20T14:53:47.653239692Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/15.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1098,7 +1098,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://21c253ee55a9714ef21398f63db8b2adb56fc3eae2dcdf481002f924c0639113",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1121,8 +1121,8 @@
   "message": "A log benchmark tool"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1131,7 +1131,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1154,8 +1154,8 @@
   "message": "Use \"logger [command] --help\" for more information about a command."
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1164,7 +1164,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1187,8 +1187,8 @@
   "message": ""
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1197,7 +1197,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1220,8 +1220,8 @@
   "message": "      --url string                      Alt. destination flag (see --destination-url)"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1230,7 +1230,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1253,8 +1253,8 @@
   "message": "      --totalLogLines int               Total number of log lines per thread (default 0 - infinite)"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1263,7 +1263,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1286,8 +1286,8 @@
   "message": "      --threads int                     Number of threads.(default 1) (default 1)"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1296,7 +1296,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1319,8 +1319,8 @@
   "message": "      --tenant string                   Alt. Loki tenantID flag (see --loki-tenant-ID) (default \"fake\")"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1329,7 +1329,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1352,8 +1352,8 @@
   "message": "      --synthetic-payload-size int      Payload length [int] (default = 100) (default 100)"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1362,7 +1362,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1385,8 +1385,8 @@
   "message": "      --source string                   Log lines Source: simple, application, synthetic. (default simple) (default \"simple\")"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1395,7 +1395,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1418,8 +1418,8 @@
   "message": "      --query-range string              The interval of time that logs were recorded in should be collected for (default \"1m\")"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1428,7 +1428,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1451,8 +1451,8 @@
   "message": "      --query-file string               Query file name (default = none)"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1461,7 +1461,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1484,8 +1484,8 @@
   "message": "      --queries stringArray             list of queries e.g. {client=\"promtail\"} (default = none)"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1494,7 +1494,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1517,8 +1517,8 @@
   "message": "      --output-format string            The output format: default, crio (mimic CRIO output), csv, json (default \"default\")"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1527,7 +1527,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1550,8 +1550,8 @@
   "message": "      --loki-tenant-ID string           Loki tenantID (default = fake)"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1560,7 +1560,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1583,8 +1583,8 @@
   "message": "      --loki-labels string              Loki labels: none,host,random (default = random) (default \"random\")"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1593,7 +1593,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1616,8 +1616,8 @@
   "message": "      --loki-bearer-token-file string   Path to file containing bearer token (default \"/var/run/secrets/kubernetes.io/serviceaccount/token\")"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1626,7 +1626,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1649,8 +1649,8 @@
   "message": "      --log-lines-rate int              The total amount of log lines per thread per second to generate.(default 1) (default 1)"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1659,7 +1659,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1682,8 +1682,8 @@
   "message": "      --log-level string                Log level: debug, info, warning, error (default = error) (default \"error\")"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1692,7 +1692,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1715,8 +1715,8 @@
   "message": "  -h, --help                            help for logger"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1725,7 +1725,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1748,8 +1748,8 @@
   "message": "      --file string                     The file to output (default: output) (default \"output\")"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1758,7 +1758,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1781,8 +1781,8 @@
   "message": "      --disable-security-check          Disable security check in HTTPS client. (default false)"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1791,7 +1791,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1814,8 +1814,8 @@
   "message": "      --destination-url string          send logs via api using the provided url (e.g http://localhost:3100/api/prom/push)"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1824,7 +1824,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1847,8 +1847,8 @@
   "message": "      --destination string              Log Destination: loki, elasticsearch, stdout, file. (default stdout) (default \"stdout\")"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1857,7 +1857,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1880,8 +1880,8 @@
   "message": "      --config string                   config file (default is $HOME/logger.yaml)"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1890,7 +1890,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1913,8 +1913,8 @@
   "message": "Flags:"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1923,7 +1923,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1946,8 +1946,8 @@
   "message": ""
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1956,7 +1956,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -1979,8 +1979,8 @@
   "message": "  query       query the log storage"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -1989,7 +1989,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2012,8 +2012,8 @@
   "message": "  help        Help about any command"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2022,7 +2022,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2045,8 +2045,8 @@
   "message": "  generate    send randomly generated log lines to Destination"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2055,7 +2055,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2078,8 +2078,8 @@
   "message": "Available Commands:"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2088,7 +2088,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2111,8 +2111,8 @@
   "message": ""
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2121,7 +2121,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2144,8 +2144,8 @@
   "message": "  logger [command]"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.632403509Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.672226719Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2154,7 +2154,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2177,8 +2177,8 @@
   "message": "Usage:"
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.631877407Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.671489126Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2187,7 +2187,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2210,8 +2210,8 @@
   "message": ""
 }
 {
-  "@timestamp": "2022-10-20T14:23:07.631877407Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/9.log",
+  "@timestamp": "2022-10-20T14:48:37.671342665Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/14.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2220,7 +2220,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://3bc2093ad6f401b2c7c0fa62bbdfe96142ec30ce078ae465273cf72cb0e02c17",
+    "container_id": "cri-o://42b0c0991dbd5a0fdc37acedaec38df379d0373056909e3786498a0d15c834d8",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2243,8 +2243,8 @@
   "message": "A log benchmark tool"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2253,7 +2253,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2276,8 +2276,8 @@
   "message": "Use \"logger [command] --help\" for more information about a command."
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2286,7 +2286,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2309,8 +2309,8 @@
   "message": ""
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2319,7 +2319,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2342,8 +2342,8 @@
   "message": "      --url string                      Alt. destination flag (see --destination-url)"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2352,7 +2352,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2375,8 +2375,8 @@
   "message": "      --totalLogLines int               Total number of log lines per thread (default 0 - infinite)"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2385,7 +2385,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2408,8 +2408,8 @@
   "message": "      --threads int                     Number of threads.(default 1) (default 1)"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2418,7 +2418,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2441,8 +2441,8 @@
   "message": "      --tenant string                   Alt. Loki tenantID flag (see --loki-tenant-ID) (default \"fake\")"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2451,7 +2451,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2474,8 +2474,8 @@
   "message": "      --synthetic-payload-size int      Payload length [int] (default = 100) (default 100)"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2484,7 +2484,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2507,8 +2507,8 @@
   "message": "      --source string                   Log lines Source: simple, application, synthetic. (default simple) (default \"simple\")"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2517,7 +2517,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2540,8 +2540,8 @@
   "message": "      --query-range string              The interval of time that logs were recorded in should be collected for (default \"1m\")"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2550,7 +2550,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2573,8 +2573,8 @@
   "message": "      --query-file string               Query file name (default = none)"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2583,7 +2583,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2606,8 +2606,8 @@
   "message": "      --queries stringArray             list of queries e.g. {client=\"promtail\"} (default = none)"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2616,7 +2616,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2639,8 +2639,8 @@
   "message": "      --output-format string            The output format: default, crio (mimic CRIO output), csv, json (default \"default\")"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2649,7 +2649,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2672,8 +2672,8 @@
   "message": "      --loki-tenant-ID string           Loki tenantID (default = fake)"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2682,7 +2682,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2705,8 +2705,8 @@
   "message": "      --loki-labels string              Loki labels: none,host,random (default = random) (default \"random\")"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2715,7 +2715,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2738,8 +2738,8 @@
   "message": "      --loki-bearer-token-file string   Path to file containing bearer token (default \"/var/run/secrets/kubernetes.io/serviceaccount/token\")"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2748,7 +2748,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2771,8 +2771,8 @@
   "message": "      --log-lines-rate int              The total amount of log lines per thread per second to generate.(default 1) (default 1)"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2781,7 +2781,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2804,8 +2804,8 @@
   "message": "      --log-level string                Log level: debug, info, warning, error (default = error) (default \"error\")"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2814,7 +2814,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2837,8 +2837,8 @@
   "message": "  -h, --help                            help for logger"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2847,7 +2847,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2870,8 +2870,8 @@
   "message": "      --file string                     The file to output (default: output) (default \"output\")"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2880,7 +2880,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2903,8 +2903,8 @@
   "message": "      --disable-security-check          Disable security check in HTTPS client. (default false)"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2913,7 +2913,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2936,8 +2936,8 @@
   "message": "      --destination-url string          send logs via api using the provided url (e.g http://localhost:3100/api/prom/push)"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2946,7 +2946,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -2969,8 +2969,8 @@
   "message": "      --destination string              Log Destination: loki, elasticsearch, stdout, file. (default stdout) (default \"stdout\")"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -2979,7 +2979,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -3002,8 +3002,8 @@
   "message": "      --config string                   config file (default is $HOME/logger.yaml)"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -3012,7 +3012,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -3035,8 +3035,8 @@
   "message": "Flags:"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -3045,7 +3045,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -3068,8 +3068,8 @@
   "message": ""
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -3078,7 +3078,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -3101,8 +3101,8 @@
   "message": "  query       query the log storage"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -3111,7 +3111,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -3134,8 +3134,8 @@
   "message": "  help        Help about any command"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -3144,7 +3144,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -3167,8 +3167,8 @@
   "message": "  generate    send randomly generated log lines to Destination"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -3177,7 +3177,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -3200,8 +3200,8 @@
   "message": "Available Commands:"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -3210,7 +3210,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -3233,8 +3233,8 @@
   "message": ""
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -3243,7 +3243,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {
@@ -3266,8 +3266,8 @@
   "message": "  logger [command]"
 }
 {
-  "@timestamp": "2022-10-20T14:18:04.631100661Z",
-  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/8.log",
+  "@timestamp": "2022-10-20T14:43:31.639254818Z",
+  "file": "/var/log/pods/test-log-generator_test-log-generator_cbc621a0-6b87-43bf-843c-ffeed2f1207d/test-log-generator/13.log",
   "hostname": "oscar7",
   "kubernetes": {
     "annotations": {
@@ -3276,7 +3276,7 @@
       "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.193\"\n    ],\n    \"mac\": \"0a:58:0a:80:00:c1\",\n    \"default\": true,\n    \"dns\": {}\n}]",
       "openshift.io/scc": "privileged"
     },
-    "container_id": "cri-o://7cc80380963380c62642cf9d01e7098c54ef9faac6ca067e118fb7a0702db0ab",
+    "container_id": "cri-o://06106cfe0c337a2317b9ae9e1bc7dbdf0823682205c1984151f7b1578f213713",
     "container_image": "quay.io/rojacob/cluster-logging-load-client:0.0.1-db25b80",
     "container_name": "test-log-generator",
     "labels": {

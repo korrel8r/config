@@ -1,3 +1,4113 @@
-make[1]: Entering directory '/home/aconway/src/korrel8/config/signal_samples'
-curl -sS --fail-with-body -k -H "Authorization: Bearer sha256~6x7OwN4Dt3DWBe4KrfXkpqL88TRVN_VwO5COQon-c6g" --get --data-urlencode 'type=alert' "https://thanos-querier-openshift-monitoring.apps.snoflake.my.test/api/v1/rules" | jq -M .data.result[]
-make[1]: Leaving directory '/home/aconway/src/korrel8/config/signal_samples'
+{
+  "state": "inactive",
+  "name": "CloudCredentialOperatorDeprovisioningFailed",
+  "query": "cco_credentials_requests_conditions{condition=\"CredentialsDeprovisionFailure\"} > 0",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "While processing a CredentialsRequest marked for deletion, the Cloud Credential Operator encountered an issue. Check the conditions of all CredentialsRequests with 'oc get credentialsrequest -A' to find any CredentialsRequest(s) with a .status.condition showing a condition type of CredentialsDeprovisionFailure set to True for more details on the issue.",
+    "message": "CredentialsRequest(s) unable to be cleaned up",
+    "summary": "One or more CredentialsRequest CRs are unable to be deleted."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000097724,
+  "lastEvaluation": "2022-10-20T15:11:39.078068597Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "CloudCredentialOperatorInsufficientCloudCreds",
+  "query": "cco_credentials_requests_conditions{condition=\"InsufficientCloudCreds\"} > 0",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The Cloud Credential Operator has determined that there are insufficient permissions to process one or more CredentialsRequest CRs. Check the conditions of all CredentialsRequests with 'oc get credentialsrequest -A' to find any CredentialsRequest(s) with a .status.condition showing a condition type of InsufficientCloudCreds set to True for more details.",
+    "message": "Cluster's cloud credentials insufficient for minting or passthrough",
+    "summary": "Problem with the available platform credentials."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000092984,
+  "lastEvaluation": "2022-10-20T15:11:39.078167811Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "CloudCredentialOperatorProvisioningFailed",
+  "query": "cco_credentials_requests_conditions{condition=\"CredentialsProvisionFailure\"} > 0",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "While processing a CredentialsRequest, the Cloud Credential Operator encountered an issue. Check the conditions of all CredentialsRequets with 'oc get credentialsrequest -A' to find any CredentialsRequest(s) with a .stats.condition showing a condition type of CredentialsProvisionFailure set to True for more details on the issue.",
+    "message": "CredentialsRequest(s) unable to be fulfilled",
+    "summary": "One or more CredentialsRequest CRs are unable to be processed."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000123174,
+  "lastEvaluation": "2022-10-20T15:11:39.077943732Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "CloudCredentialOperatorStaleCredentials",
+  "query": "cco_credentials_requests_conditions{condition=\"StaleCredentials\"} > 0",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The Cloud Credential Operator (CCO) has detected one or more stale CredentialsRequest CRs that need to be manually deleted. When the CCO is in Manual credentials mode, it will not automatially clean up stale CredentialsRequest CRs (that may no longer be necessary in the present version of OpenShift because it could involve needing to clean up manually created cloud resources. Check the conditions of all CredentialsRequests with 'oc get credentialsrequest -A' to find any CredentialsRequest(s) with a .status.condition showing a condition type of StaleCredentials set to True. Determine the appropriate steps to clean up/deprovision any previously provisioned cloud resources. Finally, delete the CredentialsRequest with an 'oc delete'.",
+    "message": "1 or more credentials requests are stale and should be deleted. Check the status.conditions on CredentialsRequest CRs to identify the stale one(s).",
+    "summary": "One or more CredentialsRequest CRs are stale and should be deleted."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000110727,
+  "lastEvaluation": "2022-10-20T15:11:39.07826219Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "CloudCredentialOperatorTargetNamespaceMissing",
+  "query": "cco_credentials_requests_conditions{condition=\"MissingTargetNamespace\"} > 0",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "At least one CredentialsRequest custom resource has specified in its .spec.secretRef.namespace field a namespace which does not presently exist. This means the Cloud Credential Operator in the openshift-cloud-credential-operator namespace cannot process the CredentialsRequest resource. Check the conditions of all CredentialsRequests with 'oc get credentialsrequest -A' to find any CredentialsRequest(s) with a .status.condition showing a condition type of MissingTargetNamespace set to True.",
+    "message": "CredentialsRequest(s) pointing to non-existent namespace",
+    "summary": "One ore more CredentialsRequest CRs are asking to save credentials to a non-existent namespace."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000244512,
+  "lastEvaluation": "2022-10-20T15:11:39.077696985Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "MachineApproverMaxPendingCSRsReached",
+  "query": "mapi_current_pending_csr > mapi_max_pending_csr",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The number of pending CertificateSigningRequests has exceeded the\nmaximum threshold (current number of machine + 100). Check the\npending CSRs to determine which machines need approval, also check\nthat the nodelink controller is running in the openshift-machine-api\nnamespace.\n",
+    "summary": "max pending CSRs threshold reached."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000279652,
+  "lastEvaluation": "2022-10-20T15:11:19.997720284Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NTODegraded",
+  "query": "nto_degraded_info == 1",
+  "duration": 7200,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The Node Tuning Operator is degraded. Review the \"node-tuning\" ClusterOperator object for further details.",
+    "summary": "The Node Tuning Operator is degraded."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000106142,
+  "lastEvaluation": "2022-10-20T15:11:12.526572755Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NTOPodsNotReady",
+  "query": "kube_pod_status_ready{condition=\"true\",namespace=\"openshift-cluster-node-tuning-operator\"} == 0",
+  "duration": 1800,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Pod {{ $labels.pod }} is not ready.\nReview the \"Event\" objects in \"openshift-cluster-node-tuning-operator\" namespace for further details.\n",
+    "summary": "Pod {{ $labels.pod }} is not ready."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000320124,
+  "lastEvaluation": "2022-10-20T15:11:12.526251116Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "SamplesDegraded",
+  "query": "openshift_samples_degraded_info == 1",
+  "duration": 7200,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Samples could not be deployed and the operator is degraded. Review the \"openshift-samples\" ClusterOperator object for further details.\n",
+    "summary": "Samples operator is degraded."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000103298,
+  "lastEvaluation": "2022-10-20T15:11:24.267124723Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "SamplesImagestreamImportFailing",
+  "query": "sum(openshift_samples_retry_imagestream_import_total) - sum(openshift_samples_retry_imagestream_import_total offset 30m) > sum(openshift_samples_failed_imagestream_import_info)",
+  "duration": 7200,
+  "labels": {
+    "namespace": "openshift-cluster-samples-operator",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Samples operator is detecting problems with imagestream image imports.  You can look at the \"openshift-samples\"\nClusterOperator object for details. Most likely there are issues with the external image registry hosting\nthe images that needs to be investigated.  Or you can consider marking samples operator Removed if you do not\ncare about having sample imagestreams available.  The list of ImageStreams for which samples operator is\nretrying imports:\n{{ range query \"openshift_samples_retry_imagestream_import_total > 0\" }}\n   {{ .Labels.imagestreamname }}\n{{ end }}\n",
+    "summary": "Samples operator is detecting problems with imagestream image imports"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000405235,
+  "lastEvaluation": "2022-10-20T15:11:24.266718194Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "SamplesInvalidConfig",
+  "query": "openshift_samples_invalidconfig_info == 1",
+  "duration": 7200,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Samples operator has been given an invalid configuration.\n",
+    "summary": "Samples operator Invalid configuration"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000110886,
+  "lastEvaluation": "2022-10-20T15:11:24.267228998Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "SamplesMissingSecret",
+  "query": "openshift_samples_invalidsecret_info{reason=\"missing_secret\"} == 1",
+  "duration": 7200,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Samples operator cannot find the samples pull secret in the openshift namespace.\n",
+    "summary": "Samples operator is not able to find secret"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000108468,
+  "lastEvaluation": "2022-10-20T15:11:24.267340588Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "SamplesMissingTBRCredential",
+  "query": "openshift_samples_invalidsecret_info{reason=\"missing_tbr_credential\"} == 1",
+  "duration": 7200,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The samples operator cannot find credentials for 'registry.redhat.io'. Many of the sample ImageStreams will fail to import unless the 'samplesRegistry' in the operator configuration is changed.\n",
+    "summary": "Samples operator is not able to find the credentials for registry"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000088358,
+  "lastEvaluation": "2022-10-20T15:11:24.267449931Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "SamplesRetriesMissingOnImagestreamImportFailing",
+  "query": "sum(openshift_samples_failed_imagestream_import_info) > sum(openshift_samples_retry_imagestream_import_total) - sum(openshift_samples_retry_imagestream_import_total offset 30m)",
+  "duration": 7200,
+  "labels": {
+    "namespace": "openshift-cluster-samples-operator",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Samples operator is detecting problems with imagestream image imports, and the periodic retries of those\nimports are not occurring.  Contact support.  You can look at the \"openshift-samples\" ClusterOperator object\nfor details. Most likely there are issues with the external image registry hosting the images that need to\nbe investigated.  The list of ImageStreams that have failing imports are:\n{{ range query \"openshift_samples_failed_imagestream_import_info > 0\" }}\n  {{ .Labels.name }}\n{{ end }}\nHowever, the list of ImageStreams for which samples operator is retrying imports is:\nretrying imports:\n{{ range query \"openshift_samples_retry_imagestream_import_total > 0\" }}\n   {{ .Labels.imagestreamname }}\n{{ end }}\n",
+    "summary": "Samples operator is having problems with imagestream imports and its retries."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000536101,
+  "lastEvaluation": "2022-10-20T15:11:24.266180853Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "SamplesTBRInaccessibleOnBoot",
+  "query": "openshift_samples_tbr_inaccessible_info == 1",
+  "duration": 172800,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info"
+  },
+  "annotations": {
+    "description": "One of two situations has occurred.  Either\nsamples operator could not access 'registry.redhat.io' during its initial installation and it bootstrapped as removed.\nIf this is expected, and stems from installing in a restricted network environment, please note that if you\nplan on mirroring images associated with sample imagestreams into a registry available in your restricted\nnetwork environment, and subsequently moving samples operator back to 'Managed' state, a list of the images\nassociated with each image stream tag from the samples catalog is\nprovided in the 'imagestreamtag-to-image' config map in the 'openshift-cluster-samples-operator' namespace to\nassist the mirroring process.\nOr, the use of allowed registries or blocked registries with global imagestream configuration will not allow\nsamples operator to create imagestreams using the default image registry 'registry.redhat.io'.\n",
+    "summary": "Samples operator is not able to access the registry on boot"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000107807,
+  "lastEvaluation": "2022-10-20T15:11:24.267539411Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "MultipleDefaultStorageClasses",
+  "query": "max_over_time(default_storage_class_count[5m]) > 1",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "Cluster storage operator monitors all storage classes configured in the cluster\nand checks there is not more than one default StorageClass configured.\n",
+    "message": "StorageClass count check is failing (there should not be more than one default StorageClass)",
+    "summary": "More than one default StorageClass detected."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000218668,
+  "lastEvaluation": "2022-10-20T15:11:16.461926576Z",
+  "type": "alerting"
+}
+{
+  "state": "firing",
+  "name": "ClusterNotUpgradeable",
+  "query": "max by(name, condition, endpoint) (cluster_operator_conditions{condition=\"Upgradeable\",endpoint=\"metrics\",name=\"version\"} == 0)",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info"
+  },
+  "annotations": {
+    "description": "In most cases, you will still be able to apply patch releases. Reason {{ with $cluster_operator_conditions := \"cluster_operator_conditions\" | query}}{{range $value := .}}{{if and (eq (label \"name\" $value) \"version\") (eq (label \"condition\" $value) \"Upgradeable\") (eq (label \"endpoint\" $value) \"metrics\") (eq (value $value) 0.0) (ne (len (label \"reason\" $value)) 0) }}{{label \"reason\" $value}}.{{end}}{{end}}{{end}} For more information refer to 'oc adm upgrade'{{ with $console_url := \"console_url\" | query }}{{ if ne (len (label \"url\" (first $console_url ) ) ) 0}} or {{ label \"url\" (first $console_url ) }}/settings/cluster/{{ end }}{{ end }}.",
+    "summary": "One or more cluster operators have been blocking minor version cluster upgrades for at least an hour."
+  },
+  "alerts": [
+    {
+      "labels": {
+        "alertname": "ClusterNotUpgradeable",
+        "condition": "Upgradeable",
+        "endpoint": "metrics",
+        "name": "version",
+        "severity": "info"
+      },
+      "annotations": {
+        "description": "In most cases, you will still be able to apply patch releases. Reason IncompatibleOperatorsInstalled. For more information refer to 'oc adm upgrade' or https://console-openshift-console.apps.snoflake.my.test/settings/cluster/.",
+        "summary": "One or more cluster operators have been blocking minor version cluster upgrades for at least an hour."
+      },
+      "state": "firing",
+      "activeAt": "2022-10-18T19:37:56.40350245Z",
+      "value": "0e+00",
+      "partialResponseStrategy": "WARN"
+    }
+  ],
+  "health": "ok",
+  "evaluationTime": 0.001810127,
+  "lastEvaluation": "2022-10-20T15:11:26.40437754Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ClusterOperatorDegraded",
+  "query": "(cluster_operator_conditions{condition=\"Degraded\",job=\"cluster-version-operator\"} or on(name) group by(name) (cluster_operator_up{job=\"cluster-version-operator\"})) == 1",
+  "duration": 1800,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The {{ $labels.name }} operator is degraded because {{ $labels.reason }}, and the components it manages may have reduced quality of service.  Cluster upgrades may not complete. For more information refer to 'oc get -o yaml clusteroperator {{ $labels.name }}'{{ with $console_url := \"console_url\" | query }}{{ if ne (len (label \"url\" (first $console_url ) ) ) 0}} or {{ label \"url\" (first $console_url ) }}/settings/cluster/{{ end }}{{ end }}.",
+    "summary": "Cluster operator has been degraded for 30 minutes."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000457699,
+  "lastEvaluation": "2022-10-20T15:11:26.406407979Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ClusterOperatorDown",
+  "query": "cluster_operator_up{job=\"cluster-version-operator\"} == 0",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "The {{ $labels.name }} operator may be down or disabled, and the components it manages may be unavailable or degraded.  Cluster upgrades may not complete. For more information refer to 'oc get -o yaml clusteroperator {{ $labels.name }}'{{ with $console_url := \"console_url\" | query }}{{ if ne (len (label \"url\" (first $console_url ) ) ) 0}} or {{ label \"url\" (first $console_url ) }}/settings/cluster/{{ end }}{{ end }}.",
+    "summary": "Cluster operator has not been available for 10 minutes."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000217365,
+  "lastEvaluation": "2022-10-20T15:11:26.406189724Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ClusterOperatorFlapping",
+  "query": "changes(cluster_operator_up{job=\"cluster-version-operator\"}[2m]) > 2",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The  {{ $labels.name }} operator behavior might cause upgrades to be unstable. For more information refer to 'oc get -o yaml clusteroperator {{ $labels.name }}'{{ with $console_url := \"console_url\" | query }}{{ if ne (len (label \"url\" (first $console_url ) ) ) 0}} or {{ label \"url\" (first $console_url ) }}/settings/cluster/{{ end }}{{ end }}.",
+    "summary": "Cluster operator up status is changing often."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000214249,
+  "lastEvaluation": "2022-10-20T15:11:26.406866719Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "CannotRetrieveUpdates",
+  "query": "(time() - cluster_version_operator_update_retrieval_timestamp_seconds) >= 3600 and ignoring(condition, name, reason) cluster_operator_conditions{condition=\"RetrievedUpdates\",endpoint=\"metrics\",name=\"version\",reason!=\"NoChannel\"}",
+  "duration": 0,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Failure to retrieve updates means that cluster administrators will need to monitor for available updates on their own or risk falling behind on security or other bugfixes. If the failure is expected, you can clear spec.channel in the ClusterVersion object to tell the cluster-version operator to not retrieve updates. Failure reason {{ with $cluster_operator_conditions := \"cluster_operator_conditions\" | query}}{{range $value := .}}{{if and (eq (label \"name\" $value) \"version\") (eq (label \"condition\" $value) \"RetrievedUpdates\") (eq (label \"endpoint\" $value) \"metrics\") (eq (value $value) 0.0)}}{{label \"reason\" $value}} {{end}}{{end}}{{end}}. {{ with $console_url := \"console_url\" | query }}{{ if ne (len (label \"url\" (first $console_url ) ) ) 0}} For more information refer to {{ label \"url\" (first $console_url ) }}/settings/cluster/.{{ end }}{{ end }}",
+    "summary": "Cluster version operator has not retrieved updates in {{ $value | humanizeDuration }}."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00019361,
+  "lastEvaluation": "2022-10-20T15:11:20.259862027Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ClusterVersionOperatorDown",
+  "query": "absent(up{job=\"cluster-version-operator\"} == 1)",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "The operator may be down or disabled. The cluster will not be kept up to date and upgrades will not be possible. Inspect the openshift-cluster-version namespace for events or changes to the cluster-version-operator deployment or pods to diagnose and repair. {{ with $console_url := \"console_url\" | query }}{{ if ne (len (label \"url\" (first $console_url ) ) ) 0}} For more information refer to {{ label \"url\" (first $console_url ) }}/k8s/cluster/projects/openshift-cluster-version.{{ end }}{{ end }}",
+    "summary": "Cluster version operator has disappeared from Prometheus target discovery."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000227545,
+  "lastEvaluation": "2022-10-20T15:11:20.25963255Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "UpdateAvailable",
+  "query": "sum by(channel, upstream) (cluster_version_available_updates) > 0",
+  "duration": 0,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info"
+  },
+  "annotations": {
+    "description": "For more information refer to 'oc adm upgrade'{{ with $console_url := \"console_url\" | query }}{{ if ne (len (label \"url\" (first $console_url ) ) ) 0}} or {{ label \"url\" (first $console_url ) }}/settings/cluster/{{ end }}{{ end }}.",
+    "summary": "Your upstream update recommendation service recommends you update your cluster."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000144055,
+  "lastEvaluation": "2022-10-20T15:11:20.260056642Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "CoreDNSErrorsHigh",
+  "query": "(sum by(namespace) (rate(coredns_dns_responses_total{rcode=\"SERVFAIL\"}[5m])) / sum by(namespace) (rate(coredns_dns_responses_total[5m]))) > 0.01",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "CoreDNS is returning SERVFAIL for {{ $value | humanizePercentage }} of requests.",
+    "summary": "CoreDNS serverfail"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000203112,
+  "lastEvaluation": "2022-10-20T15:11:21.997238793Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "CoreDNSHealthCheckSlow",
+  "query": "histogram_quantile(0.95, sum by(instance, le) (rate(coredns_health_request_duration_seconds_bucket[5m]))) > 10",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "CoreDNS Health Checks are slowing down (instance {{ $labels.instance }})",
+    "summary": "CoreDNS health checks"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000171148,
+  "lastEvaluation": "2022-10-20T15:11:21.99706675Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "CoreDNSPanicking",
+  "query": "increase(coredns_panics_total[10m]) > 0",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "{{ $value }} CoreDNS panics observed on {{ $labels.instance }}",
+    "summary": "CoreDNS panic"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000205746,
+  "lastEvaluation": "2022-10-20T15:11:21.996859874Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "etcdBackendQuotaLowSpace",
+  "query": "(etcd_mvcc_db_total_size_in_bytes / etcd_server_quota_backend_bytes) * 100 > 95",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "etcd cluster \"{{ $labels.job }}\": database size exceeds the defined quota on etcd instance {{ $labels.instance }}, please defrag or increase the quota as the writes to etcd will be disabled when it is full.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-etcd-operator/etcdBackendQuotaLowSpace.md",
+    "summary": "etcd cluster database is running full."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000187991,
+  "lastEvaluation": "2022-10-20T15:11:40.166019035Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "etcdExcessiveDatabaseGrowth",
+  "query": "increase(((etcd_mvcc_db_total_size_in_bytes / etcd_server_quota_backend_bytes) * 100)[4h:1m]) > 50",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "etcd cluster \"{{ $labels.job }}\": Observed surge in etcd writes leading to 50% increase in database size over the past four hours on etcd instance {{ $labels.instance }}, please check as it might be disruptive.",
+    "summary": "etcd cluster database growing very fast."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000902034,
+  "lastEvaluation": "2022-10-20T15:11:40.166208078Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "etcdGRPCRequestsSlow",
+  "query": "histogram_quantile(0.99, sum without(grpc_type) (rate(grpc_server_handling_seconds_bucket{grpc_method!=\"Defragment\",grpc_type=\"unary\",job=~\".*etcd.*\"}[5m]))) > 0.15",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "etcd cluster \"{{ $labels.job }}\": 99th percentile of gRPC requests is {{ $value }}s on etcd instance {{ $labels.instance }} for {{ $labels.grpc_method }} method.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-etcd-operator/etcdGRPCRequestsSlow.md",
+    "summary": "etcd grpc requests are slow"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.01526494,
+  "lastEvaluation": "2022-10-20T15:11:40.149287743Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "etcdHighCommitDurations",
+  "query": "histogram_quantile(0.99, rate(etcd_disk_backend_commit_duration_seconds_bucket{job=~\".*etcd.*\"}[5m])) > 0.25",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "etcd cluster \"{{ $labels.job }}\": 99th percentile commit durations {{ $value }}s on etcd instance {{ $labels.instance }}.",
+    "summary": "etcd cluster 99th percentile commit durations are too high."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000344915,
+  "lastEvaluation": "2022-10-20T15:11:40.165672199Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "etcdHighFsyncDurations",
+  "query": "histogram_quantile(0.99, rate(etcd_disk_wal_fsync_duration_seconds_bucket{job=~\".*etcd.*\"}[5m])) > 1",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "etcd cluster \"{{ $labels.job }}\": 99th percentile fsync durations are {{ $value }}s on etcd instance {{ $labels.instance }}.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-etcd-operator/etcdHighFsyncDurations.md",
+    "summary": "etcd cluster 99th percentile fsync durations are too high."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000313877,
+  "lastEvaluation": "2022-10-20T15:11:40.16535671Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "etcdHighFsyncDurations",
+  "query": "histogram_quantile(0.99, rate(etcd_disk_wal_fsync_duration_seconds_bucket{job=~\".*etcd.*\"}[5m])) > 0.5",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "etcd cluster \"{{ $labels.job }}\": 99th percentile fsync durations are {{ $value }}s on etcd instance {{ $labels.instance }}.",
+    "summary": "etcd cluster 99th percentile fsync durations are too high."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000370712,
+  "lastEvaluation": "2022-10-20T15:11:40.164984284Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "etcdHighNumberOfFailedProposals",
+  "query": "rate(etcd_server_proposals_failed_total{job=~\".*etcd.*\"}[15m]) > 5",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "etcd cluster \"{{ $labels.job }}\": {{ $value }} proposal failures within the last 30 minutes on etcd instance {{ $labels.instance }}.",
+    "summary": "etcd cluster has high number of proposal failures."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000169485,
+  "lastEvaluation": "2022-10-20T15:11:40.164813035Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "etcdMemberCommunicationSlow",
+  "query": "histogram_quantile(0.99, rate(etcd_network_peer_round_trip_time_seconds_bucket{job=~\".*etcd.*\"}[5m])) > 0.15",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "etcd cluster \"{{ $labels.job }}\": member communication with {{ $labels.To }} is taking {{ $value }}s on etcd instance {{ $labels.instance }}.",
+    "summary": "etcd cluster member communication is slow."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000255518,
+  "lastEvaluation": "2022-10-20T15:11:40.164555872Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "etcdMembersDown",
+  "query": "max without(endpoint) (sum without(instance) (up{job=~\".*etcd.*\"} == bool 0) or count without(To) (sum without(instance) (rate(etcd_network_peer_sent_failures_total{job=~\".*etcd.*\"}[2m])) > 0.01)) > 0",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "etcd cluster \"{{ $labels.job }}\": members are down ({{ $value }}).",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-etcd-operator/etcdMembersDown.md",
+    "summary": "etcd cluster members are down."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000699735,
+  "lastEvaluation": "2022-10-20T15:11:40.148399265Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "etcdNoLeader",
+  "query": "etcd_server_has_leader{job=~\".*etcd.*\"} == 0",
+  "duration": 60,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "etcd cluster \"{{ $labels.job }}\": member {{ $labels.instance }} has no leader.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-etcd-operator/etcdNoLeader.md",
+    "summary": "etcd cluster has no leader."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000184556,
+  "lastEvaluation": "2022-10-20T15:11:40.149101679Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "etcdHighNumberOfFailedGRPCRequests",
+  "query": "(sum without(grpc_type, grpc_code) (rate(grpc_server_handled_total{grpc_code=~\"Unknown|FailedPrecondition|ResourceExhausted|Internal|Unavailable|DataLoss|DeadlineExceeded\",job=\"etcd\"}[5m])) / (sum without(grpc_type, grpc_code) (rate(grpc_server_handled_total{job=\"etcd\"}[5m])) > 2 and on() (sum(cluster_infrastructure_provider{type!~\"ipi|BareMetal\"} == bool 1)))) * 100 > 50",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "etcd cluster \"{{ $labels.job }}\": {{ $value }}% of requests for {{ $labels.grpc_method }} failed on etcd instance {{ $labels.instance }}.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-etcd-operator/etcdHighNumberOfFailedGRPCRequests.md",
+    "summary": "etcd cluster has high number of failed grpc requests."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.006092886,
+  "lastEvaluation": "2022-10-20T15:11:15.600142568Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "etcdHighNumberOfFailedGRPCRequests",
+  "query": "(sum without(grpc_type, grpc_code) (rate(grpc_server_handled_total{grpc_code=~\"Unknown|FailedPrecondition|ResourceExhausted|Internal|Unavailable|DataLoss|DeadlineExceeded\",job=\"etcd\"}[5m])) / (sum without(grpc_type, grpc_code) (rate(grpc_server_handled_total{job=\"etcd\"}[5m])) > 2 and on() (sum(cluster_infrastructure_provider{type!~\"ipi|BareMetal\"} == bool 1)))) * 100 > 10",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "etcd cluster \"{{ $labels.job }}\": {{ $value }}% of requests for {{ $labels.grpc_method }} failed on etcd instance {{ $labels.instance }}.",
+    "summary": "etcd cluster has high number of failed grpc requests."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.006401633,
+  "lastEvaluation": "2022-10-20T15:11:15.593739535Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "etcdHighNumberOfLeaderChanges",
+  "query": "avg(changes(etcd_server_is_leader[10m])) > 5",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "etcd cluster \"{{ $labels.job }}\": {{ $value }} average leader changes within the last 10 minutes. Frequent elections may be a sign of insufficient resources, high network latency, or disruptions by other components and should be investigated.",
+    "summary": "etcd cluster has high number of leader changes."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00012064,
+  "lastEvaluation": "2022-10-20T15:11:15.606236604Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "etcdInsufficientMembers",
+  "query": "sum without(instance, pod) (up{job=\"etcd\"} == bool 1 and etcd_server_has_leader{job=\"etcd\"} == bool 1) < ((count without(instance, pod) (up{job=\"etcd\"}) + 1) / 2)",
+  "duration": 180,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "etcd is reporting fewer instances are available than are needed ({{ $value }}). When etcd does not have a majority of instances available the Kubernetes and OpenShift APIs will reject read and write requests and operations that preserve the health of workloads cannot be performed. This can occur when multiple control plane nodes are powered off or are unable to connect to each other via the network. Check that all control plane nodes are powered on and that network connections between each machine are functional.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-etcd-operator/etcdInsufficientMembers.md",
+    "summary": "etcd is reporting that a majority of instances are unavailable."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000243889,
+  "lastEvaluation": "2022-10-20T15:11:15.606358228Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "HAProxyDown",
+  "query": "haproxy_up == 0",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "This alert fires when metrics report that HAProxy is down.",
+    "message": "HAProxy metrics are reporting that HAProxy is down on pod {{ $labels.namespace }} / {{ $labels.pod }}",
+    "summary": "HAProxy is down"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00015625,
+  "lastEvaluation": "2022-10-20T15:11:26.155233Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "HAProxyReloadFail",
+  "query": "template_router_reload_failure == 1",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "This alert fires when HAProxy fails to reload its configuration, which will result in the router not picking up recently created or modified routes.",
+    "message": "HAProxy reloads are failing on {{ $labels.pod }}. Router is not respecting recently created or modified routes",
+    "summary": "HAProxy reload failure"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000213582,
+  "lastEvaluation": "2022-10-20T15:11:26.155017553Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "IngressControllerDegraded",
+  "query": "ingress_controller_conditions{condition=\"Degraded\"} == 1",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "This alert fires when the IngressController status is degraded.",
+    "message": "The {{ $labels.namespace }}/{{ $labels.name }} ingresscontroller is\ndegraded: {{ $labels.reason }}.\n",
+    "summary": "IngressController is degraded"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000117965,
+  "lastEvaluation": "2022-10-20T15:11:26.155390462Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "IngressControllerUnavailable",
+  "query": "ingress_controller_conditions{condition=\"Available\"} == 0",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "This alert fires when the IngressController is not available.",
+    "message": "The {{ $labels.namespace }}/{{ $labels.name }} ingresscontroller is\nunavailable: {{ $labels.reason }}.\n",
+    "summary": "IngressController is unavailable"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000100684,
+  "lastEvaluation": "2022-10-20T15:11:26.155509301Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "InsightsDisabled",
+  "query": "cluster_operator_conditions{condition=\"Disabled\",name=\"insights\"} == 1",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info"
+  },
+  "annotations": {
+    "description": "Insights operator is disabled. In order to enable Insights and benefit from recommendations specific to your cluster, please follow steps listed in the documentation: https://docs.openshift.com/container-platform/latest/support/remote_health_monitoring/enabling-remote-health-reporting.html",
+    "summary": "Insights operator is disabled."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000222724,
+  "lastEvaluation": "2022-10-20T15:11:27.374879183Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "SimpleContentAccessNotAvailable",
+  "query": "max_over_time(cluster_operator_conditions{condition=\"SCAAvailable\",name=\"insights\",reason=\"NotFound\"}[5m]) == 0",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info"
+  },
+  "annotations": {
+    "description": "Simple content access (SCA) is not enabled. Once enabled, Insights Operator can automatically import the SCA certificates from Red Hat OpenShift Cluster Manager making it easier to use the content provided by your Red Hat subscriptions when creating container images. See https://docs.openshift.com/container-platform/latest/cicd/builds/running-entitled-builds.html for more information.",
+    "summary": "Simple content access certificates are not available."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000158554,
+  "lastEvaluation": "2022-10-20T15:11:27.375103283Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "APIRemovedInNextEUSReleaseInUse",
+  "query": "group by(group, version, resource) (apiserver_requested_deprecated_apis{removed_release=~\"1\\\\.2[5]\"}) and (sum by(group, version, resource) (rate(apiserver_request_total{system_client!=\"cluster-policy-controller\",system_client!=\"kube-controller-manager\"}[4h]))) > 0",
+  "duration": 3600,
+  "labels": {
+    "namespace": "openshift-kube-apiserver",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info"
+  },
+  "annotations": {
+    "description": "Deprecated API that will be removed in the next EUS version is being used. Removing the workload that is using the {{ $labels.group }}.{{ $labels.version }}/{{ $labels.resource }} API might be necessary for a successful upgrade to the next EUS cluster version. Refer to `oc get apirequestcounts {{ $labels.resource }}.{{ $labels.version }}.{{ $labels.group }} -o yaml` to identify the workload.",
+    "summary": "Deprecated API that will be removed in the next EUS version is being used."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.055171446,
+  "lastEvaluation": "2022-10-20T15:11:31.265353251Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "APIRemovedInNextReleaseInUse",
+  "query": "group by(group, version, resource) (apiserver_requested_deprecated_apis{removed_release=\"1.25\"}) and (sum by(group, version, resource) (rate(apiserver_request_total{system_client!=\"cluster-policy-controller\",system_client!=\"kube-controller-manager\"}[4h]))) > 0",
+  "duration": 3600,
+  "labels": {
+    "namespace": "openshift-kube-apiserver",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info"
+  },
+  "annotations": {
+    "description": "Deprecated API that will be removed in the next version is being used. Removing the workload that is using the {{ $labels.group }}.{{ $labels.version }}/{{ $labels.resource }} API might be necessary for a successful upgrade to the next cluster version. Refer to `oc get apirequestcounts {{ $labels.resource }}.{{ $labels.version }}.{{ $labels.group }} -o yaml` to identify the workload.",
+    "summary": "Deprecated API that will be removed in the next version is being used."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.054161471,
+  "lastEvaluation": "2022-10-20T15:11:31.211189604Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "AuditLogError",
+  "query": "sum by(apiserver, instance) (rate(apiserver_audit_error_total{apiserver=~\".+-apiserver\"}[5m])) / sum by(apiserver, instance) (rate(apiserver_audit_event_total{apiserver=~\".+-apiserver\"}[5m])) > 0",
+  "duration": 60,
+  "labels": {
+    "namespace": "openshift-kube-apiserver",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "An API Server had an error writing to an audit log.",
+    "summary": "An API Server instance was unable to write audit logs. This could be\ntriggered by the node running out of space, or a malicious actor\ntampering with the audit logs."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000508312,
+  "lastEvaluation": "2022-10-20T15:11:18.185128387Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ExtremelyHighIndividualControlPlaneCPU",
+  "query": "100 - (avg by(instance) (rate(node_cpu_seconds_total{mode=\"idle\"}[1m])) * 100) > 90 and on(instance) label_replace(kube_node_role{role=\"master\"}, \"instance\", \"$1\", \"node\", \"(.+)\")",
+  "duration": 3600,
+  "labels": {
+    "namespace": "openshift-kube-apiserver",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "Extreme CPU pressure can cause slow serialization and poor performance from the kube-apiserver and etcd. When this happens, there is a risk of clients seeing non-responsive API requests which are issued again causing even more CPU pressure. It can also cause failing liveness probes due to slow etcd responsiveness on the backend. If one kube-apiserver fails under this condition, chances are you will experience a cascade as the remaining kube-apiservers are also under-provisioned. To fix this, increase the CPU and memory on your control plane nodes.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-kube-apiserver-operator/ExtremelyHighIndividualControlPlaneCPU.md",
+    "summary": "Sustained high CPU utilization on a single control plane node, more CPU pressure is likely to cause a failover; increase available CPU."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000288103,
+  "lastEvaluation": "2022-10-20T15:11:29.038028122Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ExtremelyHighIndividualControlPlaneCPU",
+  "query": "100 - (avg by(instance) (rate(node_cpu_seconds_total{mode=\"idle\"}[1m])) * 100) > 90 and on(instance) label_replace(kube_node_role{role=\"master\"}, \"instance\", \"$1\", \"node\", \"(.+)\")",
+  "duration": 300,
+  "labels": {
+    "namespace": "openshift-kube-apiserver",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Extreme CPU pressure can cause slow serialization and poor performance from the kube-apiserver and etcd. When this happens, there is a risk of clients seeing non-responsive API requests which are issued again causing even more CPU pressure. It can also cause failing liveness probes due to slow etcd responsiveness on the backend. If one kube-apiserver fails under this condition, chances are you will experience a cascade as the remaining kube-apiservers are also under-provisioned. To fix this, increase the CPU and memory on your control plane nodes.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-kube-apiserver-operator/ExtremelyHighIndividualControlPlaneCPU.md",
+    "summary": "CPU utilization on a single control plane node is very high, more CPU pressure is likely to cause a failover; increase available CPU."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000266511,
+  "lastEvaluation": "2022-10-20T15:11:29.037760102Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "HighOverallControlPlaneCPU",
+  "query": "sum(100 - (avg by(instance) (rate(node_cpu_seconds_total{mode=\"idle\"}[1m])) * 100) and on(instance) label_replace(kube_node_role{role=\"master\"}, \"instance\", \"$1\", \"node\", \"(.+)\")) / count(kube_node_role{role=\"master\"}) > 60",
+  "duration": 600,
+  "labels": {
+    "namespace": "openshift-kube-apiserver",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Given three control plane nodes, the overall CPU utilization may only be about 2/3 of all available capacity. This is because if a single control plane node fails, the remaining two must handle the load of the cluster in order to be HA. If the cluster is using more than 2/3 of all capacity, if one control plane node fails, the remaining two are likely to fail when they take the load. To fix this, increase the CPU and memory on your control plane nodes.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-kube-apiserver-operator/ExtremelyHighIndividualControlPlaneCPU.md",
+    "summary": "CPU utilization across all three control plane nodes is higher than two control plane nodes can sustain; a single control plane node outage may cause a cascading failure; increase available CPU."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000452745,
+  "lastEvaluation": "2022-10-20T15:11:29.037306112Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeAPIErrorBudgetBurn",
+  "query": "sum(apiserver_request:burnrate1h) > (14.4 * 0.01) and sum(apiserver_request:burnrate5m) > (14.4 * 0.01)",
+  "duration": 120,
+  "labels": {
+    "long": "1h",
+    "namespace": "openshift-kube-apiserver",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical",
+    "short": "5m"
+  },
+  "annotations": {
+    "description": "The API server is burning too much error budget. This alert fires when too many requests are failing with high latency. Use the 'API Performance' monitoring dashboards to narrow down the request states and latency. The 'etcd' monitoring dashboards also provides metrics to help determine etcd stability and performance.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-kube-apiserver-operator/KubeAPIErrorBudgetBurn.md",
+    "summary": "The API server is burning too much error budget."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00040296,
+  "lastEvaluation": "2022-10-20T15:11:14.900567898Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeAPIErrorBudgetBurn",
+  "query": "sum(apiserver_request:burnrate6h) > (6 * 0.01) and sum(apiserver_request:burnrate30m) > (6 * 0.01)",
+  "duration": 900,
+  "labels": {
+    "long": "6h",
+    "namespace": "openshift-kube-apiserver",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical",
+    "short": "30m"
+  },
+  "annotations": {
+    "description": "The API server is burning too much error budget. This alert fires when too many requests are failing with high latency. Use the 'API Performance' monitoring dashboards to narrow down the request states and latency. The 'etcd' monitoring dashboards also provides metrics to help determine etcd stability and performance.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-kube-apiserver-operator/KubeAPIErrorBudgetBurn.md",
+    "summary": "The API server is burning too much error budget."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000200272,
+  "lastEvaluation": "2022-10-20T15:11:14.900972223Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "TechPreviewNoUpgrade",
+  "query": "cluster_feature_set{name!=\"\",namespace=\"openshift-kube-apiserver-operator\"} == 0",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Cluster has enabled Technology Preview features that cannot be undone and will prevent upgrades. The TechPreviewNoUpgrade feature set is not recommended on production clusters.",
+    "summary": "Cluster has enabled tech preview features that will prevent upgrades."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000978155,
+  "lastEvaluation": "2022-10-20T15:11:37.218796009Z",
+  "type": "alerting"
+}
+{
+  "state": "firing",
+  "name": "PodSecurityViolation",
+  "query": "sum by(policy_level) (increase(pod_security_evaluations_total{decision=\"deny\",mode=\"audit\",resource=\"pod\"}[1d])) > 0",
+  "duration": 0,
+  "labels": {
+    "namespace": "openshift-kube-apiserver",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info"
+  },
+  "annotations": {
+    "description": "A workload (pod, deployment, deamonset, ...) was created somewhere in the cluster but it did not match the PodSecurity \"{{ $labels.policy_level }}\" profile defined by its namespace either via the cluster-wide configuration (which triggers on a \"restricted\" profile violations) or by the namespace local Pod Security labels. Refer to Kubernetes documentation on Pod Security Admission to learn more about these violations.",
+    "summary": "One or more workloads users created in the cluster don't match their Pod Security profile"
+  },
+  "alerts": [
+    {
+      "labels": {
+        "alertname": "PodSecurityViolation",
+        "namespace": "openshift-kube-apiserver",
+        "policy_level": "restricted",
+        "severity": "info"
+      },
+      "annotations": {
+        "description": "A workload (pod, deployment, deamonset, ...) was created somewhere in the cluster but it did not match the PodSecurity \"restricted\" profile defined by its namespace either via the cluster-wide configuration (which triggers on a \"restricted\" profile violations) or by the namespace local Pod Security labels. Refer to Kubernetes documentation on Pod Security Admission to learn more about these violations.",
+        "summary": "One or more workloads users created in the cluster don't match their Pod Security profile"
+      },
+      "state": "firing",
+      "activeAt": "2022-10-17T20:35:12.630829563Z",
+      "value": "8.002778742618965e+00",
+      "partialResponseStrategy": "WARN"
+    }
+  ],
+  "health": "ok",
+  "evaluationTime": 0.001340086,
+  "lastEvaluation": "2022-10-20T15:11:12.63197316Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "GarbageCollectorSyncFailed",
+  "query": "rate(garbagecollector_controller_resources_sync_error_total[5m]) > 0",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Garbage Collector had a problem with syncing and monitoring the available resources. Please see KubeControllerManager logs for more details.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-kube-controller-manager-operator/GarbageCollectorSyncFailed.md",
+    "summary": "There was a problem with syncing the resources for garbage collection."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000132153,
+  "lastEvaluation": "2022-10-20T15:11:13.282849204Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeControllerManagerDown",
+  "query": "absent(up{job=\"kube-controller-manager\"} == 1)",
+  "duration": 900,
+  "labels": {
+    "namespace": "openshift-kube-controller-manager",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "KubeControllerManager has disappeared from Prometheus target discovery.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-kube-controller-manager-operator/KubeControllerManagerDown.md",
+    "summary": "Target disappeared from Prometheus target discovery."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000223284,
+  "lastEvaluation": "2022-10-20T15:11:13.282190132Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PodDisruptionBudgetAtLimit",
+  "query": "max by(namespace, poddisruptionbudget) (kube_poddisruptionbudget_status_current_healthy == kube_poddisruptionbudget_status_desired_healthy and on(namespace, poddisruptionbudget) kube_poddisruptionbudget_status_expected_pods > 0)",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The pod disruption budget is at the minimum disruptions allowed level. The number of current healthy pods is equal to the desired healthy pods.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-kube-controller-manager-operator/PodDisruptionBudgetAtLimit.md",
+    "summary": "The pod disruption budget is preventing further disruption to pods."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000263249,
+  "lastEvaluation": "2022-10-20T15:11:13.282414614Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PodDisruptionBudgetLimit",
+  "query": "max by(namespace, poddisruptionbudget) (kube_poddisruptionbudget_status_current_healthy < kube_poddisruptionbudget_status_desired_healthy)",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "The pod disruption budget is below the minimum disruptions allowed level and is not satisfied. The number of current healthy pods is less than the desired healthy pods.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-kube-controller-manager-operator/PodDisruptionBudgetLimit.md",
+    "summary": "The pod disruption budget registers insufficient amount of pods."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000168242,
+  "lastEvaluation": "2022-10-20T15:11:13.282678963Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeSchedulerDown",
+  "query": "absent(up{job=\"scheduler\"} == 1)",
+  "duration": 900,
+  "labels": {
+    "namespace": "openshift-kube-scheduler",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "KubeScheduler has disappeared from Prometheus target discovery.",
+    "summary": "Target disappeared from Prometheus target discovery."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000266574,
+  "lastEvaluation": "2022-10-20T15:11:20.642660524Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "SchedulerLegacyPolicySet",
+  "query": "cluster_legacy_scheduler_policy > 0",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The scheduler is currently configured to use a legacy scheduler policy API. Use of the policy API is deprecated and removed in 4.10.",
+    "summary": "Legacy scheduler policy API in use by the scheduler."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000142485,
+  "lastEvaluation": "2022-10-20T15:11:37.151080248Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "FluentDHighErrorRate",
+  "query": "100 * (sum by(instance) (rate(fluentd_output_status_num_errors[2m])) / sum by(instance) (rate(fluentd_output_status_emit_records[2m]))) > 10",
+  "duration": 900,
+  "labels": {
+    "namespace": "openshift-logging",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "message": "{{ $value }}% of records have resulted in an error by fluentd {{ $labels.instance }}.",
+    "summary": "FluentD output errors are high"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000201776,
+  "lastEvaluation": "2022-10-20T15:11:24.796218661Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "FluentDVeryHighErrorRate",
+  "query": "100 * (sum by(instance) (rate(fluentd_output_status_num_errors[2m])) / sum by(instance) (rate(fluentd_output_status_emit_records[2m]))) > 25",
+  "duration": 900,
+  "labels": {
+    "namespace": "openshift-logging",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "message": "{{ $value }}% of records have resulted in an error by fluentd {{ $labels.instance }}.",
+    "summary": "FluentD output errors are very high"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000133975,
+  "lastEvaluation": "2022-10-20T15:11:24.796421526Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "FluentdNodeDown",
+  "query": "up{job=\"collector\"} == 0 or absent(up{job=\"collector\"}) == 1",
+  "duration": 600,
+  "labels": {
+    "namespace": "openshift-logging",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "fluentd",
+    "severity": "critical"
+  },
+  "annotations": {
+    "message": "Prometheus could not scrape fluentd {{ $labels.instance }} for more than 10m.",
+    "summary": "Fluentd cannot be scraped"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000290407,
+  "lastEvaluation": "2022-10-20T15:11:24.795638188Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "FluentdQueueLengthIncreasing",
+  "query": "(0 * (deriv(fluentd_output_status_emit_records[1m] offset 1h))) + on(pod, plugin_id) (deriv(fluentd_output_status_buffer_queue_length[10m]) > 0 and delta(fluentd_output_status_buffer_queue_length[1h]) > 1)",
+  "duration": 3600,
+  "labels": {
+    "namespace": "openshift-logging",
+    "prometheus": "openshift-monitoring/k8s",
+    "service": "fluentd",
+    "severity": "Warning"
+  },
+  "annotations": {
+    "message": "For the last hour, fluentd {{ $labels.instance }} output '{{ $labels.plugin_id }}' average buffer queue length has increased continuously.",
+    "summary": "Fluentd is unable to keep up with traffic over time for forwarder output {{ $labels.plugin_id }}."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00028693,
+  "lastEvaluation": "2022-10-20T15:11:24.795930027Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "LokiRequestErrors",
+  "query": "sum by(namespace, job, route) (rate(loki_request_duration_seconds_count{status_code=~\"5..\"}[1m])) / sum by(namespace, job, route) (rate(loki_request_duration_seconds_count[1m])) * 100 > 10",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "message": "{{ $labels.job }} {{ $labels.route }} is experiencing {{ printf \"%.2f\" $value }}% errors.",
+    "runbook_url": "https://github.com/grafana/loki/blob/main/operator/docs/lokistack/sop.md#Loki-Request-Errors",
+    "summary": "At least 10% of requests are responded by 5xx server errors."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000647986,
+  "lastEvaluation": "2022-10-20T15:11:26.035701837Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "LokiRequestPanics",
+  "query": "sum by(namespace, job) (increase(loki_panic_total[10m])) > 0",
+  "duration": 0,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "message": "{{ $labels.job }} is experiencing an increase of {{ $value }} panics.",
+    "runbook_url": "https://github.com/grafana/loki/blob/main/operator/docs/lokistack/sop.md#Loki-Request-Panics",
+    "summary": "A panic was triggered."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000131263,
+  "lastEvaluation": "2022-10-20T15:11:26.037122368Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "LokiStackReadRequestErrors",
+  "query": "sum by(namespace, job, tenant) (rate(http_requests_total{code=~\"5..\",group=\"logsv1\",handler=~\"query|query_range|label|labels|label_values\"}[1m])) / sum by(namespace, job, tenant) (rate(http_requests_total{group=\"logsv1\",handler=~\"query|query_range|label|labels|label_values\"}[1m])) * 100 > 10",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "message": "{{ printf \"%.2f\" $value }}% of query requests from {{ $labels.job }} are returned with server errors.",
+    "runbook_url": "https://github.com/grafana/loki/blob/main/operator/docs/lokistack/sop.md#LokiStack-Read-Request-Errors",
+    "summary": "At least 10% of query requests to the lokistack-gateway are responded with 5xx server errors."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00042983,
+  "lastEvaluation": "2022-10-20T15:11:26.036691375Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "LokiStackWriteRequestErrors",
+  "query": "sum by(namespace, job, tenant) (rate(http_requests_total{code=~\"5..\",group=\"logsv1\",handler=\"push\"}[1m])) / sum by(namespace, job, tenant) (rate(http_requests_total{group=\"logsv1\",handler=\"push\"}[1m])) * 100 > 10",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "message": "{{ printf \"%.2f\" $value }}% of write requests from {{ $labels.job }} are returned with server errors.",
+    "runbook_url": "https://github.com/grafana/loki/blob/main/operator/docs/lokistack/sop.md#LokiStack-Write-Request-Errors",
+    "summary": "At least 10% of write requests to the lokistack-gateway are responded with 5xx server errors."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000337833,
+  "lastEvaluation": "2022-10-20T15:11:26.036352086Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "MachineAPIOperatorMetricsCollectionFailing",
+  "query": "mapi_mao_collector_up == 0",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "For more details:  oc logs <machine-api-operator-pod-name> -n openshift-machine-api",
+    "summary": "machine api operator metrics collection is failing."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00031722,
+  "lastEvaluation": "2022-10-20T15:11:17.322093132Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "MachineHealthCheckUnterminatedShortCircuit",
+  "query": "mapi_machinehealthcheck_short_circuit == 1",
+  "duration": 1800,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The number of unhealthy machines has exceeded the `maxUnhealthy` limit for the check, you should check\nthe status of machines in the cluster.\n",
+    "summary": "machine health check {{ $labels.name }} has been disabled by short circuit for more than 30 minutes"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000222627,
+  "lastEvaluation": "2022-10-20T15:11:24.901931562Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "MachineNotYetDeleted",
+  "query": "sum by(name, namespace) (avg_over_time(mapi_machine_created_timestamp_seconds{phase=\"Deleting\"}[15m])) > 0",
+  "duration": 21600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The machine is not properly deleting, this may be due to a configuration issue with the\ninfrastructure provider, or because workloads on the node have PodDisruptionBudgets or\nlong termination periods which are preventing deletion.\n",
+    "summary": "machine {{ $labels.name }} has been in Deleting phase for more than 6 hours"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000209213,
+  "lastEvaluation": "2022-10-20T15:11:41.333497083Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "MachineWithNoRunningPhase",
+  "query": "sum by(name, namespace) (mapi_machine_created_timestamp_seconds{phase!~\"Running|Deleting\"}) > 0",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The machine has been without a Running or Deleting phase for more than 60 minutes.\nThe machine may not have been provisioned properly from the infrastructure provider, or\nit might have issues with CertificateSigningRequests being approved.\n",
+    "summary": "machine {{ $labels.name }} is in phase: {{ $labels.phase }}"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000230051,
+  "lastEvaluation": "2022-10-20T15:11:29.969904872Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "MachineWithoutValidNode",
+  "query": "sum by(name, namespace) (mapi_machine_created_timestamp_seconds unless on(node) kube_node_info) > 0",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "If the machine never became a node, you should diagnose the machine related failures.\nIf the node was deleted from the API, you may delete the machine if appropriate.\n",
+    "summary": "machine {{ $labels.name }} does not have valid node reference"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000409291,
+  "lastEvaluation": "2022-10-20T15:11:26.474522096Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "MachineConfigControllerPausedPoolKubeletCA",
+  "query": "max by(namespace, pool) (last_over_time(machine_config_controller_paused_pool_kubelet_ca[5m]) - time()) < (86400 * 14) and max by(namespace, pool) (last_over_time(machine_config_controller_paused_pool_kubelet_ca[5m])) > 0",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "Machine config pools have a 'pause' feature, which allows config to be rendered, but prevents it from being rolled out to the nodes. This alert indicates that a certificate rotation has taken place, and the new kubelet-ca certificate bundle has been rendered into a machine config, but because the pool '{{$labels.pool}}' is paused, the config cannot be rolled out to the nodes in that pool. You will notice almost immediately that for nodes in pool '{{$labels.pool}}', pod logs will not be visible in the console and interactive commands (oc log, oc exec, oc debug, oc attach) will not work. You must unpause machine config pool '{{$labels.pool}}' to let the certificates through before the kube-apiserver-to-kubelet-signer certificate expires. You have approximately {{ $value | humanizeDuration }} remaining before this happens and nodes in '{{$labels.pool}}' cease to function properly.",
+    "runbook_url": "https://github.com/openshift/blob/master/alerts/machine-config-operator/MachineConfigControllerPausedPoolKubeletCA.md",
+    "summary": "Paused machine configuration pool '{{$labels.pool}}' is blocking a necessary certificate rotation and must be unpaused before the current kube-apiserver-to-kubelet-signer certificate expires in {{ $value | humanizeDuration }}."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00022599,
+  "lastEvaluation": "2022-10-20T15:11:25.830165303Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "MachineConfigControllerPausedPoolKubeletCA",
+  "query": "max by(namespace, pool) (last_over_time(machine_config_controller_paused_pool_kubelet_ca[5m])) > 0",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Machine config pools have a 'pause' feature, which allows config to be rendered, but prevents it from being rolled out to the nodes. This alert indicates that a certificate rotation has taken place, and the new kubelet-ca certificate bundle has been rendered into a machine config, but because the pool '{{$labels.pool}}' is paused, the config cannot be rolled out to the nodes in that pool. You will notice almost immediately that for nodes in pool '{{$labels.pool}}', pod logs will not be visible in the console and interactive commands (oc log, oc exec, oc debug, oc attach) will not work. You must unpause machine config pool '{{$labels.pool}}' to let the certificates through before the kube-apiserver-to-kubelet-signer certificate expires on {{ $value | humanizeTimestamp }} or this pool's nodes will cease to function properly.",
+    "runbook_url": "https://github.com/openshift/blob/master/alerts/machine-config-operator/MachineConfigControllerPausedPoolKubeletCA.md",
+    "summary": "Paused machine configuration pool '{{$labels.pool}}' is blocking a necessary certificate rotation and must be unpaused before the current kube-apiserver-to-kubelet-signer certificate expires on {{ $value | humanizeTimestamp }}."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000283723,
+  "lastEvaluation": "2022-10-20T15:11:25.82988038Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ExtremelyHighIndividualControlPlaneMemory",
+  "query": "(1 - sum by(instance) (node_memory_MemFree_bytes + node_memory_Buffers_bytes + node_memory_Cached_bytes and on(instance) label_replace(kube_node_role{role=\"master\"}, \"instance\", \"$1\", \"node\", \"(.+)\")) / sum by(instance) (node_memory_MemTotal_bytes and on(instance) label_replace(kube_node_role{role=\"master\"}, \"instance\", \"$1\", \"node\", \"(.+)\"))) * 100 > 90",
+  "duration": 2700,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "The memory utilization per instance within control plane nodes influence the stability, and responsiveness of the cluster. This can lead to cluster instability and slow responses from kube-apiserver or failing requests specially on etcd. Moreover, OOM kill is expected which negatively influences the pod scheduling. If this happens on container level, the descheduler will not be able to detect it, as it works on the pod level. To fix this, increase memory of the affected node of control plane nodes.",
+    "summary": "Extreme memory utilization per node within control plane nodes is extremely high, and could impact responsiveness and stability."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000492159,
+  "lastEvaluation": "2022-10-20T15:11:34.112921824Z",
+  "type": "alerting"
+}
+{
+  "state": "firing",
+  "name": "HighOverallControlPlaneMemory",
+  "query": "(1 - sum(node_memory_MemFree_bytes + node_memory_Buffers_bytes + node_memory_Cached_bytes and on(instance) label_replace(kube_node_role{role=\"master\"}, \"instance\", \"$1\", \"node\", \"(.+)\")) / sum(node_memory_MemTotal_bytes and on(instance) label_replace(kube_node_role{role=\"master\"}, \"instance\", \"$1\", \"node\", \"(.+)\"))) * 100 > 60",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Given three control plane nodes, the overall memory utilization may only be about 2/3 of all available capacity. This is because if a single control plane node fails, the kube-apiserver and etcd my be slow to respond. To fix this, increase memory of the control plane nodes.",
+    "summary": "Memory utilization across all control plane nodes is high, and could impact responsiveness and stability."
+  },
+  "alerts": [
+    {
+      "labels": {
+        "alertname": "HighOverallControlPlaneMemory",
+        "severity": "warning"
+      },
+      "annotations": {
+        "description": "Given three control plane nodes, the overall memory utilization may only be about 2/3 of all available capacity. This is because if a single control plane node fails, the kube-apiserver and etcd my be slow to respond. To fix this, increase memory of the control plane nodes.",
+        "summary": "Memory utilization across all control plane nodes is high, and could impact responsiveness and stability."
+      },
+      "state": "firing",
+      "activeAt": "2022-10-20T11:20:39.607485417Z",
+      "value": "7.029749239366039e+01",
+      "partialResponseStrategy": "WARN"
+    }
+  ],
+  "health": "ok",
+  "evaluationTime": 0.000944375,
+  "lastEvaluation": "2022-10-20T15:11:39.608965873Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "MCDDrainError",
+  "query": "mcd_drain_err > 0",
+  "duration": 0,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "message": "Drain failed on {{ $labels.node }} , updates may be blocked. For more details check MachineConfigController pod logs: oc logs -f -n {{ $labels.namespace }} machine-config-controller-xxxxx -c machine-config-controller"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000234821,
+  "lastEvaluation": "2022-10-20T15:11:28.969816929Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeletHealthState",
+  "query": "mcd_kubelet_state > 2",
+  "duration": 0,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "message": "Kubelet health failure threshold reached"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000220027,
+  "lastEvaluation": "2022-10-20T15:11:23.443912929Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "MCDPivotError",
+  "query": "mcd_pivot_err > 0",
+  "duration": 0,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "message": "Error detected in pivot logs on {{ $labels.node }} "
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000213694,
+  "lastEvaluation": "2022-10-20T15:11:16.050664441Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "MCDRebootError",
+  "query": "mcd_reboot_err > 0",
+  "duration": 0,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "message": "Reboot failed on {{ $labels.node }} , update may be blocked"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000265421,
+  "lastEvaluation": "2022-10-20T15:11:29.469909007Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "SystemMemoryExceedsReservation",
+  "query": "sum by(node) (container_memory_rss{id=\"/system.slice\"}) > ((sum by(node) (kube_node_status_capacity{resource=\"memory\"} - kube_node_status_allocatable{resource=\"memory\"})) * 0.95)",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "message": "System memory usage of {{ $value | humanize }} on {{ $labels.node }} exceeds 95% of the reservation. Reserved memory ensures system processes can function even when the node is fully allocated and protects against workload out of memory events impacting the proper functioning of the node. The default reservation is expected to be sufficient for most configurations and should be increased (https://docs.openshift.com/container-platform/latest/nodes/nodes/nodes-nodes-managing.html) when running nodes with high numbers of pods (either due to rate of change or at steady state)."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000475734,
+  "lastEvaluation": "2022-10-20T15:11:41.133654032Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "CertifiedOperatorsCatalogError",
+  "query": "catalogsource_ready{exported_namespace=\"openshift-marketplace\",name=\"certified-operators\"} == 0",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Fires whenever the certified-operators source is not ready for more than 10 mins.",
+    "message": "Default OperatorHub source \"certified-operators\" is in Non-Ready state for more than 10 mins.",
+    "summary": "Certified-operators not ready for more than 10 minutes"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000218585,
+  "lastEvaluation": "2022-10-20T15:11:34.993544901Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "CommunityOperatorsCatalogError",
+  "query": "catalogsource_ready{exported_namespace=\"openshift-marketplace\",name=\"community-operators\"} == 0",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Fires whenever the community-operators source is not ready for more than 10 mins.",
+    "message": "Default OperatorHub source \"community-operators\" is in Non-Ready state for more than 10 mins.",
+    "summary": "Community-operators not ready for 10 minutes"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000235287,
+  "lastEvaluation": "2022-10-20T15:11:37.89483908Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "RedhatMarketplaceCatalogError",
+  "query": "catalogsource_ready{exported_namespace=\"openshift-marketplace\",name=\"redhat-marketplace\"} == 0",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Fires whenever the redhat-marketplace source is not ready for more than 10 mins.",
+    "message": "Default OperatorHub source \"redhat-marketplace\" is in Non-Ready state for more than 10 mins.",
+    "summary": "Redhat-marketplace not ready for more than 10 minutes"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000210992,
+  "lastEvaluation": "2022-10-20T15:11:39.399037407Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "RedhatOperatorsCatalogError",
+  "query": "catalogsource_ready{exported_namespace=\"openshift-marketplace\",name=\"redhat-operators\"} == 0",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Fires whenever the redhat-operators source is not ready for more than 10 mins.",
+    "message": "Default OperatorHub source \"redhat-operators\" is in Non-Ready state for more than 10 mins.",
+    "summary": "Redhat-operators not ready for more than 10 minutes"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000198792,
+  "lastEvaluation": "2022-10-20T15:11:19.696594437Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "AlertmanagerClusterDown",
+  "query": "(count by(namespace, service) (avg_over_time(up{job=~\"alertmanager-main|alertmanager-user-workload\"}[5m]) < 0.5) / count by(namespace, service) (up{job=~\"alertmanager-main|alertmanager-user-workload\"})) >= 0.5",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "{{ $value | humanizePercentage }} of Alertmanager instances within the {{$labels.job}} cluster have been up for less than half of the last 5m.",
+    "summary": "Half or more of the Alertmanager instances within the same cluster are down."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00042785,
+  "lastEvaluation": "2022-10-20T15:11:28.823504704Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "AlertmanagerClusterFailedToSendAlerts",
+  "query": "min by(namespace, service, integration) (rate(alertmanager_notifications_failed_total{integration=~\".*\",job=~\"alertmanager-main|alertmanager-user-workload\"}[5m]) / rate(alertmanager_notifications_total{integration=~\".*\",job=~\"alertmanager-main|alertmanager-user-workload\"}[5m])) > 0.01",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The minimum notification failure rate to {{ $labels.integration }} sent from any instance in the {{$labels.job}} cluster is {{ $value | humanizePercentage }}.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/AlertmanagerClusterFailedToSendAlerts.md",
+    "summary": "All Alertmanager instances in a cluster failed to send notifications to a critical integration."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000918766,
+  "lastEvaluation": "2022-10-20T15:11:28.822373423Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "AlertmanagerConfigInconsistent",
+  "query": "count by(namespace, service) (count_values by(namespace, service) (\"config_hash\", alertmanager_config_hash{job=~\"alertmanager-main|alertmanager-user-workload\"})) != 1",
+  "duration": 1200,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Alertmanager instances within the {{$labels.job}} cluster have different configurations.",
+    "summary": "Alertmanager instances within the same cluster have different configurations."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000208844,
+  "lastEvaluation": "2022-10-20T15:11:28.823293882Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "AlertmanagerFailedReload",
+  "query": "max_over_time(alertmanager_config_last_reload_successful{job=~\"alertmanager-main|alertmanager-user-workload\"}[5m]) == 0",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "Configuration has failed to load for {{ $labels.namespace }}/{{ $labels.pod}}.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/AlertmanagerFailedReload.md",
+    "summary": "Reloading an Alertmanager configuration has failed."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000216339,
+  "lastEvaluation": "2022-10-20T15:11:28.821442386Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "AlertmanagerFailedToSendAlerts",
+  "query": "(rate(alertmanager_notifications_failed_total{job=~\"alertmanager-main|alertmanager-user-workload\"}[5m]) / rate(alertmanager_notifications_total{job=~\"alertmanager-main|alertmanager-user-workload\"}[5m])) > 0.01",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Alertmanager {{ $labels.namespace }}/{{ $labels.pod}} failed to send {{ $value | humanizePercentage }} of notifications to {{ $labels.integration }}.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/AlertmanagerFailedToSendAlerts.md",
+    "summary": "An Alertmanager instance failed to send notifications."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000496131,
+  "lastEvaluation": "2022-10-20T15:11:28.821875774Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "AlertmanagerMembersInconsistent",
+  "query": "max_over_time(alertmanager_cluster_members{job=~\"alertmanager-main|alertmanager-user-workload\"}[5m]) < on(namespace, service) group_left() count by(namespace, service) (max_over_time(alertmanager_cluster_members{job=~\"alertmanager-main|alertmanager-user-workload\"}[5m]))",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Alertmanager {{ $labels.namespace }}/{{ $labels.pod}} has only found {{ $value }} members of the {{$labels.job}} cluster.",
+    "summary": "A member of an Alertmanager cluster has not found all other cluster members."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000214332,
+  "lastEvaluation": "2022-10-20T15:11:28.821660056Z",
+  "type": "alerting"
+}
+{
+  "state": "firing",
+  "name": "Watchdog",
+  "query": "vector(1)",
+  "duration": 0,
+  "labels": {
+    "namespace": "openshift-monitoring",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "none"
+  },
+  "annotations": {
+    "description": "This is an alert meant to ensure that the entire alerting pipeline is functional.\nThis alert is always firing, therefore it should always be firing in Alertmanager\nand always fire against a receiver. There are integrations with various notification\nmechanisms that send a notification when this alert is not firing. For example the\n\"DeadMansSnitch\" integration in PagerDuty.\n",
+    "summary": "An alert that should always be firing to certify that Alertmanager is working properly."
+  },
+  "alerts": [
+    {
+      "labels": {
+        "alertname": "Watchdog",
+        "namespace": "openshift-monitoring",
+        "severity": "none"
+      },
+      "annotations": {
+        "description": "This is an alert meant to ensure that the entire alerting pipeline is functional.\nThis alert is always firing, therefore it should always be firing in Alertmanager\nand always fire against a receiver. There are integrations with various notification\nmechanisms that send a notification when this alert is not firing. For example the\n\"DeadMansSnitch\" integration in PagerDuty.\n",
+        "summary": "An alert that should always be firing to certify that Alertmanager is working properly."
+      },
+      "state": "firing",
+      "activeAt": "2022-10-17T20:30:53.481653988Z",
+      "value": "1e+00",
+      "partialResponseStrategy": "WARN"
+    }
+  ],
+  "health": "ok",
+  "evaluationTime": 0.000497462,
+  "lastEvaluation": "2022-10-20T15:11:23.483075604Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeNetworkInterfaceFlapping",
+  "query": "changes(node_network_up{device!~\"veth.+|tunbr\",job=\"node-exporter\"}[2m]) > 2",
+  "duration": 120,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Network interface \"{{ $labels.device }}\" changing its up status often on node-exporter {{ $labels.namespace }}/{{ $labels.pod }}",
+    "summary": "Network interface is often changing its status"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000360094,
+  "lastEvaluation": "2022-10-20T15:11:39.567853514Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "TargetDown",
+  "query": "100 * (count by(job, namespace, service) (up == 0 unless on(node) max by(node) (kube_node_spec_unschedulable == 1)) / count by(job, namespace, service) (up unless on(node) max by(node) (kube_node_spec_unschedulable == 1))) > 10",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "{{ printf \"%.4g\" $value }}% of the {{ $labels.job }}/{{ $labels.service }} targets in {{ $labels.namespace }} namespace have been unreachable for more than 15 minutes. This may be a symptom of network connectivity issues, down nodes, or failures within these components. Assess the health of the infrastructure and nodes running these targets and then contact support.",
+    "summary": "Some targets were not reachable from the monitoring server for an extended period of time."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.001195735,
+  "lastEvaluation": "2022-10-20T15:11:15.877886216Z",
+  "type": "alerting"
+}
+{
+  "state": "firing",
+  "name": "AlertmanagerReceiversNotConfigured",
+  "query": "cluster:alertmanager_integrations:max == 0",
+  "duration": 600,
+  "labels": {
+    "namespace": "openshift-monitoring",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Alerts are not configured to be sent to a notification system, meaning that you may not be notified in a timely fashion when important failures occur. Check the OpenShift documentation to learn how to configure notifications with Alertmanager.",
+    "summary": "Receivers (notification integrations) are not configured on Alertmanager"
+  },
+  "alerts": [
+    {
+      "labels": {
+        "alertname": "AlertmanagerReceiversNotConfigured",
+        "namespace": "openshift-monitoring",
+        "severity": "warning"
+      },
+      "annotations": {
+        "description": "Alerts are not configured to be sent to a notification system, meaning that you may not be notified in a timely fashion when important failures occur. Check the OpenShift documentation to learn how to configure notifications with Alertmanager.",
+        "summary": "Receivers (notification integrations) are not configured on Alertmanager"
+      },
+      "state": "firing",
+      "activeAt": "2022-10-12T21:49:04Z",
+      "value": "0e+00",
+      "partialResponseStrategy": "WARN"
+    }
+  ],
+  "health": "ok",
+  "evaluationTime": 0.00030428,
+  "lastEvaluation": "2022-10-20T15:11:34.211690598Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ClusterMonitoringOperatorReconciliationErrors",
+  "query": "max_over_time(cluster_monitoring_operator_last_reconciliation_successful[5m]) == 0",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Errors are occurring during reconciliation cycles. Inspect the cluster-monitoring-operator log for potential root causes.",
+    "summary": "Cluster Monitoring Operator is experiencing unexpected reconciliation errors."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000072278,
+  "lastEvaluation": "2022-10-20T15:11:34.211617468Z",
+  "type": "alerting"
+}
+{
+  "state": "firing",
+  "name": "KubeDeploymentReplicasMismatch",
+  "query": "(((kube_deployment_spec_replicas{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} > kube_deployment_status_replicas_available{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}) and (changes(kube_deployment_status_replicas_updated{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}[5m]) == 0)) * on() group_left() cluster:control_plane:all_nodes_ready) > 0",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Deployment {{ $labels.namespace }}/{{ $labels.deployment }} has not matched the expected number of replicas for longer than 15 minutes. This indicates that cluster infrastructure is unable to start or restart the necessary components. This most often occurs when one or more nodes are down or partioned from the cluster, or a fault occurs on the node that prevents the workload from starting. In rare cases this may indicate a new version of a cluster component cannot start due to a bug or configuration error. Assess the pods for this deployment to verify they are running on healthy nodes and then contact support.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/KubeDeploymentReplicasMismatch.md",
+    "summary": "Deployment has not matched the expected number of replicas"
+  },
+  "alerts": [
+    {
+      "labels": {
+        "alertname": "KubeDeploymentReplicasMismatch",
+        "container": "kube-rbac-proxy-main",
+        "deployment": "minio",
+        "endpoint": "https-main",
+        "job": "kube-state-metrics",
+        "namespace": "openshift-logging",
+        "service": "kube-state-metrics",
+        "severity": "warning"
+      },
+      "annotations": {
+        "description": "Deployment openshift-logging/minio has not matched the expected number of replicas for longer than 15 minutes. This indicates that cluster infrastructure is unable to start or restart the necessary components. This most often occurs when one or more nodes are down or partioned from the cluster, or a fault occurs on the node that prevents the workload from starting. In rare cases this may indicate a new version of a cluster component cannot start due to a bug or configuration error. Assess the pods for this deployment to verify they are running on healthy nodes and then contact support.",
+        "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/KubeDeploymentReplicasMismatch.md",
+        "summary": "Deployment has not matched the expected number of replicas"
+      },
+      "state": "firing",
+      "activeAt": "2022-10-19T20:39:04.190440298Z",
+      "value": "1e+00",
+      "partialResponseStrategy": "WARN"
+    }
+  ],
+  "health": "ok",
+  "evaluationTime": 0.001860238,
+  "lastEvaluation": "2022-10-20T15:11:34.211996561Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "MultipleContainersOOMKilled",
+  "query": "sum(max by(namespace, container, pod) (increase(kube_pod_container_status_restarts_total[12m])) and max by(namespace, container, pod) (kube_pod_container_status_last_terminated_reason{reason=\"OOMKilled\"}) == 1) > 5",
+  "duration": 900,
+  "labels": {
+    "namespace": "kube-system",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info"
+  },
+  "annotations": {
+    "description": "Multiple containers were out of memory killed within the past 15 minutes. There are many potential causes of OOM errors, however issues on a specific node or containers breaching their limits is common.",
+    "summary": "Containers are being killed due to OOM"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.001282211,
+  "lastEvaluation": "2022-10-20T15:11:34.213858472Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeStateMetricsListErrors",
+  "query": "(sum(rate(kube_state_metrics_list_total{job=\"kube-state-metrics\",result=\"error\"}[5m])) / sum(rate(kube_state_metrics_list_total{job=\"kube-state-metrics\"}[5m]))) > 0.01",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "kube-state-metrics is experiencing errors at an elevated rate in list operations. This is likely causing it to not be able to expose metrics about Kubernetes objects correctly or at all.",
+    "summary": "kube-state-metrics is experiencing errors in list operations."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000824594,
+  "lastEvaluation": "2022-10-20T15:11:40.158562753Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeStateMetricsWatchErrors",
+  "query": "(sum(rate(kube_state_metrics_watch_total{job=\"kube-state-metrics\",result=\"error\"}[5m])) / sum(rate(kube_state_metrics_watch_total{job=\"kube-state-metrics\"}[5m]))) > 0.01",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "kube-state-metrics is experiencing errors at an elevated rate in watch operations. This is likely causing it to not be able to expose metrics about Kubernetes objects correctly or at all.",
+    "summary": "kube-state-metrics is experiencing errors in watch operations."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000713338,
+  "lastEvaluation": "2022-10-20T15:11:40.15938989Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeContainerWaiting",
+  "query": "sum by(namespace, pod, container, cluster) (kube_pod_container_status_waiting_reason{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}) > 0",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "pod/{{ $labels.pod }} in namespace {{ $labels.namespace }} on container {{ $labels.container}} has been in waiting state for longer than 1 hour.",
+    "summary": "Pod container waiting longer than 1 hour"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000397935,
+  "lastEvaluation": "2022-10-20T15:11:38.929712017Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeDaemonSetMisScheduled",
+  "query": "kube_daemonset_status_number_misscheduled{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} > 0",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "{{ $value }} Pods of DaemonSet {{ $labels.namespace }}/{{ $labels.daemonset }} are running where they are not supposed to run.",
+    "summary": "DaemonSet pods are misscheduled."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000305509,
+  "lastEvaluation": "2022-10-20T15:11:38.930845638Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeDaemonSetNotScheduled",
+  "query": "kube_daemonset_status_desired_number_scheduled{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} - kube_daemonset_status_current_number_scheduled{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} > 0",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "{{ $value }} Pods of DaemonSet {{ $labels.namespace }}/{{ $labels.daemonset }} are not scheduled.",
+    "summary": "DaemonSet pods are not scheduled."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000731945,
+  "lastEvaluation": "2022-10-20T15:11:38.93011189Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeDaemonSetRolloutStuck",
+  "query": "((kube_daemonset_status_current_number_scheduled{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} != kube_daemonset_status_desired_number_scheduled{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}) or (kube_daemonset_status_number_misscheduled{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} != 0) or (kube_daemonset_status_updated_number_scheduled{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} != kube_daemonset_status_desired_number_scheduled{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}) or (kube_daemonset_status_number_available{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} != kube_daemonset_status_desired_number_scheduled{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"})) and (changes(kube_daemonset_status_updated_number_scheduled{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}[5m]) == 0)",
+  "duration": 1800,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "DaemonSet {{ $labels.namespace }}/{{ $labels.daemonset }} has not finished or progressed for at least 30 minutes.",
+    "summary": "DaemonSet rollout is stuck."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00234592,
+  "lastEvaluation": "2022-10-20T15:11:38.92736375Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeDeploymentGenerationMismatch",
+  "query": "kube_deployment_status_observed_generation{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} != kube_deployment_metadata_generation{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Deployment generation for {{ $labels.namespace }}/{{ $labels.deployment }} does not match, this indicates that the Deployment has failed but has not been rolled back.",
+    "summary": "Deployment generation mismatch due to possible roll-back"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.001574397,
+  "lastEvaluation": "2022-10-20T15:11:38.923034791Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeHpaMaxedOut",
+  "query": "kube_horizontalpodautoscaler_status_current_replicas{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} == kube_horizontalpodautoscaler_spec_max_replicas{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "HPA {{ $labels.namespace }}/{{ $labels.horizontalpodautoscaler  }} has been running at max replicas for longer than 15 minutes.",
+    "summary": "HPA is running at max replicas"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00031129,
+  "lastEvaluation": "2022-10-20T15:11:38.933049004Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeHpaReplicasMismatch",
+  "query": "(kube_horizontalpodautoscaler_status_desired_replicas{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} != kube_horizontalpodautoscaler_status_current_replicas{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}) and (kube_horizontalpodautoscaler_status_current_replicas{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} > kube_horizontalpodautoscaler_spec_min_replicas{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}) and (kube_horizontalpodautoscaler_status_current_replicas{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} < kube_horizontalpodautoscaler_spec_max_replicas{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}) and changes(kube_horizontalpodautoscaler_status_current_replicas{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}[15m]) == 0",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "HPA {{ $labels.namespace }}/{{ $labels.horizontalpodautoscaler  }} has not matched the desired number of replicas for longer than 15 minutes.",
+    "summary": "HPA has not matched descired number of replicas."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00085006,
+  "lastEvaluation": "2022-10-20T15:11:38.932197603Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeJobFailed",
+  "query": "kube_job_failed{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} > 0",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Job {{ $labels.namespace }}/{{ $labels.job_name }} failed to complete. Removing failed job after investigation should clear this alert.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/KubeJobFailed.md",
+    "summary": "Job failed to complete."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000239356,
+  "lastEvaluation": "2022-10-20T15:11:38.931957144Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeJobNotCompleted",
+  "query": "time() - max by(namespace, job_name, cluster) (kube_job_status_start_time{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} and kube_job_status_active{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} > 0) > 43200",
+  "duration": 0,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Job {{ $labels.namespace }}/{{ $labels.job_name }} is taking more than {{ \"43200\" | humanizeDuration }} to complete.",
+    "summary": "Job did not complete in time"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000803495,
+  "lastEvaluation": "2022-10-20T15:11:38.931152207Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubePodCrashLooping",
+  "query": "max_over_time(kube_pod_container_status_waiting_reason{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\",reason=\"CrashLoopBackOff\"}[5m]) >= 1",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Pod {{ $labels.namespace }}/{{ $labels.pod }} ({{ $labels.container }}) is in waiting state (reason: \"CrashLoopBackOff\").",
+    "summary": "Pod is crash looping."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000327926,
+  "lastEvaluation": "2022-10-20T15:11:38.918900823Z",
+  "type": "alerting"
+}
+{
+  "state": "firing",
+  "name": "KubePodNotReady",
+  "query": "sum by(namespace, pod, cluster) (max by(namespace, pod, cluster) (kube_pod_status_phase{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\",phase=~\"Pending|Unknown\"}) * on(namespace, pod, cluster) group_left(owner_kind) topk by(namespace, pod, cluster) (1, max by(namespace, pod, owner_kind, cluster) (kube_pod_owner{owner_kind!=\"Job\"}))) > 0",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Pod {{ $labels.namespace }}/{{ $labels.pod }} has been in a non-ready state for longer than 15 minutes.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/KubePodNotReady.md",
+    "summary": "Pod has been in a non-ready state for more than 15 minutes."
+  },
+  "alerts": [
+    {
+      "labels": {
+        "alertname": "KubePodNotReady",
+        "namespace": "openshift-logging",
+        "pod": "minio-b7c668ffb-jjhxp",
+        "severity": "warning"
+      },
+      "annotations": {
+        "description": "Pod openshift-logging/minio-b7c668ffb-jjhxp has been in a non-ready state for longer than 15 minutes.",
+        "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/KubePodNotReady.md",
+        "summary": "Pod has been in a non-ready state for more than 15 minutes."
+      },
+      "state": "firing",
+      "activeAt": "2022-10-19T20:39:08.915895861Z",
+      "value": "1e+00",
+      "partialResponseStrategy": "WARN"
+    }
+  ],
+  "health": "ok",
+  "evaluationTime": 0.003801564,
+  "lastEvaluation": "2022-10-20T15:11:38.919230329Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeStatefulSetGenerationMismatch",
+  "query": "kube_statefulset_status_observed_generation{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} != kube_statefulset_metadata_generation{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "StatefulSet generation for {{ $labels.namespace }}/{{ $labels.statefulset }} does not match, this indicates that the StatefulSet has failed but has not been rolled back.",
+    "summary": "StatefulSet generation mismatch due to possible roll-back"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000725861,
+  "lastEvaluation": "2022-10-20T15:11:38.925491777Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeStatefulSetReplicasMismatch",
+  "query": "(kube_statefulset_status_replicas_ready{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} != kube_statefulset_status_replicas{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}) and (changes(kube_statefulset_status_replicas_updated{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}[10m]) == 0)",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "StatefulSet {{ $labels.namespace }}/{{ $labels.statefulset }} has not matched the expected number of replicas for longer than 15 minutes.",
+    "summary": "Deployment has not matched the expected number of replicas."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000877983,
+  "lastEvaluation": "2022-10-20T15:11:38.924611794Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeStatefulSetUpdateNotRolledOut",
+  "query": "(max without(revision) (kube_statefulset_status_current_revision{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} unless kube_statefulset_status_update_revision{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}) * (kube_statefulset_replicas{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} != kube_statefulset_status_replicas_updated{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"})) and (changes(kube_statefulset_status_replicas_updated{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}[5m]) == 0)",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "StatefulSet {{ $labels.namespace }}/{{ $labels.statefulset }} update has not been rolled out.",
+    "summary": "StatefulSet update has not been rolled out."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.001143493,
+  "lastEvaluation": "2022-10-20T15:11:38.926218957Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeCPUOvercommit",
+  "query": "sum(namespace_cpu:kube_pod_container_resource_requests:sum) - (sum(kube_node_status_allocatable{resource=\"cpu\"}) - max(kube_node_status_allocatable{resource=\"cpu\"})) > 0 and (sum(kube_node_status_allocatable{resource=\"cpu\"}) - max(kube_node_status_allocatable{resource=\"cpu\"})) > 0",
+  "duration": 600,
+  "labels": {
+    "namespace": "kube-system",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Cluster has overcommitted CPU resource requests for Pods by {{ $value }} CPU shares and cannot tolerate node failure.",
+    "summary": "Cluster has overcommitted CPU resource requests."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000563657,
+  "lastEvaluation": "2022-10-20T15:11:15.940092903Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeCPUQuotaOvercommit",
+  "query": "sum(min without(resource) (kube_resourcequota{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\",resource=~\"(cpu|requests.cpu)\",type=\"hard\"})) / sum(kube_node_status_allocatable{job=\"kube-state-metrics\",resource=\"cpu\"}) > 1.5",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Cluster has overcommitted CPU resource requests for Namespaces.",
+    "summary": "Cluster has overcommitted CPU resource requests."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000552527,
+  "lastEvaluation": "2022-10-20T15:11:15.941179287Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeMemoryOvercommit",
+  "query": "sum(namespace_memory:kube_pod_container_resource_requests:sum) - (sum(kube_node_status_allocatable{resource=\"memory\"}) - max(kube_node_status_allocatable{resource=\"memory\"})) > 0 and (sum(kube_node_status_allocatable{resource=\"memory\"}) - max(kube_node_status_allocatable{resource=\"memory\"})) > 0",
+  "duration": 600,
+  "labels": {
+    "namespace": "kube-system",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Cluster has overcommitted memory resource requests for Pods by {{ $value | humanize }} bytes and cannot tolerate node failure.",
+    "summary": "Cluster has overcommitted memory resource requests."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000519284,
+  "lastEvaluation": "2022-10-20T15:11:15.94065823Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeMemoryQuotaOvercommit",
+  "query": "sum(min without(resource) (kube_resourcequota{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\",resource=~\"(memory|requests.memory)\",type=\"hard\"})) / sum(kube_node_status_allocatable{job=\"kube-state-metrics\",resource=\"memory\"}) > 1.5",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Cluster has overcommitted memory resource requests for Namespaces.",
+    "summary": "Cluster has overcommitted memory resource requests."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000426728,
+  "lastEvaluation": "2022-10-20T15:11:15.941733532Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeQuotaAlmostFull",
+  "query": "kube_resourcequota{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\",type=\"used\"} / ignoring(instance, job, type) (kube_resourcequota{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\",type=\"hard\"} > 0) > 0.9 < 1",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info"
+  },
+  "annotations": {
+    "description": "Namespace {{ $labels.namespace }} is using {{ $value | humanizePercentage }} of its {{ $labels.resource }} quota.",
+    "summary": "Namespace quota is going to be full."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000456399,
+  "lastEvaluation": "2022-10-20T15:11:15.942161607Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeQuotaExceeded",
+  "query": "kube_resourcequota{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\",type=\"used\"} / ignoring(instance, job, type) (kube_resourcequota{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\",type=\"hard\"} > 0) > 1",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Namespace {{ $labels.namespace }} is using {{ $value | humanizePercentage }} of its {{ $labels.resource }} quota.",
+    "summary": "Namespace quota has exceeded the limits."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000377904,
+  "lastEvaluation": "2022-10-20T15:11:15.943052462Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeQuotaFullyUsed",
+  "query": "kube_resourcequota{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\",type=\"used\"} / ignoring(instance, job, type) (kube_resourcequota{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\",type=\"hard\"} > 0) == 1",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info"
+  },
+  "annotations": {
+    "description": "Namespace {{ $labels.namespace }} is using {{ $value | humanizePercentage }} of its {{ $labels.resource }} quota.",
+    "summary": "Namespace quota is fully used."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000432215,
+  "lastEvaluation": "2022-10-20T15:11:15.942619186Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubePersistentVolumeErrors",
+  "query": "kube_persistentvolume_status_phase{job=\"kube-state-metrics\",namespace=~\"(openshift-.*|kube-.*|default)\",phase=~\"Failed|Pending\"} > 0",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The persistent volume {{ $labels.persistentvolume }} has status {{ $labels.phase }}.",
+    "summary": "PersistentVolume is having issues with provisioning."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.001873352,
+  "lastEvaluation": "2022-10-20T15:11:24.774272128Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubePersistentVolumeFillingUp",
+  "query": "(kubelet_volume_stats_available_bytes{job=\"kubelet\",metrics_path=\"/metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} / kubelet_volume_stats_capacity_bytes{job=\"kubelet\",metrics_path=\"/metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}) < 0.03 and kubelet_volume_stats_used_bytes{job=\"kubelet\",metrics_path=\"/metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} > 0 unless on(namespace, persistentvolumeclaim) kube_persistentvolumeclaim_access_mode{access_mode=\"ReadOnlyMany\",namespace=~\"(openshift-.*|kube-.*|default)\"} == 1 unless on(namespace, persistentvolumeclaim) kube_persistentvolumeclaim_labels{label_alerts_k8s_io_kube_persistent_volume_filling_up=\"disabled\",namespace=~\"(openshift-.*|kube-.*|default)\"} == 1",
+  "duration": 60,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "The PersistentVolume claimed by {{ $labels.persistentvolumeclaim }} in Namespace {{ $labels.namespace }} is only {{ $value | humanizePercentage }} free.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/KubePersistentVolumeFillingUp.md",
+    "summary": "PersistentVolume is filling up."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.001309447,
+  "lastEvaluation": "2022-10-20T15:11:24.760519625Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubePersistentVolumeFillingUp",
+  "query": "(kubelet_volume_stats_available_bytes{job=\"kubelet\",metrics_path=\"/metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} / kubelet_volume_stats_capacity_bytes{job=\"kubelet\",metrics_path=\"/metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}) < 0.15 and kubelet_volume_stats_used_bytes{job=\"kubelet\",metrics_path=\"/metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} > 0 and predict_linear(kubelet_volume_stats_available_bytes{job=\"kubelet\",metrics_path=\"/metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}[6h], 4 * 24 * 3600) < 0 unless on(namespace, persistentvolumeclaim) kube_persistentvolumeclaim_access_mode{access_mode=\"ReadOnlyMany\",namespace=~\"(openshift-.*|kube-.*|default)\"} == 1 unless on(namespace, persistentvolumeclaim) kube_persistentvolumeclaim_labels{label_alerts_k8s_io_kube_persistent_volume_filling_up=\"disabled\",namespace=~\"(openshift-.*|kube-.*|default)\"} == 1",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Based on recent sampling, the PersistentVolume claimed by {{ $labels.persistentvolumeclaim }} in Namespace {{ $labels.namespace }} is expected to fill up within four days. Currently {{ $value | humanizePercentage }} is available.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/KubePersistentVolumeFillingUp.md",
+    "summary": "PersistentVolume is filling up."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.005507106,
+  "lastEvaluation": "2022-10-20T15:11:24.761831781Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubePersistentVolumeInodesFillingUp",
+  "query": "(kubelet_volume_stats_inodes_free{job=\"kubelet\",metrics_path=\"/metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} / kubelet_volume_stats_inodes{job=\"kubelet\",metrics_path=\"/metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}) < 0.03 and kubelet_volume_stats_inodes_used{job=\"kubelet\",metrics_path=\"/metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} > 0 unless on(namespace, persistentvolumeclaim) kube_persistentvolumeclaim_access_mode{access_mode=\"ReadOnlyMany\",namespace=~\"(openshift-.*|kube-.*|default)\"} == 1 unless on(namespace, persistentvolumeclaim) kube_persistentvolumeclaim_labels{label_alerts_k8s_io_kube_persistent_volume_filling_up=\"disabled\",namespace=~\"(openshift-.*|kube-.*|default)\"} == 1",
+  "duration": 60,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "The PersistentVolume claimed by {{ $labels.persistentvolumeclaim }} in Namespace {{ $labels.namespace }} only has {{ $value | humanizePercentage }} free inodes.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/KubePersistentVolumeInodesFillingUp.md",
+    "summary": "PersistentVolumeInodes are filling up."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00112794,
+  "lastEvaluation": "2022-10-20T15:11:24.767341317Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubePersistentVolumeInodesFillingUp",
+  "query": "(kubelet_volume_stats_inodes_free{job=\"kubelet\",metrics_path=\"/metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} / kubelet_volume_stats_inodes{job=\"kubelet\",metrics_path=\"/metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}) < 0.15 and kubelet_volume_stats_inodes_used{job=\"kubelet\",metrics_path=\"/metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"} > 0 and predict_linear(kubelet_volume_stats_inodes_free{job=\"kubelet\",metrics_path=\"/metrics\",namespace=~\"(openshift-.*|kube-.*|default)\"}[6h], 4 * 24 * 3600) < 0 unless on(namespace, persistentvolumeclaim) kube_persistentvolumeclaim_access_mode{access_mode=\"ReadOnlyMany\",namespace=~\"(openshift-.*|kube-.*|default)\"} == 1 unless on(namespace, persistentvolumeclaim) kube_persistentvolumeclaim_labels{label_alerts_k8s_io_kube_persistent_volume_filling_up=\"disabled\",namespace=~\"(openshift-.*|kube-.*|default)\"} == 1",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Based on recent sampling, the PersistentVolume claimed by {{ $labels.persistentvolumeclaim }} in Namespace {{ $labels.namespace }} is expected to run out of inodes within four days. Currently {{ $value | humanizePercentage }} of its inodes are free.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/KubePersistentVolumeInodesFillingUp.md",
+    "summary": "PersistentVolumeInodes are filling up."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.005798092,
+  "lastEvaluation": "2022-10-20T15:11:24.768471632Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeClientErrors",
+  "query": "(sum by(cluster, instance, job, namespace) (rate(rest_client_requests_total{code=~\"5..\"}[5m])) / sum by(cluster, instance, job, namespace) (rate(rest_client_requests_total[5m]))) > 0.01",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Kubernetes API server client '{{ $labels.job }}/{{ $labels.instance }}' is experiencing {{ $value | humanizePercentage }} errors.'",
+    "summary": "Kubernetes API server client is experiencing errors."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.001699073,
+  "lastEvaluation": "2022-10-20T15:11:23.688976402Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeAPIDown",
+  "query": "absent(up{job=\"apiserver\"} == 1)",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "KubeAPI has disappeared from Prometheus target discovery.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/KubeAPIDown.md",
+    "summary": "Target disappeared from Prometheus target discovery."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000090331,
+  "lastEvaluation": "2022-10-20T15:11:12.635350283Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeAPITerminatedRequests",
+  "query": "sum(rate(apiserver_request_terminations_total{job=\"apiserver\"}[10m])) / (sum(rate(apiserver_request_total{job=\"apiserver\"}[10m])) + sum(rate(apiserver_request_terminations_total{job=\"apiserver\"}[10m]))) > 0.2",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The kubernetes apiserver has terminated {{ $value | humanizePercentage }} of its incoming requests.",
+    "summary": "The kubernetes apiserver has terminated {{ $value | humanizePercentage }} of its incoming requests."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.013032041,
+  "lastEvaluation": "2022-10-20T15:11:12.635441475Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeAggregatedAPIDown",
+  "query": "(1 - max by(name, namespace, cluster) (avg_over_time(aggregator_unavailable_apiservice[10m]))) * 100 < 85",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Kubernetes aggregated API {{ $labels.name }}/{{ $labels.namespace }} has been only {{ $value | humanize }}% available over the last 10m.",
+    "summary": "Kubernetes aggregated API is down."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000900223,
+  "lastEvaluation": "2022-10-20T15:11:12.634449027Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeAggregatedAPIErrors",
+  "query": "sum by(name, namespace, cluster) (increase(aggregator_unavailable_apiservice_total[10m])) > 4",
+  "duration": 0,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Kubernetes aggregated API {{ $labels.name }}/{{ $labels.namespace }} has reported errors. It has appeared unavailable {{ $value | humanize }} times averaged over the past 10m.",
+    "summary": "Kubernetes aggregated API has reported errors."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000169238,
+  "lastEvaluation": "2022-10-20T15:11:12.634278608Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeNodeNotReady",
+  "query": "kube_node_status_condition{condition=\"Ready\",job=\"kube-state-metrics\",status=\"true\"} == 0",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "{{ $labels.node }} has been unready for more than 15 minutes.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/KubeNodeNotReady.md",
+    "summary": "Node is not ready."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000207388,
+  "lastEvaluation": "2022-10-20T15:11:23.883806263Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeNodeReadinessFlapping",
+  "query": "sum by(cluster, node) (changes(kube_node_status_condition{condition=\"Ready\",status=\"true\"}[15m])) > 2",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The readiness status of node {{ $labels.node }} has changed {{ $value }} times in the last 15 minutes.",
+    "summary": "Node readiness status is flapping."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000178664,
+  "lastEvaluation": "2022-10-20T15:11:23.886744039Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeNodeUnreachable",
+  "query": "(kube_node_spec_taint{effect=\"NoSchedule\",job=\"kube-state-metrics\",key=\"node.kubernetes.io/unreachable\"} unless ignoring(key, value) kube_node_spec_taint{job=\"kube-state-metrics\",key=~\"ToBeDeletedByClusterAutoscaler|cloud.google.com/impending-node-termination|aws-node-termination-handler/spot-itn\"}) == 1",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "{{ $labels.node }} is unreachable and some workloads may be rescheduled.",
+    "summary": "Node is unreachable."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000230712,
+  "lastEvaluation": "2022-10-20T15:11:23.8840148Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeletClientCertificateRenewalErrors",
+  "query": "increase(kubelet_certificate_manager_client_expiration_renew_errors[5m]) > 0",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Kubelet on node {{ $labels.node }} has failed to renew its client certificate ({{ $value | humanize }} errors in the last 5 minutes).",
+    "summary": "Kubelet has failed to renew its client certificate."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000222521,
+  "lastEvaluation": "2022-10-20T15:11:23.887734208Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeletDown",
+  "query": "absent(up{job=\"kubelet\",metrics_path=\"/metrics\"} == 1)",
+  "duration": 900,
+  "labels": {
+    "namespace": "kube-system",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "Kubelet has disappeared from Prometheus target discovery.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/KubeletDown.md",
+    "summary": "Target disappeared from Prometheus target discovery."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000109147,
+  "lastEvaluation": "2022-10-20T15:11:23.888129483Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeletPlegDurationHigh",
+  "query": "node_quantile:kubelet_pleg_relist_duration_seconds:histogram_quantile{quantile=\"0.99\"} >= 10",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "The Kubelet Pod Lifecycle Event Generator has a 99th percentile duration of {{ $value }} seconds on node {{ $labels.node }}.",
+    "summary": "Kubelet Pod Lifecycle Event Generator is taking too long to relist."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000166129,
+  "lastEvaluation": "2022-10-20T15:11:23.886937349Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeletPodStartUpLatencyHigh",
+  "query": "histogram_quantile(0.99, sum by(cluster, instance, le) (rate(kubelet_pod_worker_duration_seconds_bucket{job=\"kubelet\",metrics_path=\"/metrics\"}[5m]))) * on(cluster, instance) group_left(node) kubelet_node_name{job=\"kubelet\",metrics_path=\"/metrics\"} > 60",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Kubelet Pod startup 99th percentile latency is {{ $value }} seconds on node {{ $labels.node }}.",
+    "summary": "Kubelet Pod startup latency is too high."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000627542,
+  "lastEvaluation": "2022-10-20T15:11:23.887104975Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeletServerCertificateRenewalErrors",
+  "query": "increase(kubelet_server_expiration_renew_errors[5m]) > 0",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Kubelet on node {{ $labels.node }} has failed to renew its server certificate ({{ $value | humanize }} errors in the last 5 minutes).",
+    "summary": "Kubelet has failed to renew its server certificate."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000169443,
+  "lastEvaluation": "2022-10-20T15:11:23.887958123Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "KubeletTooManyPods",
+  "query": "count by(cluster, node) ((kube_pod_status_phase{job=\"kube-state-metrics\",phase=\"Running\"} == 1) * on(instance, pod, namespace, cluster) group_left(node) topk by(instance, pod, namespace, cluster) (1, kube_pod_info{job=\"kube-state-metrics\"})) / max by(cluster, node) (kube_node_status_capacity{job=\"kube-state-metrics\",resource=\"pods\"} != 1) > 0.95",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info"
+  },
+  "annotations": {
+    "description": "Kubelet '{{ $labels.node }}' is running at {{ $value | humanizePercentage }} of its Pod capacity.",
+    "summary": "Kubelet is running at capacity."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.002495738,
+  "lastEvaluation": "2022-10-20T15:11:23.884246424Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeClockNotSynchronising",
+  "query": "min_over_time(node_timex_sync_status[5m]) == 0 and node_timex_maxerror_seconds >= 16",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "Clock on {{ $labels.instance }} is not synchronising. Ensure NTP is configured on this host.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/NodeClockNotSynchronising.md",
+    "summary": "Clock not synchronising."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000162236,
+  "lastEvaluation": "2022-10-20T15:11:21.781140421Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeClockSkewDetected",
+  "query": "(node_timex_offset_seconds > 0.05 and deriv(node_timex_offset_seconds[5m]) >= 0) or (node_timex_offset_seconds < -0.05 and deriv(node_timex_offset_seconds[5m]) <= 0)",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Clock on {{ $labels.instance }} is out of sync by more than 300s. Ensure NTP is configured correctly on this host.",
+    "summary": "Clock skew detected."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00029092,
+  "lastEvaluation": "2022-10-20T15:11:21.780848332Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeFileDescriptorLimit",
+  "query": "(node_filefd_allocated{job=\"node-exporter\"} * 100 / node_filefd_maximum{job=\"node-exporter\"} > 90)",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "File descriptors limit at {{ $labels.instance }} is currently at {{ printf \"%.2f\" $value }}%.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/NodeFileDescriptorLimit.md",
+    "summary": "Kernel is predicted to exhaust file descriptors limit soon."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000164059,
+  "lastEvaluation": "2022-10-20T15:11:21.78162375Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeFileDescriptorLimit",
+  "query": "(node_filefd_allocated{job=\"node-exporter\"} * 100 / node_filefd_maximum{job=\"node-exporter\"} > 70)",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "File descriptors limit at {{ $labels.instance }} is currently at {{ printf \"%.2f\" $value }}%.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/NodeFileDescriptorLimit.md",
+    "summary": "Kernel is predicted to exhaust file descriptors limit soon."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000173825,
+  "lastEvaluation": "2022-10-20T15:11:21.781448854Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeFilesystemAlmostOutOfFiles",
+  "query": "(node_filesystem_files_free{fstype!=\"\",job=\"node-exporter\"} / node_filesystem_files{fstype!=\"\",job=\"node-exporter\"} * 100 < 3 and node_filesystem_readonly{fstype!=\"\",job=\"node-exporter\"} == 0)",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "Filesystem on {{ $labels.device }} at {{ $labels.instance }} has only {{ printf \"%.2f\" $value }}% available inodes left.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/NodeFilesystemAlmostOutOfFiles.md",
+    "summary": "Filesystem has less than 3% inodes left."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000503717,
+  "lastEvaluation": "2022-10-20T15:11:21.779534373Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeFilesystemAlmostOutOfFiles",
+  "query": "(node_filesystem_files_free{fstype!=\"\",job=\"node-exporter\"} / node_filesystem_files{fstype!=\"\",job=\"node-exporter\"} * 100 < 5 and node_filesystem_readonly{fstype!=\"\",job=\"node-exporter\"} == 0)",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Filesystem on {{ $labels.device }} at {{ $labels.instance }} has only {{ printf \"%.2f\" $value }}% available inodes left.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/NodeFilesystemAlmostOutOfFiles.md",
+    "summary": "Filesystem has less than 5% inodes left."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00048519,
+  "lastEvaluation": "2022-10-20T15:11:21.779047911Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeFilesystemAlmostOutOfSpace",
+  "query": "(node_filesystem_avail_bytes{fstype!=\"\",job=\"node-exporter\"} / node_filesystem_size_bytes{fstype!=\"\",job=\"node-exporter\"} * 100 < 3 and node_filesystem_readonly{fstype!=\"\",job=\"node-exporter\"} == 0)",
+  "duration": 1800,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "Filesystem on {{ $labels.device }} at {{ $labels.instance }} has only {{ printf \"%.2f\" $value }}% available space left.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/NodeFilesystemAlmostOutOfSpace.md",
+    "summary": "Filesystem has less than 3% space left."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000471841,
+  "lastEvaluation": "2022-10-20T15:11:21.773450699Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeFilesystemAlmostOutOfSpace",
+  "query": "(node_filesystem_avail_bytes{fstype!=\"\",job=\"node-exporter\"} / node_filesystem_size_bytes{fstype!=\"\",job=\"node-exporter\"} * 100 < 5 and node_filesystem_readonly{fstype!=\"\",job=\"node-exporter\"} == 0)",
+  "duration": 1800,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Filesystem on {{ $labels.device }} at {{ $labels.instance }} has only {{ printf \"%.2f\" $value }}% available space left.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/NodeFilesystemAlmostOutOfSpace.md",
+    "summary": "Filesystem has less than 5% space left."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000506517,
+  "lastEvaluation": "2022-10-20T15:11:21.772942097Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeFilesystemFilesFillingUp",
+  "query": "(node_filesystem_files_free{fstype!=\"\",job=\"node-exporter\"} / node_filesystem_files{fstype!=\"\",job=\"node-exporter\"} * 100 < 20 and predict_linear(node_filesystem_files_free{fstype!=\"\",job=\"node-exporter\"}[6h], 4 * 60 * 60) < 0 and node_filesystem_readonly{fstype!=\"\",job=\"node-exporter\"} == 0)",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "Filesystem on {{ $labels.device }} at {{ $labels.instance }} has only {{ printf \"%.2f\" $value }}% available inodes left and is filling up fast.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/NodeFilesystemFilesFillingUp.md",
+    "summary": "Filesystem is predicted to run out of inodes within the next 4 hours."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.002770701,
+  "lastEvaluation": "2022-10-20T15:11:21.776274888Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeFilesystemFilesFillingUp",
+  "query": "(node_filesystem_files_free{fstype!=\"\",job=\"node-exporter\"} / node_filesystem_files{fstype!=\"\",job=\"node-exporter\"} * 100 < 40 and predict_linear(node_filesystem_files_free{fstype!=\"\",job=\"node-exporter\"}[6h], 24 * 60 * 60) < 0 and node_filesystem_readonly{fstype!=\"\",job=\"node-exporter\"} == 0)",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Filesystem on {{ $labels.device }} at {{ $labels.instance }} has only {{ printf \"%.2f\" $value }}% available inodes left and is filling up.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/NodeFilesystemFilesFillingUp.md",
+    "summary": "Filesystem is predicted to run out of inodes within the next 24 hours."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.002348625,
+  "lastEvaluation": "2022-10-20T15:11:21.773924027Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeFilesystemSpaceFillingUp",
+  "query": "(node_filesystem_avail_bytes{fstype!=\"\",job=\"node-exporter\"} / node_filesystem_size_bytes{fstype!=\"\",job=\"node-exporter\"} * 100 < 10 and predict_linear(node_filesystem_avail_bytes{fstype!=\"\",job=\"node-exporter\"}[6h], 4 * 60 * 60) < 0 and node_filesystem_readonly{fstype!=\"\",job=\"node-exporter\"} == 0)",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "Filesystem on {{ $labels.device }} at {{ $labels.instance }} has only {{ printf \"%.2f\" $value }}% available space left and is filling up fast.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/NodeFilesystemSpaceFillingUp.md",
+    "summary": "Filesystem is predicted to run out of space within the next 4 hours."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.002234897,
+  "lastEvaluation": "2022-10-20T15:11:21.770704165Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeFilesystemSpaceFillingUp",
+  "query": "(node_filesystem_avail_bytes{fstype!=\"\",job=\"node-exporter\"} / node_filesystem_size_bytes{fstype!=\"\",job=\"node-exporter\"} * 100 < 15 and predict_linear(node_filesystem_avail_bytes{fstype!=\"\",job=\"node-exporter\"}[6h], 24 * 60 * 60) < 0 and node_filesystem_readonly{fstype!=\"\",job=\"node-exporter\"} == 0)",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Filesystem on {{ $labels.device }} at {{ $labels.instance }} has only {{ printf \"%.2f\" $value }}% available space left and is filling up.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/NodeFilesystemSpaceFillingUp.md",
+    "summary": "Filesystem is predicted to run out of space within the next 24 hours."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.002286367,
+  "lastEvaluation": "2022-10-20T15:11:21.768414867Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeHighNumberConntrackEntriesUsed",
+  "query": "(node_nf_conntrack_entries / node_nf_conntrack_entries_limit) > 0.75",
+  "duration": 0,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "{{ $value | humanizePercentage }} of conntrack entries are used.",
+    "summary": "Number of conntrack are getting close to the limit."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000135952,
+  "lastEvaluation": "2022-10-20T15:11:21.780595536Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeNetworkReceiveErrs",
+  "query": "rate(node_network_receive_errs_total[2m]) / rate(node_network_receive_packets_total[2m]) > 0.01",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "{{ $labels.instance }} interface {{ $labels.device }} has encountered {{ printf \"%.0f\" $value }} receive errors in the last two minutes.",
+    "summary": "Network interface is reporting many receive errors."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.0002578,
+  "lastEvaluation": "2022-10-20T15:11:21.780039306Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeNetworkTransmitErrs",
+  "query": "rate(node_network_transmit_errs_total[2m]) / rate(node_network_transmit_packets_total[2m]) > 0.01",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "{{ $labels.instance }} interface {{ $labels.device }} has encountered {{ printf \"%.0f\" $value }} transmit errors in the last two minutes.",
+    "summary": "Network interface is reporting many transmit errors."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000296128,
+  "lastEvaluation": "2022-10-20T15:11:21.78029828Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeRAIDDegraded",
+  "query": "node_md_disks_required - ignoring(state) (node_md_disks{state=\"active\"}) > 0",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "RAID array '{{ $labels.device }}' on {{ $labels.instance }} is in degraded state due to one or more disks failures. Number of spare drives is insufficient to fix issue automatically.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/NodeRAIDDegraded.md",
+    "summary": "RAID Array is degraded"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000090053,
+  "lastEvaluation": "2022-10-20T15:11:21.781303663Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeRAIDDiskFailure",
+  "query": "node_md_disks{state=\"failed\"} > 0",
+  "duration": 0,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "At least one device in RAID array on {{ $labels.instance }} failed. Array '{{ $labels.device }}' needs attention and possibly a disk swap.",
+    "summary": "Failed device in RAID array"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000053237,
+  "lastEvaluation": "2022-10-20T15:11:21.781394704Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeTextFileCollectorScrapeError",
+  "query": "node_textfile_scrape_error{job=\"node-exporter\"} == 1",
+  "duration": 0,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Node Exporter text file collector failed to scrape.",
+    "summary": "Node Exporter text file collector failed to scrape."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000114623,
+  "lastEvaluation": "2022-10-20T15:11:21.780732549Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusBadConfig",
+  "query": "max_over_time(prometheus_config_last_reload_successful{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) == 0",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} has failed to reload its configuration.",
+    "summary": "Failed Prometheus configuration reload."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000353284,
+  "lastEvaluation": "2022-10-20T15:11:23.155680111Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusDuplicateTimestamps",
+  "query": "rate(prometheus_target_scrapes_sample_duplicate_timestamp_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) > 0",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} is dropping {{ printf \"%.4g\" $value  }} samples/s with different values but duplicated timestamp.",
+    "summary": "Prometheus is dropping samples with duplicate timestamps."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000130353,
+  "lastEvaluation": "2022-10-20T15:11:23.158322678Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusErrorSendingAlertsToSomeAlertmanagers",
+  "query": "(rate(prometheus_notifications_errors_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) / rate(prometheus_notifications_sent_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m])) * 100 > 1",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "{{ printf \"%.1f\" $value }}% errors while sending alerts from Prometheus {{$labels.namespace}}/{{$labels.pod}} to Alertmanager {{$labels.alertmanager}}.",
+    "summary": "Prometheus has encountered more than 1% errors sending alerts to a specific Alertmanager."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00024431,
+  "lastEvaluation": "2022-10-20T15:11:23.15629874Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusLabelLimitHit",
+  "query": "increase(prometheus_target_scrape_pool_exceeded_label_limits_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) > 0",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} has dropped {{ printf \"%.0f\" $value }} targets because some samples exceeded the configured label_limit, label_name_length_limit or label_value_length_limit.",
+    "summary": "Prometheus has dropped targets because some scrape configs have exceeded the labels limit."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00016427,
+  "lastEvaluation": "2022-10-20T15:11:23.16083861Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusMissingRuleEvaluations",
+  "query": "increase(prometheus_rule_group_iterations_missed_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) > 0",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} has missed {{ printf \"%.0f\" $value }} rule group evaluations in the last 5m.",
+    "summary": "Prometheus is missing rule evaluations due to slow rule group evaluation."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000569447,
+  "lastEvaluation": "2022-10-20T15:11:23.160082926Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusNotConnectedToAlertmanagers",
+  "query": "max_over_time(prometheus_notifications_alertmanagers_discovered{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) < 1",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} is not connected to any Alertmanagers.",
+    "summary": "Prometheus is not connected to any Alertmanagers."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000144465,
+  "lastEvaluation": "2022-10-20T15:11:23.156544159Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusNotIngestingSamples",
+  "query": "(rate(prometheus_tsdb_head_samples_appended_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) <= 0 and (sum without(scrape_job) (prometheus_target_metadata_cache_entries{job=~\"prometheus-k8s|prometheus-user-workload\"}) > 0 or sum without(rule_group) (prometheus_rule_group_rules{job=~\"prometheus-k8s|prometheus-user-workload\"}) > 0))",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} is not ingesting samples.",
+    "summary": "Prometheus is not ingesting samples."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.001187402,
+  "lastEvaluation": "2022-10-20T15:11:23.157133941Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusNotificationQueueRunningFull",
+  "query": "(predict_linear(prometheus_notifications_queue_length{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m], 60 * 30) > min_over_time(prometheus_notifications_queue_capacity{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]))",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Alert notification queue of Prometheus {{$labels.namespace}}/{{$labels.pod}} is running full.",
+    "summary": "Prometheus alert notification queue predicted to run full in less than 30m."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000262928,
+  "lastEvaluation": "2022-10-20T15:11:23.156034626Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusOutOfOrderTimestamps",
+  "query": "rate(prometheus_target_scrapes_sample_out_of_order_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) > 0",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} is dropping {{ printf \"%.4g\" $value  }} samples/s with timestamps arriving out of order.",
+    "summary": "Prometheus drops samples with out-of-order timestamps."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000145253,
+  "lastEvaluation": "2022-10-20T15:11:23.158453989Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusRemoteStorageFailures",
+  "query": "((rate(prometheus_remote_storage_failed_samples_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) or rate(prometheus_remote_storage_samples_failed_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m])) / ((rate(prometheus_remote_storage_failed_samples_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) or rate(prometheus_remote_storage_samples_failed_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m])) + (rate(prometheus_remote_storage_succeeded_samples_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) or rate(prometheus_remote_storage_samples_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m])))) * 100 > 1",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} failed to send {{ printf \"%.1f\" $value }}% of the samples to {{ $labels.remote_name}}:{{ $labels.url }}",
+    "summary": "Prometheus fails to send samples to remote storage."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000493135,
+  "lastEvaluation": "2022-10-20T15:11:23.158600115Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusRemoteWriteBehind",
+  "query": "(max_over_time(prometheus_remote_storage_highest_timestamp_in_seconds{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) - ignoring(remote_name, url) group_right() max_over_time(prometheus_remote_storage_queue_highest_sent_timestamp_seconds{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m])) > 120",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "info"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} remote write is {{ printf \"%.1f\" $value }}s behind for {{ $labels.remote_name}}:{{ $labels.url }}.",
+    "summary": "Prometheus remote write is behind."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000211418,
+  "lastEvaluation": "2022-10-20T15:11:23.159094854Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusRemoteWriteDesiredShards",
+  "query": "(max_over_time(prometheus_remote_storage_shards_desired{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) > max_over_time(prometheus_remote_storage_shards_max{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]))",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} remote write desired shards calculation wants to run {{ $value }} shards for queue {{ $labels.remote_name}}:{{ $labels.url }}, which is more than the max of {{ printf `prometheus_remote_storage_shards_max{instance=\"%s\",job=~\"prometheus-k8s|prometheus-user-workload\"}` $labels.instance | query | first | value }}.",
+    "summary": "Prometheus remote write desired shards calculation wants to run more than configured max shards."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000158623,
+  "lastEvaluation": "2022-10-20T15:11:23.159307269Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusRuleFailures",
+  "query": "increase(prometheus_rule_evaluation_failures_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) > 0",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} has failed to evaluate {{ printf \"%.0f\" $value }} rules in the last 5m.",
+    "summary": "Prometheus is failing rule evaluations."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000615297,
+  "lastEvaluation": "2022-10-20T15:11:23.1594667Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusScrapeBodySizeLimitHit",
+  "query": "increase(prometheus_target_scrapes_exceeded_body_size_limit_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) > 0",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} has failed {{ printf \"%.0f\" $value }} scrapes in the last 5m because some targets exceeded the configured body_size_limit.",
+    "summary": "Prometheus has dropped some targets that exceeded body size limit."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000110217,
+  "lastEvaluation": "2022-10-20T15:11:23.161003945Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusScrapeSampleLimitHit",
+  "query": "increase(prometheus_target_scrapes_exceeded_sample_limit_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) > 0",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} has failed {{ printf \"%.0f\" $value }} scrapes in the last 5m because some targets exceeded the configured sample_limit.",
+    "summary": "Prometheus has failed scrapes that have exceeded the configured sample limit."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000114235,
+  "lastEvaluation": "2022-10-20T15:11:23.161131232Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusTSDBCompactionsFailing",
+  "query": "increase(prometheus_tsdb_compactions_failed_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[3h]) > 0",
+  "duration": 14400,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} has detected {{$value | humanize}} compaction failures over the last 3h.",
+    "summary": "Prometheus has issues compacting blocks."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000270262,
+  "lastEvaluation": "2022-10-20T15:11:23.156862773Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusTSDBReloadsFailing",
+  "query": "increase(prometheus_tsdb_reloads_failures_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[3h]) > 0",
+  "duration": 14400,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} has detected {{$value | humanize}} reload failures over the last 3h.",
+    "summary": "Prometheus has issues reloading blocks from disk."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000172138,
+  "lastEvaluation": "2022-10-20T15:11:23.156689584Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusTargetLimitHit",
+  "query": "increase(prometheus_target_scrape_pool_exceeded_target_limit_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[5m]) > 0",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus {{$labels.namespace}}/{{$labels.pod}} has dropped {{ printf \"%.0f\" $value }} targets because the number of targets exceeded the configured target_limit.",
+    "summary": "Prometheus has dropped targets because some scrape configs have exceeded the targets limit."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000184189,
+  "lastEvaluation": "2022-10-20T15:11:23.160653269Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusTargetSyncFailure",
+  "query": "increase(prometheus_target_sync_failed_total{job=~\"prometheus-k8s|prometheus-user-workload\"}[30m]) > 0",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "{{ printf \"%.0f\" $value }} targets in Prometheus {{$labels.namespace}}/{{$labels.pod}} have failed to sync because invalid configuration was supplied.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-monitoring-operator/PrometheusTargetSyncFailure.md",
+    "summary": "Prometheus has failed to sync targets."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000631846,
+  "lastEvaluation": "2022-10-20T15:11:23.161246342Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ThanosSidecarBucketOperationsFailed",
+  "query": "sum by(namespace, job, instance) (rate(thanos_objstore_bucket_operation_failures_total{job=~\"prometheus-(k8s|user-workload)-thanos-sidecar\"}[5m])) > 0",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Thanos Sidecar {{$labels.instance}} in {{$labels.namespace}} bucket operations are failing",
+    "summary": "Thanos Sidecar bucket operations are failing"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000302834,
+  "lastEvaluation": "2022-10-20T15:11:18.938916997Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ThanosSidecarNoConnectionToStartedPrometheus",
+  "query": "thanos_sidecar_prometheus_up{job=~\"prometheus-(k8s|user-workload)-thanos-sidecar\"} == 0 and on(namespace, pod) prometheus_tsdb_data_replay_duration_seconds != 0",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Thanos Sidecar {{$labels.instance}} in {{$labels.namespace}} is unhealthy.",
+    "summary": "Thanos Sidecar cannot access Prometheus, even though Prometheus seems healthy and has reloaded WAL."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000193491,
+  "lastEvaluation": "2022-10-20T15:11:18.939221485Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ConfigReloaderSidecarErrors",
+  "query": "max_over_time(reloader_last_reload_successful{namespace=~\".+\"}[5m]) == 0",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Errors encountered while the {{$labels.pod}} config-reloader sidecar attempts to sync config in {{$labels.namespace}} namespace.\nAs a result, configuration for service running in {{$labels.pod}} may be stale and cannot be updated anymore.",
+    "summary": "config-reloader sidecar has not had a successful reload for 10m"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000374588,
+  "lastEvaluation": "2022-10-20T15:11:15.97846291Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusOperatorListErrors",
+  "query": "(sum by(controller, namespace) (rate(prometheus_operator_list_operations_failed_total{job=\"prometheus-operator\",namespace=~\"openshift-monitoring|openshift-user-workload-monitoring\"}[10m])) / sum by(controller, namespace) (rate(prometheus_operator_list_operations_total{job=\"prometheus-operator\",namespace=~\"openshift-monitoring|openshift-user-workload-monitoring\"}[10m]))) > 0.4",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Errors while performing List operations in controller {{$labels.controller}} in {{$labels.namespace}} namespace.",
+    "summary": "Errors while performing list operations in controller."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000631593,
+  "lastEvaluation": "2022-10-20T15:11:25.300597351Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusOperatorNodeLookupErrors",
+  "query": "rate(prometheus_operator_node_address_lookup_errors_total{job=\"prometheus-operator\",namespace=~\"openshift-monitoring|openshift-user-workload-monitoring\"}[5m]) > 0.1",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Errors while reconciling Prometheus in {{ $labels.namespace }} Namespace.",
+    "summary": "Errors while reconciling Prometheus."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000239257,
+  "lastEvaluation": "2022-10-20T15:11:25.302154567Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusOperatorNotReady",
+  "query": "min by(controller, namespace) (max_over_time(prometheus_operator_ready{job=\"prometheus-operator\",namespace=~\"openshift-monitoring|openshift-user-workload-monitoring\"}[5m]) == 0)",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus operator in {{ $labels.namespace }} namespace isn't ready to reconcile {{ $labels.controller }} resources.",
+    "summary": "Prometheus operator not ready"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000229866,
+  "lastEvaluation": "2022-10-20T15:11:25.302395137Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusOperatorReconcileErrors",
+  "query": "(sum by(controller, namespace) (rate(prometheus_operator_reconcile_errors_total{job=\"prometheus-operator\",namespace=~\"openshift-monitoring|openshift-user-workload-monitoring\"}[5m]))) / (sum by(controller, namespace) (rate(prometheus_operator_reconcile_operations_total{job=\"prometheus-operator\",namespace=~\"openshift-monitoring|openshift-user-workload-monitoring\"}[5m]))) > 0.1",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "{{ $value | humanizePercentage }} of reconciling operations failed for {{ $labels.controller }} controller in {{ $labels.namespace }} namespace.",
+    "summary": "Errors while reconciling controller."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000296943,
+  "lastEvaluation": "2022-10-20T15:11:25.301856586Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusOperatorRejectedResources",
+  "query": "min_over_time(prometheus_operator_managed_resources{job=\"prometheus-operator\",namespace=~\"openshift-monitoring|openshift-user-workload-monitoring\",state=\"rejected\"}[5m]) > 0",
+  "duration": 300,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Prometheus operator in {{ $labels.namespace }} namespace rejected {{ printf \"%0.0f\" $value }} {{ $labels.controller }}/{{ $labels.resource }} resources.",
+    "summary": "Resources rejected by Prometheus operator"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000201839,
+  "lastEvaluation": "2022-10-20T15:11:25.302626223Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusOperatorSyncFailed",
+  "query": "min_over_time(prometheus_operator_syncs{job=\"prometheus-operator\",namespace=~\"openshift-monitoring|openshift-user-workload-monitoring\",status=\"failed\"}[5m]) > 0",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Controller {{ $labels.controller }} in {{ $labels.namespace }} namespace fails to reconcile {{ $value }} objects.",
+    "summary": "Last controller reconciliation failed"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000192623,
+  "lastEvaluation": "2022-10-20T15:11:25.301662607Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "PrometheusOperatorWatchErrors",
+  "query": "(sum by(controller, namespace) (rate(prometheus_operator_watch_operations_failed_total{job=\"prometheus-operator\",namespace=~\"openshift-monitoring|openshift-user-workload-monitoring\"}[5m])) / sum by(controller, namespace) (rate(prometheus_operator_watch_operations_total{job=\"prometheus-operator\",namespace=~\"openshift-monitoring|openshift-user-workload-monitoring\"}[5m]))) > 0.4",
+  "duration": 900,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Errors while performing watch operations in controller {{$labels.controller}} in {{$labels.namespace}} namespace.",
+    "summary": "Errors while performing watch operations in controller."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000430679,
+  "lastEvaluation": "2022-10-20T15:11:25.30123068Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ThanosQueryGrpcClientErrorRate",
+  "query": "(sum by(namespace, job) (rate(grpc_client_handled_total{grpc_code!=\"OK\",job=\"thanos-querier\"}[5m])) / sum by(namespace, job) (rate(grpc_client_started_total{job=\"thanos-querier\"}[5m]))) * 100 > 5",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Thanos Query {{$labels.job}} in {{$labels.namespace}} is failing to send {{$value | humanize}}% of requests.",
+    "summary": "Thanos Query is failing to send requests."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000255141,
+  "lastEvaluation": "2022-10-20T15:11:15.319341259Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ThanosQueryGrpcServerErrorRate",
+  "query": "(sum by(namespace, job) (rate(grpc_server_handled_total{grpc_code=~\"Unknown|ResourceExhausted|Internal|Unavailable|DataLoss|DeadlineExceeded\",job=\"thanos-querier\"}[5m])) / sum by(namespace, job) (rate(grpc_server_started_total{job=\"thanos-querier\"}[5m])) * 100 > 5)",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Thanos Query {{$labels.job}} in {{$labels.namespace}} is failing to handle {{$value | humanize}}% of requests.",
+    "summary": "Thanos Query is failing to handle requests."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000806555,
+  "lastEvaluation": "2022-10-20T15:11:15.318533277Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ThanosQueryHighDNSFailures",
+  "query": "(sum by(namespace, job) (rate(thanos_query_store_apis_dns_failures_total{job=\"thanos-querier\"}[5m])) / sum by(namespace, job) (rate(thanos_query_store_apis_dns_lookups_total{job=\"thanos-querier\"}[5m]))) * 100 > 1",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Thanos Query {{$labels.job}} in {{$labels.namespace}} have {{$value | humanize}}% of failing DNS queries for store endpoints.",
+    "summary": "Thanos Query is having high number of DNS failures."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000262792,
+  "lastEvaluation": "2022-10-20T15:11:15.319597611Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ThanosQueryHttpRequestQueryErrorRateHigh",
+  "query": "(sum by(namespace, job) (rate(http_requests_total{code=~\"5..\",handler=\"query\",job=\"thanos-querier\"}[5m])) / sum by(namespace, job) (rate(http_requests_total{handler=\"query\",job=\"thanos-querier\"}[5m]))) * 100 > 5",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Thanos Query {{$labels.job}} in {{$labels.namespace}} is failing to handle {{$value | humanize}}% of \"query\" requests.",
+    "summary": "Thanos Query is failing to handle requests."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000528264,
+  "lastEvaluation": "2022-10-20T15:11:15.317663527Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "ThanosQueryHttpRequestQueryRangeErrorRateHigh",
+  "query": "(sum by(namespace, job) (rate(http_requests_total{code=~\"5..\",handler=\"query_range\",job=\"thanos-querier\"}[5m])) / sum by(namespace, job) (rate(http_requests_total{handler=\"query_range\",job=\"thanos-querier\"}[5m]))) * 100 > 5",
+  "duration": 3600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Thanos Query {{$labels.job}} in {{$labels.namespace}} is failing to handle {{$value | humanize}}% of \"query_range\" requests.",
+    "summary": "Thanos Query is failing to handle requests."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000338455,
+  "lastEvaluation": "2022-10-20T15:11:15.318193183Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "CsvAbnormalFailedOver2Min",
+  "query": "csv_abnormal{phase=~\"^Failed$\"}",
+  "duration": 120,
+  "labels": {
+    "namespace": "{{ $labels.namespace }}",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Fires whenever a CSV has been in the failed phase for more than 2 minutes.",
+    "message": "Failed to install Operator {{ $labels.name }} version {{ $labels.version }}. Reason-{{ $labels.reason }}",
+    "summary": "CSV failed for over 2 minutes"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000194496,
+  "lastEvaluation": "2022-10-20T15:11:27.948423496Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "CsvAbnormalOver30Min",
+  "query": "csv_abnormal{phase=~\"(^Replacing$|^Pending$|^Deleting$|^Unknown$)\"}",
+  "duration": 1800,
+  "labels": {
+    "namespace": "{{ $labels.namespace }}",
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Fires whenever a CSV is in the Replacing, Pending, Deleting, or Unkown phase for more than 30 minutes.",
+    "message": "Failed to install Operator {{ $labels.name }} version {{ $labels.version }}. Phase-{{ $labels.phase }} Reason-{{ $labels.reason }}",
+    "summary": "CSV abnormal for over 30 minutes"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000123716,
+  "lastEvaluation": "2022-10-20T15:11:27.948619575Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "InstallPlanStepAppliedWithWarnings",
+  "query": "sum(increase(installplan_warnings_total[5m])) > 0",
+  "duration": 0,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Fires whenever the API server returns a warning when attempting to modify an operator.",
+    "message": "The API server returned a warning during installation or upgrade of an operator. An Event with reason \"AppliedWithWarnings\" has been created with complete details, including a reference to the InstallPlan step that generated the warning.",
+    "summary": "API returned a warning when modifying an operator"
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000252744,
+  "lastEvaluation": "2022-10-20T15:11:33.159428989Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NoOvnMasterLeader",
+  "query": "max(ovnkube_master_leader) == 0",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "Networking control plane is degraded. Networking configuration updates applied to the cluster will not be\nimplemented while there is no OVN Kubernetes leader. Existing workloads should continue to have connectivity.\nOVN-Kubernetes control plane is not functional.\n",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-network-operator/NoOvnMasterLeader.md",
+    "summary": "There is no ovn-kubernetes master leader."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000095947,
+  "lastEvaluation": "2022-10-20T15:11:39.399615101Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NoRunningOvnMaster",
+  "query": "absent(up{job=\"ovnkube-master\",namespace=\"openshift-ovn-kubernetes\"} == 1)",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "critical"
+  },
+  "annotations": {
+    "description": "Networking control plane is degraded. Networking configuration updates applied to the cluster will not be\nimplemented while there are no OVN Kubernetes pods.\n",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-network-operator/NoRunningOvnMaster.md",
+    "summary": "There is no running ovn-kubernetes master."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000139009,
+  "lastEvaluation": "2022-10-20T15:11:39.399474573Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NorthboundStale",
+  "query": "time() - max(ovnkube_master_nb_e2e_timestamp) > 120",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Networking control plane is degraded. Networking configuration updates applied to the cluster will not be\nimplemented. Existing workloads should continue to have connectivity. OVN-Kubernetes control plane and/or\nOVN northbound database may not be functional.\n",
+    "summary": "ovn-kubernetes has not written anything to the northbound database for too long."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00021098,
+  "lastEvaluation": "2022-10-20T15:11:39.399712392Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "SouthboundStale",
+  "query": "max(ovnkube_master_nb_e2e_timestamp) - max(ovnkube_master_sb_e2e_timestamp) > 120",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Networking control plane is degraded. Networking configuration updates may not be applied to the cluster or\ntaking a long time to apply. This usually means there is a large load on OVN component 'northd' or it is not\nfunctioning.\n",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-network-operator/SouthboundStaleAlert.md",
+    "summary": "ovn-northd has not successfully synced any changes to the southbound DB for too long."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.00014019,
+  "lastEvaluation": "2022-10-20T15:11:39.399924683Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "V4SubnetAllocationThresholdExceeded",
+  "query": "ovnkube_master_allocated_v4_host_subnets / ovnkube_master_num_v4_host_subnets * 100 > 80",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "More than 80% of IPv4 subnets are used. Insufficient IPv4 subnets could degrade provisioning of workloads.",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-network-operator/V4SubnetAllocationThresholdExceeded.md",
+    "summary": "More than 80% of v4 subnets available to assign to the nodes are allocated. Current v4 subnet allocation percentage is {{ $value }}."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000136597,
+  "lastEvaluation": "2022-10-20T15:11:39.400066097Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "V6SubnetAllocationThresholdExceeded",
+  "query": "ovnkube_master_allocated_v6_host_subnets / ovnkube_master_num_v6_host_subnets * 100 > 80",
+  "duration": 600,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "More than 80% of IPv6 subnets are used. Insufficient IPv6 subnets could degrade provisioning of workloads.",
+    "summary": "More than 80% of the v6 subnets available to assign to the nodes are allocated. Current v6 subnet allocation percentage is {{ $value }}."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000142282,
+  "lastEvaluation": "2022-10-20T15:11:39.400203967Z",
+  "type": "alerting"
+}
+{
+  "state": "inactive",
+  "name": "NodeWithoutOVNKubeNodePodRunning",
+  "query": "(kube_node_info unless on(node) (kube_pod_info{namespace=\"openshift-ovn-kubernetes\",pod=~\"ovnkube-node.*\"} or kube_node_labels{label_kubernetes_io_os=\"windows\"})) > 0",
+  "duration": 1200,
+  "labels": {
+    "prometheus": "openshift-monitoring/k8s",
+    "severity": "warning"
+  },
+  "annotations": {
+    "description": "Networking is degraded on nodes that do not have a functioning ovnkube-node pod. Existing workloads on the\nnode may continue to have connectivity but any additional workloads will not be provisioned on the node. Any\nnetwork policy changes will not be implemented on existing workloads on the node.\n",
+    "runbook_url": "https://github.com/openshift/runbooks/blob/master/alerts/cluster-network-operator/NodeWithoutOVNKubeNodePodRunning.md",
+    "summary": "All Linux nodes should be running an ovnkube-node pod, {{ $labels.node }} is not."
+  },
+  "alerts": [],
+  "health": "ok",
+  "evaluationTime": 0.000490708,
+  "lastEvaluation": "2022-10-20T15:11:32.893705634Z",
+  "type": "alerting"
+}

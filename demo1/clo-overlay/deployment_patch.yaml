@@ -1,0 +1,14 @@
+---
+# Patch the console plugin image.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cluster-logging-operator
+spec:
+  template:
+    spec:
+      containers:
+        - name: cluster-logging-operator
+          env:
+            - name: RELATED_IMAGE_LOGGING_CONSOLE_PLUGIN
+              value: quay.io/gbernal/logging-view-plugin:correlation-demo
