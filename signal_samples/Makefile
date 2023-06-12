@@ -71,3 +71,8 @@ test-log-generator: ## Generates application logs.
 
 clean-cluster:
 	oc delete ns/test-log-generator
+
+API_NS=openshift-kube-apiserver
+API_POD=$(shell oc get pod -n $(API_NS) -l apiserver=true -o name | head -n1)
+api-audit: ## API server audit logs directly from API kube-apiserver
+	oc exec -n $(API_NS) $(API_POD) -- sh -c 'cat /var/log/kube-apiserver/audit.log | tail -n $(LIMIT)' $(REDIRECT)
