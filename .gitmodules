@@ -1,0 +1,3 @@
+[submodule "external/tempo-deployments"]
+	path = external/tempo-deployments
+	url = git@github.com:andreasgerstmayr/deployments.git
