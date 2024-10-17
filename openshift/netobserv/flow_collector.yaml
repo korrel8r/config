@@ -5,6 +5,7 @@ metadata:
     flows.netobserv.io/flowcollectorlegacy-namespace: netobserv
     flows.netobserv.io/flpparent-namespace: netobserv
   name: cluster
+  namespace: netobserv
 spec:
   kafka:
     sasl:

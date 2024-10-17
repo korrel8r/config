@@ -10,7 +10,7 @@ metadata:
   labels:
     app: chat
     test: "true"
-  name: chat-x
+  name: chat
   namespace: chat
 spec:
   containers:
