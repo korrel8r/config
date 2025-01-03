@@ -18,9 +18,12 @@ SIGNAL_FILES=$(addprefix $(SAMPLE_DIR)/,$(addsuffix .json,$(SIGNALS))
 # Limit number of values
 LIMIT?=100
 
-CURL=curl -sS -k -H "Authorization: Bearer $(shell oc whoami -t)"
+SHELL=/bin/bash -o pipefail
+CURL=curl -sS --fail-with-body -k --oauth2-bearer "$(shell oc whoami -t)"
 JQ=jq -M
 REDIRECT=$(and $(OUTDIR),> $(OUTDIR)/$@.json)
+
+DOMAIN?=$(shell oc get ingresses.config/cluster --output 'jsonpath={.spec.domain}')
 
 .PHONY: $(SIGNALS) help examples update
 
@@ -61,9 +64,10 @@ ALERTMANAGER_HOST=$(shell oc get route alertmanager-main -n openshift-monitoring
 alerts: ### Alerts from cluster alertmanager
 	$(CURL) https://$(ALERTMANAGER_HOST)/api/v1/alerts | $(JQ) '.data[]' $(REDIRECT)
 
-traces: ### Traces from Jaeger (WIP)
-	$(CURL) https://jaeger-all-in-one-inmemory-tracing-system.apps.snoflake.my.test/api/traces?service=jaeger-query | $(JQ) '.data[]'  $(REDIRECT)
+TEMPO_HOST=$(shell oc get route -n openshift-tracing tempo-platform-gateway -o jsonpath='{@.spec.host}')
 
+traces: ### Traces from tempo
+	$(CURL) https://$(TEMPO_HOST)/api/traces?service=jaeger-query | $(JQ) '.data[]'  $(REDIRECT)
 
 test-log-generator: ## Generates application logs.
 	oc create namespace $@ || true

@@ -3,7 +3,7 @@
 set -e -o pipefail
 
 declare RETRY_LIMIT=${RETRY_LIMIT:-20}
-declare RETRY_DELAY=${RETRY_DELAY:-3}
+declare RETRY_DELAY=${RETRY_DELAY:-6}
 declare -r ROLLOUT_TIMEOUT=5m
 
 # Wait for a subscription to have a CSV with phase=succeeded.
@@ -47,6 +47,12 @@ wait_for_resource() {
 	return $ret
 }
 
+crd() {
+	for CRD in "$@"; do
+		kubectl wait --for condition=established "crd/$CRD"
+	done
+}
+
 # Wait for a workload to roll out.
 rollout() {
 	local ns=$1
@@ -68,16 +74,16 @@ main() {
 	local op=$1
 	shift
 	case "$op" in
-	subscription | rollout)
-		kubectl get events -n $1 --watch-only &
-		trap "kill %%" EXIT
-		"$op" "$@"
-		return $?
-		;;
-	*)
-		show_usage
-		return 1
-		;;
+		subscription | rollout | crd)
+			kubectl get events -n $1 --watch-only &
+			trap "kill %%" EXIT
+			"$op" "$@"
+			return $?
+			;;
+		*)
+			show_usage
+			return 1
+			;;
 	esac
 }
 
