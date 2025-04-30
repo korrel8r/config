@@ -7,9 +7,6 @@ metadata:
   name: cluster
   namespace: netobserv
 spec:
-  kafka:
-    sasl:
-      type: Disabled
   agent:
     ebpf:
       cacheActiveTimeout: 5s

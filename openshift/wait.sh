@@ -15,7 +15,6 @@ subscription() {
 		wait_for_resource check_condition "AtLatestKnown" kubectl -n "$ns" get subscription/"$NAME" -o jsonpath='{.status.state}' || return 1
 		csv=$(kubectl get -n "$ns" subscription/"$NAME" -o jsonpath='{.status.currentCSV}')
 		wait_for_resource check_condition "Succeeded" kubectl get csv/"$csv" -o jsonpath='{.status.phase}' || return 1
-		oc wait --allow-missing-template-keys=true --for=jsonpath='{.status.phase}'=Succeeded -n "$ns" csv/"$csv" || return 1
 	done
 }
 

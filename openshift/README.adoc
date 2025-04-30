@@ -1,6 +1,8 @@
 = Set up OpenShift for testing
 :toc: left
 
+FIXME: need to update channel versions to stable-X.Y, no "stable" for logging.
+
 These instructions will help you set up a small cluster with observable
 signals for test or demonstration purposes. This is not intended for
 production clusters.
