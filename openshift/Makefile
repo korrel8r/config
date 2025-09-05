@@ -35,12 +35,13 @@ lokistack: minio
 	kubectl apply -f $@
 
 .PHONY: logging
+LOG_FORMAT?=viaq
 logging: lokistack
 	$(STORAGE_SED) $@/lokistack.yaml
 	kubectl apply -f $@/*-operator.yaml
 	./wait.sh subscription openshift-logging cluster-logging
 	./wait.sh crd clusterlogforwarders.observability.openshift.io
-	kubectl apply -f $@
+	kubectl apply -f $@ -f $@/$(LOG_FORMAT)
 	./wait.sh rollout openshift-logging deployment.apps/cluster-logging-operator
 
 .PHONY: netobserv
@@ -54,10 +55,8 @@ netobserv: lokistack
 
 .PHONY: tempo
 tempo:
-	# Create operator and wait for ready before creating resources.
 	kubectl apply -f $@/00_projects.yaml -f $@/10_operators.yaml
-	# must wait for operator to create resources
-	./wait.sh subscription openshift-tempo-operator tempo-product 
+	./wait.sh subscription openshift-tempo-operator tempo-product
 	./wait.sh subscription openshift-opentelemetry-operator opentelemetry-product
 	./wait.sh crd tempostacks.tempo.grafana.com
 	kubectl apply -f $@/

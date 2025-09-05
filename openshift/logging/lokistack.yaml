@@ -19,7 +19,7 @@ spec:
   size: 1x.demo
   storage:
     schemas:
-    - effectiveDate: '2022-06-01'
+    - effectiveDate: '2024-10-01'
       version: v13
     secret:
       name: minio
@@ -27,4 +27,3 @@ spec:
   storageClassName: local-storage
   tenants:
     mode: openshift-logging
-
