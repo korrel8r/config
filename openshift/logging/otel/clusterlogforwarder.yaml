@@ -9,7 +9,7 @@ spec:
   serviceAccount:
     name: collector
   outputs:
-  - name: default-lokistack
+  - name: lokistack
     type: lokiStack
     lokiStack:
       target:
@@ -24,9 +24,8 @@ spec:
         key: service-ca.crt
         configMapName: openshift-service-ca.crt
   pipelines:
-  - name: default-logstore
+  - name: all
     inputRefs:
     - application
-    - infrastructure
     outputRefs:
-    - default-lokistack
+    - lokistack

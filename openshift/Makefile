@@ -8,6 +8,7 @@
 
 ALL=$(BACKENDS) uiplugins
 BACKENDS=minio lokistack logging netobserv tempo
+OPERATORS=true
 
 all: $(ALL)
 
@@ -29,18 +30,22 @@ minio:
 
 .PHONY: lokistack
 lokistack: minio
-	kubectl apply -f $@/*-operator.yaml
-	./wait.sh subscription openshift-operators-redhat loki-operator
-	./wait.sh crd alertingrules.loki.grafana.com lokistacks.loki.grafana.com recordingrules.loki.grafana.com rulerconfigs.loki.grafana.com
+	if $(OPERATORS); then \
+		 kubectl apply -f $@/*-operator.yaml && \
+		./wait.sh subscription openshift-operators-redhat loki-operator && \
+		./wait.sh crd alertingrules.loki.grafana.com lokistacks.loki.grafana.com recordingrules.loki.grafana.com rulerconfigs.loki.grafana.com; \
+	fi
 	kubectl apply -f $@
 
 .PHONY: logging
 LOG_FORMAT?=viaq
-logging: lokistack
+logging:
 	$(STORAGE_SED) $@/lokistack.yaml
-	kubectl apply -f $@/*-operator.yaml
-	./wait.sh subscription openshift-logging cluster-logging
-	./wait.sh crd clusterlogforwarders.observability.openshift.io
+	if $(OPERATORS); then \
+		kubectl apply -f $@/*-operator.yaml && \
+		./wait.sh subscription openshift-logging cluster-logging && \
+		./wait.sh crd clusterlogforwarders.observability.openshift.io; \
+	fi
 	kubectl apply -f $@ -f $@/$(LOG_FORMAT)
 	./wait.sh rollout openshift-logging deployment.apps/cluster-logging-operator
 
