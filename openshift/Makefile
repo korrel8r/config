@@ -8,7 +8,7 @@
 
 ALL=$(BACKENDS) uiplugins
 BACKENDS=minio lokistack logging netobserv tempo
-OPERATORS=true
+OPERATORS?=true
 
 all: $(ALL)
 
