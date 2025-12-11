@@ -6,13 +6,11 @@
 # It also provides all: and backends: targets to install everyhing on a new cluster.
 #
 
-ALL=$(BACKENDS) uiplugins route
 BACKENDS=minio lokistack logging netobserv tempo
+ALL=$(BACKENDS) route coo uiplugins
 OPERATORS?=true
 
 all: $(ALL)
-
-backends: $(BACKENDS)
 
 # Find default storage class.
 DEFAULT_SC=$(shell kubectl get storageclass -o=jsonpath='{.items[?(@.metadata.annotations.storageclass\.kubernetes\.io/is-default-class=="true")].metadata.name}')
@@ -70,6 +68,12 @@ tempo:
 	./wait.sh crd tempostacks.tempo.grafana.com
 	kubectl apply -f $@/
 	./wait.sh rollout openshift-tracing deployment.apps/tempo-platform-gateway
+
+.PHONY: coo
+coo:
+	kubectl apply -f $@/
+	./wait.sh subscription openshift-cluster-observability-operator cluster-observability-operator
+	./wait.sh crd uiplugins.observability.openshift.io
 
 clean-cluster:
 	$(foreach X,$(ALL),kubectl delete --ignore-not-found -f $(X)/ & ) wait

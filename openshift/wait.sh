@@ -86,4 +86,5 @@ main() {
 	esac
 }
 
+echo "$0 $*"
 main "$@"
