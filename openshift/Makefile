@@ -6,11 +6,11 @@
 # It also provides all: and backends: targets to install everyhing on a new cluster.
 #
 
-BACKENDS=minio lokistack logging netobserv tempo
-ALL=$(BACKENDS) route coo uiplugins
 OPERATORS?=true
 
-all: $(ALL)
+signals: minio lokistack logging netobserv tempo
+after-coo: route uiplugins
+all: signals coo after-coo
 
 # Find default storage class.
 DEFAULT_SC=$(shell kubectl get storageclass -o=jsonpath='{.items[?(@.metadata.annotations.storageclass\.kubernetes\.io/is-default-class=="true")].metadata.name}')

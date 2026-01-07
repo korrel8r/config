@@ -24,6 +24,6 @@ spec:
     secret:
       name: minio
       type: s3
-  storageClassName: crc-csi-hostpath-provisioner
+  storageClassName: local-storage
   tenants:
     mode: openshift-network
