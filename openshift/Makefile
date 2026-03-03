@@ -46,7 +46,7 @@ logging:
 	if $(OPERATORS); then \
 		kubectl apply -f $@/*-operator.yaml && \
 		./wait.sh subscription openshift-logging cluster-logging && \
-		./wait.sh crd clusterlogforwarders.observability.openshift.io; \
+./wait.sh crd clusterlogforwarders.observability.openshift.io; \
 	fi
 	kubectl apply -f $@ -f $@/$(LOG_FORMAT)
 	./wait.sh rollout openshift-logging deployment.apps/cluster-logging-operator
@@ -76,4 +76,4 @@ coo:
 	./wait.sh crd uiplugins.observability.openshift.io
 
 clean-cluster:
-	$(foreach X,$(ALL),kubectl delete --ignore-not-found -f $(X)/ & ) wait
+	$(foreach DIR,$(shell find * -type d -prune),kubectl delete --ignore-not-found -f $(DIR)/ & ) wait
