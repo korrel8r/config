@@ -74,6 +74,11 @@ coo:
 	kubectl apply -f $@/
 	./wait.sh subscription openshift-cluster-observability-operator cluster-observability-operator
 	./wait.sh crd uiplugins.observability.openshift.io
+	$(MAKE) route
 
 clean-cluster:
 	$(foreach DIR,$(shell find * -type d -prune),kubectl delete --ignore-not-found -f $(DIR)/ & ) wait
+
+.PHONY: lightspeed
+lightspeed:
+	$(MAKE) -c $@ all

@@ -1,0 +1,50 @@
+apiVersion: ols.openshift.io/v1alpha1
+kind: OLSConfig
+metadata:
+  name: cluster
+spec:
+  featureGates:
+    - MCPServer
+    - ToolFiltering
+  llm:
+    providers:
+      - credentialsSecretRef:
+          name: credentials
+        models:
+          - name: gpt-4o-mini
+        name: openai
+        type: openai
+        url: "https://api.openai.com/v1"
+  ols:
+    additionalCAConfigMapRef:
+      name: service-ca-bundle
+    introspectionEnabled: true
+    conversationCache:
+      postgres:
+        credentialsSecret: lightspeed-postgres-secret
+        dbName: postgres
+        maxConnections: 2000
+        sharedBuffers: 256MB
+        user: postgres
+      type: postgres
+    defaultModel: gpt-4o-mini
+    defaultProvider: openai
+    deployment:
+      console:
+        replicas: 1
+      replicas: 1
+    logLevel: INFO
+    toolsApprovalConfig:
+      approvalType: never
+  olsDataCollector:
+    logLevel: INFO
+  mcpServers:
+    - name: korrel8r
+      url: https://korrel8r.openshift-cluster-observability-operator.svc.cluster.local:9443/mcp
+      timeout: 30
+      headers:
+        - name: Authorization
+          valueFrom:
+            type: secret
+            secretRef:
+              name: oc-token
