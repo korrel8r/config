@@ -27,3 +27,11 @@ spec:
   storageClassName: local-storage
   tenants:
     mode: openshift-logging
+  rules:
+    enabled: true
+    selector:
+      matchLabels:
+        openshift.io/log-alerting: "true"
+    namespaceSelector:
+      matchLabels:
+        openshift.io/log-alerting: "true"
