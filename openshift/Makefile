@@ -7,6 +7,7 @@
 #
 
 OPERATORS?=true
+COO_NAMESPACE?=openshift-cluster-observability-operator
 
 signals: minio lokistack logging netobserv tempo
 after-coo: route uiplugins
@@ -19,11 +20,11 @@ STORAGE_SED=sed -i 's/storageClassName:.*/storageClassName: $(STORAGE_CLASS)/'
 
 .PHONY: route
 route:
-	kubectl apply -f $@/
+	sed 's/namespace:.*/namespace: $(COO_NAMESPACE)/' $@/korrel8r.yaml | kubectl apply -f -
 
 .PHONY: uiplugins
 uiplugins:
-	kubectl apply -f $@/
+	sed 's/namespace:.*/namespace: $(COO_NAMESPACE)/' $@/uiplugins.yaml | kubectl apply -f -
 
 .PHONY: minio
 minio:
@@ -81,4 +82,4 @@ clean-cluster:
 
 .PHONY: lightspeed
 lightspeed:
-	$(MAKE) -c $@ all
+	$(MAKE) -C $@ all

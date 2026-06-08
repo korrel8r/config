@@ -3,6 +3,7 @@ apiVersion: observability.openshift.io/v1alpha1
 kind: UIPlugin
 metadata:
   name: dashboards
+  namespace: openshift-cluster-observability-operator
 spec:
   type: Dashboards
 ---
@@ -10,13 +11,17 @@ apiVersion: observability.openshift.io/v1alpha1
 kind: UIPlugin
 metadata:
   name: troubleshooting-panel
+  namespace: openshift-cluster-observability-operator
 spec:
   type: TroubleshootingPanel
+  troubleshootingPanel:
+    enableAgentNavigation: true
 ---
 apiVersion: observability.openshift.io/v1alpha1
 kind: UIPlugin
 metadata:
   name: distributed-tracing
+  namespace: openshift-cluster-observability-operator
 spec:
   type: DistributedTracing
 ---
@@ -24,6 +29,7 @@ apiVersion: observability.openshift.io/v1alpha1
 kind: UIPlugin
 metadata:
   name: logging
+  namespace: openshift-cluster-observability-operator
 spec:
   type: Logging
   logging:

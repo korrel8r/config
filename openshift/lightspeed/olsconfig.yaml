@@ -45,6 +45,4 @@ spec:
       headers:
         - name: Authorization
           valueFrom:
-            type: secret
-            secretRef:
-              name: oc-token
+            type: kubernetes
