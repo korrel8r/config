@@ -23,5 +23,5 @@ spec:
   name: lightspeed-operator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: lightspeed-operator.v1.0.10
+  startingCSV: lightspeed-operator.v1.1.1
 ---

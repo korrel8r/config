@@ -11,7 +11,7 @@ spec:
       - credentialsSecretRef:
           name: credentials
         models:
-          - name: gpt-4o-mini
+          - name: "Qwen3.6-35B-A3B"
         name: openai
         type: openai
         url: "https://api.openai.com/v1"
@@ -45,6 +45,4 @@ spec:
       headers:
         - name: Authorization
           valueFrom:
-            type: secret
-            secretRef:
-              name: oc-token
+            type: kubernetes # Use the bearer-token for MCP servers

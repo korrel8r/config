@@ -7,6 +7,7 @@
 #
 
 OPERATORS?=true
+COO_NAMESPACE?=openshift-cluster-observability-operator
 
 signals: minio lokistack logging netobserv tempo
 after-coo: route uiplugins
@@ -81,4 +82,4 @@ clean-cluster:
 
 .PHONY: lightspeed
 lightspeed:
-	$(MAKE) -c $@ all
+	$(MAKE) -C $@ all

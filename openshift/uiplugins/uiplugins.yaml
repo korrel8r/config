@@ -12,6 +12,8 @@ metadata:
   name: troubleshooting-panel
 spec:
   type: TroubleshootingPanel
+  troubleshootingPanel:
+    enableAgentNavigation: true
 ---
 apiVersion: observability.openshift.io/v1alpha1
 kind: UIPlugin
