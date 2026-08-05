@@ -77,8 +77,14 @@ coo:
 	./wait.sh crd uiplugins.observability.openshift.io
 	$(MAKE) route
 
-clean-cluster:
-	$(foreach DIR,$(shell find * -type d -prune),kubectl delete --ignore-not-found -f $(DIR)/ & ) wait
+delete:
+	kubectl delete --ignore-not-found -f $(or $(DELETE),$(error Must set DELETE))/ || true
+
+delete-all:
+	$(foreach DIR,$(shell find * -type d -prune),$(MAKE) delete DELETE=$(DIR) &) wait
+
+clean-cluster: delete-all
+
 
 .PHONY: lightspeed
 lightspeed:
