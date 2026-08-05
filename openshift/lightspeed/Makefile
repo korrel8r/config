@@ -1,15 +1,16 @@
 
 LIGHTSPEED_TOKEN?=$(error Set LIGHTSPEED_TOKEN to a model API token)
+COO_NAMESPACE?=openshift-cluster-observability-operator
+RHOAI_API_KEY?=$(LIGHTSPEED_TOKEN)
+RHOAI_URL?=https://litellm-litemaas.apps.prod.rhoai.rh-aiservices-bu.com/v1
+RHOAI_MODEL?=Qwen3.6-35B-A3B
 
 NS=openshift-lightspeed
 
 all: operator ols
 
 ols:
-	oc delete -n $(NS) --ignore-not-found secret/credentials
-	oc create -n $(NS) secret generic credentials --from-literal "apitoken=$(LIGHTSPEED_TOKEN)"
-	oc apply -f service-ca-bundle.yaml
-	oc apply -f olsconfig.yaml
+	cd setup; ./setup-ols.sh
 
 operator:
 	oc apply -f 00_namespace.yaml -f 10_lightspeed_operator.yaml

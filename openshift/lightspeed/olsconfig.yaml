@@ -8,40 +8,41 @@ spec:
     - ToolFiltering
   llm:
     providers:
-      - credentialsSecretRef:
-          name: credentials
+      - credentialKey: apitoken
+        credentialsSecretRef:
+          name: credentials-gcp-google
+        googleVertexConfig:
+          location: global
+          projectID: itpc-gcp-hcm-pe-eng-claude
         models:
-          - name: "Qwen3.6-35B-A3B"
-        name: openai
-        type: openai
-        url: "https://api.openai.com/v1"
+          - name: gemini-2.5-flash
+          - name: gemini-3.5-flash
+          - name: gemini-2.5-pro
+        name: google
+        type: google_vertex
+      - credentialKey: apitoken
+        credentialsSecretRef:
+          name: credentials-gcp-anthropic
+        googleVertexAnthropicConfig:
+          location: us-east5
+          projectID: itpc-gcp-hcm-pe-eng-claude
+        models:
+          - name: claude-opus-4-6
+          - name: claude-opus-4-8
+        name: anthropic
+        type: google_vertex_anthropic
   ols:
+    # NOTE needed for korrel8r - review.
     additionalCAConfigMapRef:
       name: service-ca-bundle
-    introspectionEnabled: true
-    conversationCache:
-      postgres:
-        credentialsSecret: lightspeed-postgres-secret
-        dbName: postgres
-        maxConnections: 2000
-        sharedBuffers: 256MB
-        user: postgres
-      type: postgres
-    defaultModel: gpt-4o-mini
-    defaultProvider: openai
-    deployment:
-      console:
-        replicas: 1
-      replicas: 1
-    logLevel: INFO
+    defaultModel: claude-opus-4-6
+    defaultProvider: anthropic
     toolsApprovalConfig:
       approvalType: never
-  olsDataCollector:
-    logLevel: INFO
   mcpServers:
     - name: korrel8r
       url: https://korrel8r.openshift-cluster-observability-operator.svc.cluster.local:9443/mcp
-      timeout: 30
+      timeout: 10
       headers:
         - name: Authorization
           valueFrom:
