@@ -32,13 +32,11 @@ spec:
         name: anthropic
         type: google_vertex_anthropic
   ols:
-    # NOTE needed for korrel8r - review.
-    additionalCAConfigMapRef:
-      name: service-ca-bundle
     defaultModel: claude-opus-4-6
     defaultProvider: anthropic
     toolsApprovalConfig:
       approvalType: never
+    introspectionEnabled: true
   mcpServers:
     - name: korrel8r
       url: https://korrel8r.openshift-cluster-observability-operator.svc.cluster.local:9443/mcp

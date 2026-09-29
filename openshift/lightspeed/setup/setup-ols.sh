@@ -180,6 +180,9 @@ kind: OLSConfig
 metadata:
   name: cluster
 spec:
+  featureGates:
+    - MCPServer
+    - ToolFiltering
   llm:
     providers:${providers}
   ols:
