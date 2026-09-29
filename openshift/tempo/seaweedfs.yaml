@@ -1,0 +1,12 @@
+# Credentials for the shared seaweedfs deployment (see ../seaweedfs/).
+apiVersion: v1
+kind: Secret
+metadata:
+  name: seaweedfs
+  namespace: openshift-tracing
+stringData:
+  endpoint: http://seaweedfs.seaweedfs.svc:8333
+  bucket: tempo
+  access_key_id: seaweedfs
+  access_key_secret: seaweedfs123
+type: Opaque

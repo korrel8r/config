@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: telemetrygen-trace-test
+  # Deploy this in the same namespace as your collector,
+  # or use the fully qualified domain name (FQDN) for the endpoint below.
+  namespace: sample
+spec:
+  backoffLimit: 0 # Fail immediately if there's an error so you can read the logs
+  template:
+    metadata:
+      labels:
+        app: telemetrygen-test
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: telemetrygen
+          image: ghcr.io/open-telemetry/opentelemetry-collector-contrib/telemetrygen:latest
+          args:
+            - traces
+            - --traces=10
+            - --otlp-insecure
+            - --otlp-endpoint=test-collector:4317

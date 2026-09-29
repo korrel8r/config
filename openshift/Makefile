@@ -9,9 +9,11 @@
 OPERATORS?=true
 COO_NAMESPACE?=openshift-cluster-observability-operator
 
-signals: minio lokistack logging netobserv tempo
+signals: namespace seaweedfs lokistack logging netobserv tempo
 after-coo: route uiplugins
 all: signals coo after-coo
+namespace:
+	oc create ns $(COO_NAMESPACE) || true
 
 # Find default storage class.
 DEFAULT_SC=$(shell kubectl get storageclass -o=jsonpath='{.items[?(@.metadata.annotations.storageclass\.kubernetes\.io/is-default-class=="true")].metadata.name}')
@@ -26,13 +28,13 @@ route:
 uiplugins:
 	kubectl apply -f $@/
 
-.PHONY: minio
-minio:
+.PHONY: seaweedfs
+seaweedfs:
 	kubectl apply -f $@/
-	./wait.sh rollout minio deployment/minio
+	./wait.sh rollout seaweedfs deployment/seaweedfs
 
 .PHONY: lokistack
-lokistack: minio
+lokistack: seaweedfs
 	if $(OPERATORS); then \
 		 kubectl apply -f $@/*-operator.yaml && \
 		./wait.sh subscription openshift-operators-redhat loki-operator && \
@@ -62,7 +64,7 @@ netobserv: lokistack
 	./wait.sh rollout openshift-netobserv-operator deployment.apps/netobserv-controller-manager
 
 .PHONY: tempo
-tempo:
+tempo: seaweedfs
 	kubectl apply -f $@/00_projects.yaml -f $@/10_operators.yaml
 	./wait.sh subscription openshift-tempo-operator tempo-product
 	./wait.sh subscription openshift-opentelemetry-operator opentelemetry-product
@@ -77,11 +79,16 @@ coo:
 	./wait.sh crd uiplugins.observability.openshift.io
 	$(MAKE) route
 
+.PHONY: telemetrygen
+telemetrygen:
+	kubectl delete -f $@/ || true
+	kubectl apply -f $@/
+
 delete:
 	kubectl delete --ignore-not-found -f $(or $(DELETE),$(error Must set DELETE))/ || true
 
 delete-all:
-	$(foreach DIR,$(shell find * -type d -prune),$(MAKE) delete DELETE=$(DIR) &) wait
+	$(foreach DIR,$(shell find * -type d -prune | grep -v seaweedfs),$(MAKE) delete DELETE=$(DIR) &) wait
 
 clean-cluster: delete-all
 

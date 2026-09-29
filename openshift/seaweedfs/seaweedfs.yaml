@@ -1,0 +1,113 @@
+# Deploy seaweedfs (S3-compatible object store), does not require an operator.
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: seaweedfs
+# ---
+# # Example secret, copy to client namespace.
+# apiVersion: v1
+# kind: Secret
+# metadata:
+#   name: seaweedfs
+#   namespace: seaweedfs
+# stringData:
+#   access_key_id: seaweedfs
+#   access_key_secret: seaweedfs123
+#   bucketnames: shared
+#   endpoint: http://seaweedfs.seaweedfs.svc:8333
+# type: Opaque
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: seaweedfs-s3-config
+  namespace: seaweedfs
+data:
+  s3.json: |
+    {
+      "identities": [
+        {
+          "name": "seaweedfs",
+          "credentials": [
+            {
+              "accessKey": "seaweedfs",
+              "secretKey": "seaweedfs123"
+            }
+          ],
+          "actions": ["Admin", "Read", "Write", "List", "Tagging"]
+        }
+      ]
+    }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: seaweedfs
+  namespace: seaweedfs
+spec:
+  ports:
+    - port: 8333
+      protocol: TCP
+      targetPort: 8333
+  selector:
+    app.kubernetes.io/name: seaweedfs
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: seaweedfs
+  name: seaweedfs
+  namespace: seaweedfs
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: seaweedfs
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: seaweedfs
+    spec:
+      containers:
+        - command:
+            - /bin/sh
+            - -c
+            - |
+              weed server -dir=/storage -s3 -s3.port=8333 -s3.config=/etc/seaweedfs/s3.json &
+              until echo 's3.bucket.list' | weed shell >/dev/null 2>&1; do sleep 2; done
+              for b in tempo loki shared; do echo "s3.bucket.create -name $b" | weed shell; done
+              wait
+          image: chrislusf/seaweedfs
+          name: seaweedfs
+          ports:
+            - containerPort: 8333
+          volumeMounts:
+            - mountPath: /storage
+              name: storage
+            - mountPath: /etc/seaweedfs
+              name: s3-config
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: seaweedfs
+        - name: s3-config
+          configMap:
+            name: seaweedfs-s3-config
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels:
+    app.kubernetes.io/name: seaweedfs
+  name: seaweedfs
+  namespace: seaweedfs
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
