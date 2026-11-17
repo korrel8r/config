@@ -2,6 +2,6 @@
 
 ⚠ Provided as-is, no guarantees. May change at any time. ⚠
 
-- [Openshift setup](./openshift/README.adoc)
-- [Replace korrle8r deployed by COO](./)
+- [OpenShift setup](./openshift/README.md)
+- [Replace korrel8r deployed by COO](./coo-replace/README.md)
 

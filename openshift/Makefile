@@ -5,12 +5,13 @@
 # This Makefile also ensure dependencies are respected, and waits till components are ready, reporting errors.
 # It also provides all: and backends: targets to install everyhing on a new cluster.
 #
+# To speed up deployment 'make -j5'
 
 OPERATORS?=true
 COO_NAMESPACE?=openshift-cluster-observability-operator
 
 signals: namespace seaweedfs lokistack logging netobserv tempo
-after-coo: route uiplugins
+after-coo: route uiplugins			# Run after COO exists, possibly installed elsewhere
 all: signals coo after-coo
 namespace:
 	oc create ns $(COO_NAMESPACE) || true
@@ -44,7 +45,7 @@ lokistack: seaweedfs
 
 .PHONY: logging
 LOG_FORMAT?=viaq
-logging:
+logging: lokistack
 	$(STORAGE_SED) $@/lokistack.yaml
 	if $(OPERATORS); then \
 		kubectl apply -f $@/*-operator.yaml && \
@@ -85,10 +86,12 @@ telemetrygen:
 	kubectl apply -f $@/
 
 delete:
-	kubectl delete --ignore-not-found -f $(or $(DELETE),$(error Must set DELETE))/ || true
+	kubectl delete --ignore-not-found -f $(or $(DELETE),$(error Must set DELETE))/
 
+# Delete dependents before their operators/CRDs, and shared storage last.
+DELETE_DIRS = uiplugins route telemetrygen eventrouter netobserv logging/$(LOG_FORMAT) logging tempo lokistack lightspeed coo seaweedfs
 delete-all:
-	$(foreach DIR,$(shell find * -type d -prune | grep -v seaweedfs),$(MAKE) delete DELETE=$(DIR) &) wait
+	@set -e; for dir in $(DELETE_DIRS); do $(MAKE) delete DELETE=$$dir || true; done
 
 clean-cluster: delete-all
 

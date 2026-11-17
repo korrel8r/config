@@ -1,36 +1,34 @@
-= Set up OpenShift for testing
-:toc: left
+# Set up OpenShift for testing
 
 These instructions will help you set up a small cluster with observable
 signals for test or demonstration purposes. This is not intended for
 production clusters.
 
-== Log-in to a cluster
+## Log-in to a cluster
 
 Log into an existing OpenShift cluster as `kubeadmin` or other user with the `cluster-admin` role.
 
 To create a test cluster on your own machine install
-https://developers.redhat.com/products/openshift-local/overview[OpenShift Local]
+[OpenShift Local](https://developers.redhat.com/products/openshift-local/overview)
 
-== Installing Observability Components
+## Installing Observability Components
 
 1. Install the Cluster Observability Operator from OperatorHub or from a test build
 2. Run `make all` to install all supported observability components (operator and default resources)
   and `uiplugins` to enable the corresponding console views.
 
-You can also install components individually, read the link:Makefile[Makefile] for details.
+You can also install components individually, read the [Makefile](Makefile) for details.
 
-== Viewing in the Console
+## Viewing in the Console
 
 In the Openshift console you should see entries in the "Observe" menu:
 
-- _Logs_
-- _Network Traffic_
-- _Traces_
+* _Logs_
+* _Network Traffic_
+* _Traces_
 
-== Uninstalling
+## Uninstalling
 
-[source,bash]
-----
+```bash
 make clean-cluster
-----
+```

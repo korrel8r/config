@@ -2,87 +2,108 @@
 
 set -e -o pipefail
 
-declare RETRY_LIMIT=${RETRY_LIMIT:-20}
-declare RETRY_DELAY=${RETRY_DELAY:-6}
-declare -r ROLLOUT_TIMEOUT=5m
+# Each resource gets one deadline, shared by creation and readiness checks.
+declare -r WAIT_TIMEOUT=${WAIT_TIMEOUT:-60}  # Seconds.
+declare -r POLL_INTERVAL=${POLL_INTERVAL:-1}
 
-# Wait for a subscription to have a CSV with phase=succeeded.
-subscription() {
-	local ns=$1
-	shift 1
-	local csv=""
-	for NAME in "$@"; do
-		wait_for_resource check_condition "AtLatestKnown" kubectl -n "$ns" get subscription/"$NAME" -o jsonpath='{.status.state}' || return 1
-		csv=$(kubectl get -n "$ns" subscription/"$NAME" -o jsonpath='{.status.currentCSV}')
-		wait_for_resource check_condition "Succeeded" kubectl get csv/"$csv" -o jsonpath='{.status.phase}' || return 1
-	done
+remaining() {
+	local -i seconds=$(( $1 - SECONDS ))
+	(( seconds > 0 )) || return 1
+	printf '%s' "$seconds"
 }
 
-check_condition() {
-	local exp="$1"
-	local cond="$2"
-	shift 2
-	[[ -n $exp ]] && [[ $("$cond" "$@") == "$exp" ]] && {
-		return 0
-	}
-	return 1
-}
-
-# Wait for a specific condition in a resource.
+# Poll for existence or a nonempty field; watch readiness rather than polling it.
 wait_for_resource() {
-	echo "Waiting for [$RETRY_LIMIT x $RETRY_DELAY s]: $*"
-	local -i tries=0
-	local -i ret=1
-	while [[ $tries -lt $RETRY_LIMIT ]]; do
-		"$@" && {
-			ret=0
-			break
+	local deadline=$1
+	shift
+	echo "Waiting for: $*"
+	while ! "$@"; do
+		remaining "$deadline" >/dev/null || {
+			echo "Timed out waiting for: $*" >&2
+			return 1
 		}
-		tries=$((tries + 1))
-		echo "...[$tries / $RETRY_LIMIT]: waiting for ($RETRY_DELAY s): $*" >&2
-		sleep "$RETRY_DELAY"
+		sleep "$POLL_INTERVAL"
 	done
+}
 
-	return $ret
+resource_exists() { "$@" >/dev/null 2>&1; }
+has_value() { [[ -n $("$@" 2>/dev/null) ]]; }
+
+# kubectl wait for Succeeded cannot detect a CSV that has already Failed.
+wait_for_csv() {
+	local ns=$1 csv=$2 deadline=$3 phase
+	echo "Waiting for CSV $ns/$csv to succeed"
+	while :; do
+		phase=$(kubectl -n "$ns" get "csv/$csv" -o jsonpath='{.status.phase}') || return 1
+		case "$phase" in
+			Succeeded) return 0 ;;
+			Failed)
+				echo "CSV $ns/$csv failed:" >&2
+				kubectl -n "$ns" get "csv/$csv" -o jsonpath='{.status.reason}{": "}{.status.message}{"\n"}' >&2
+				return 1 ;;
+		esac
+		remaining "$deadline" >/dev/null || {
+			echo "Timed out waiting for CSV $ns/$csv (phase: $phase)" >&2
+			return 1
+		}
+		sleep "$POLL_INTERVAL"
+	done
+}
+
+subscription() {
+	local ns=$1 name csv deadline
+	shift
+	for name in "$@"; do
+		deadline=$((SECONDS + WAIT_TIMEOUT))
+		wait_for_resource "$deadline" resource_exists kubectl -n "$ns" get "subscription/$name" || return 1
+		kubectl -n "$ns" wait --for=jsonpath='{.status.state}'=AtLatestKnown \
+			"subscription/$name" --timeout="$(remaining "$deadline")s" || return 1
+		wait_for_resource "$deadline" has_value kubectl -n "$ns" get "subscription/$name" -o jsonpath='{.status.currentCSV}' || return 1
+		csv=$(kubectl -n "$ns" get "subscription/$name" -o jsonpath='{.status.currentCSV}')
+		wait_for_resource "$deadline" resource_exists kubectl -n "$ns" get "csv/$csv" || return 1
+		wait_for_csv "$ns" "$csv" "$deadline" || return 1
+	done
 }
 
 crd() {
-	for CRD in "$@"; do
-		kubectl wait --for condition=established "crd/$CRD"
+	local name deadline
+	for name in "$@"; do
+		deadline=$((SECONDS + WAIT_TIMEOUT))
+		wait_for_resource "$deadline" resource_exists kubectl get "crd/$name" || return 1
+		kubectl wait --for=condition=established "crd/$name" --timeout="$(remaining "$deadline")s" || return 1
 	done
 }
 
-# Wait for a workload to roll out.
+# Wait for creation, then watch rollout status once with the remaining time.
 rollout() {
-	local ns=$1
-	shift 1
-	wait_for_resource kubectl -n "$ns" get "$@" || return 1
-	wait_for_resource kubectl -n "$ns" rollout status --watch --timeout="$ROLLOUT_TIMEOUT" "$@" || return 1
+	local ns=$1 deadline
+	shift
+	deadline=$((SECONDS + WAIT_TIMEOUT))
+	wait_for_resource "$deadline" resource_exists kubectl -n "$ns" get "$@" || return 1
+	kubectl -n "$ns" rollout status --watch --timeout="$(remaining "$deadline")s" "$@"
 }
 
-# Show usage.
 show_usage() {
-	echo "Usage: $0 {subscription|rollout} [NAMESPACE] [RESOURCE...]"
+	echo "Usage: $0 {subscription|rollout} NAMESPACE RESOURCE... | crd RESOURCE..."
 }
 
 main() {
-	[[ "$#" -lt 1 ]] && {
-		show_usage
-		return 1
-	}
+	(( $# >= 1 )) || { show_usage; return 1; }
 	local op=$1
 	shift
 	case "$op" in
-		subscription | rollout | crd)
-			kubectl get events -n $1 --watch-only &
-			trap "kill %%" EXIT
+		subscription | rollout)
+			(( $# >= 2 )) || { show_usage; return 1; }
+			kubectl get events -n "$1" --watch-only &
+			event_pid=$!
+			trap 'kill "$event_pid" 2>/dev/null || true' EXIT
 			"$op" "$@"
-			return $?
 			;;
-		*)
-			show_usage
-			return 1
+		crd)
+			(( $# >= 1 )) || { show_usage; return 1; }
+			crd "$@"
 			;;
+		*) show_usage; return 1 ;;
 	esac
 }
 
